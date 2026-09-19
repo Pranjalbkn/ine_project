@@ -1,0 +1,5 @@
+node_modules/
+.playwright-browsers/
+debug/
+client/dist/
+.env

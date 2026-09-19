@@ -1,0 +1,7005 @@
+{
+  "refreshedAt": "2026-09-19T06:10:26.536Z",
+  "products": [
+    {
+      "id": 472,
+      "name": "Amperage Air Fryer Plus",
+      "brand": "Amperage",
+      "category": "Kitchen",
+      "sku": "AMP-10472"
+    },
+    {
+      "id": 234,
+      "name": "Amperage Approach Shoe Air",
+      "brand": "Amperage",
+      "category": "Footwear",
+      "sku": "AMP-10234"
+    },
+    {
+      "id": 794,
+      "name": "Amperage Approach Shoe X",
+      "brand": "Amperage",
+      "category": "Footwear",
+      "sku": "AMP-10794"
+    },
+    {
+      "id": 500,
+      "name": "Amperage AR Glasses Two",
+      "brand": "Amperage",
+      "category": "Wearables",
+      "sku": "AMP-10500"
+    },
+    {
+      "id": 150,
+      "name": "Amperage Blender Mini",
+      "brand": "Amperage",
+      "category": "Kitchen",
+      "sku": "AMP-10150"
+    },
+    {
+      "id": 710,
+      "name": "Amperage Blender S",
+      "brand": "Amperage",
+      "category": "Kitchen",
+      "sku": "AMP-10710"
+    },
+    {
+      "id": 136,
+      "name": "Amperage Bridge Hub Mini",
+      "brand": "Amperage",
+      "category": "Smart Home",
+      "sku": "AMP-10136"
+    },
+    {
+      "id": 696,
+      "name": "Amperage Bridge Hub S",
+      "brand": "Amperage",
+      "category": "Smart Home",
+      "sku": "AMP-10696"
+    },
+    {
+      "id": 332,
+      "name": "Amperage Cloudbook Lite",
+      "brand": "Amperage",
+      "category": "Laptops",
+      "sku": "AMP-10332"
+    },
+    {
+      "id": 892,
+      "name": "Amperage Cloudbook Studio",
+      "brand": "Amperage",
+      "category": "Laptops",
+      "sku": "AMP-10892"
+    },
+    {
+      "id": 94,
+      "name": "Amperage Creatorbook Mini",
+      "brand": "Amperage",
+      "category": "Laptops",
+      "sku": "AMP-10094"
+    },
+    {
+      "id": 654,
+      "name": "Amperage Creatorbook S",
+      "brand": "Amperage",
+      "category": "Laptops",
+      "sku": "AMP-10654"
+    },
+    {
+      "id": 80,
+      "name": "Amperage Cross Trainer Pro",
+      "brand": "Amperage",
+      "category": "Footwear",
+      "sku": "AMP-10080"
+    },
+    {
+      "id": 640,
+      "name": "Amperage Cross Trainer Three",
+      "brand": "Amperage",
+      "category": "Footwear",
+      "sku": "AMP-10640"
+    },
+    {
+      "id": 24,
+      "name": "Amperage Dive Watch Pro",
+      "brand": "Amperage",
+      "category": "Wearables",
+      "sku": "AMP-10024"
+    },
+    {
+      "id": 584,
+      "name": "Amperage Dive Watch Three",
+      "brand": "Amperage",
+      "category": "Wearables",
+      "sku": "AMP-10584"
+    },
+    {
+      "id": 360,
+      "name": "Amperage Docking Station Lite",
+      "brand": "Amperage",
+      "category": "Peripherals",
+      "sku": "AMP-10360"
+    },
+    {
+      "id": 920,
+      "name": "Amperage Docking Station Studio",
+      "brand": "Amperage",
+      "category": "Peripherals",
+      "sku": "AMP-10920"
+    },
+    {
+      "id": 542,
+      "name": "Amperage Duffel Two",
+      "brand": "Amperage",
+      "category": "Bags",
+      "sku": "AMP-10542"
+    },
+    {
+      "id": 962,
+      "name": "Amperage Earbuds Neo",
+      "brand": "Amperage",
+      "category": "Audio",
+      "sku": "AMP-10962"
+    },
+    {
+      "id": 402,
+      "name": "Amperage Earbuds Plus",
+      "brand": "Amperage",
+      "category": "Audio",
+      "sku": "AMP-10402"
+    },
+    {
+      "id": 192,
+      "name": "Amperage Field Monitor Air",
+      "brand": "Amperage",
+      "category": "Monitors",
+      "sku": "AMP-10192"
+    },
+    {
+      "id": 752,
+      "name": "Amperage Field Monitor X",
+      "brand": "Amperage",
+      "category": "Monitors",
+      "sku": "AMP-10752"
+    },
+    {
+      "id": 178,
+      "name": "Amperage Fitness Band Air",
+      "brand": "Amperage",
+      "category": "Wearables",
+      "sku": "AMP-10178"
+    },
+    {
+      "id": 738,
+      "name": "Amperage Fitness Band X",
+      "brand": "Amperage",
+      "category": "Wearables",
+      "sku": "AMP-10738"
+    },
+    {
+      "id": 976,
+      "name": "Amperage Gamebook Neo",
+      "brand": "Amperage",
+      "category": "Laptops",
+      "sku": "AMP-10976"
+    },
+    {
+      "id": 416,
+      "name": "Amperage Gamebook Plus",
+      "brand": "Amperage",
+      "category": "Laptops",
+      "sku": "AMP-10416"
+    },
+    {
+      "id": 108,
+      "name": "Amperage Gaming Monitor Mini",
+      "brand": "Amperage",
+      "category": "Monitors",
+      "sku": "AMP-10108"
+    },
+    {
+      "id": 668,
+      "name": "Amperage Gaming Monitor S",
+      "brand": "Amperage",
+      "category": "Monitors",
+      "sku": "AMP-10668"
+    },
+    {
+      "id": 66,
+      "name": "Amperage Grinder Pro",
+      "brand": "Amperage",
+      "category": "Kitchen",
+      "sku": "AMP-10066"
+    },
+    {
+      "id": 626,
+      "name": "Amperage Grinder Three",
+      "brand": "Amperage",
+      "category": "Kitchen",
+      "sku": "AMP-10626"
+    },
+    {
+      "id": 220,
+      "name": "Amperage Hardshell Case Air",
+      "brand": "Amperage",
+      "category": "Bags",
+      "sku": "AMP-10220"
+    },
+    {
+      "id": 780,
+      "name": "Amperage Hardshell Case X",
+      "brand": "Amperage",
+      "category": "Bags",
+      "sku": "AMP-10780"
+    },
+    {
+      "id": 318,
+      "name": "Amperage Hiking Boot Max",
+      "brand": "Amperage",
+      "category": "Footwear",
+      "sku": "AMP-10318"
+    },
+    {
+      "id": 878,
+      "name": "Amperage Hiking Boot XL",
+      "brand": "Amperage",
+      "category": "Footwear",
+      "sku": "AMP-10878"
+    },
+    {
+      "id": 52,
+      "name": "Amperage Indoor Camera Pro",
+      "brand": "Amperage",
+      "category": "Smart Home",
+      "sku": "AMP-10052"
+    },
+    {
+      "id": 612,
+      "name": "Amperage Indoor Camera Three",
+      "brand": "Amperage",
+      "category": "Smart Home",
+      "sku": "AMP-10612"
+    },
+    {
+      "id": 458,
+      "name": "Amperage Messenger Bag Plus",
+      "brand": "Amperage",
+      "category": "Bags",
+      "sku": "AMP-10458"
+    },
+    {
+      "id": 374,
+      "name": "Amperage Motion Sensor Lite",
+      "brand": "Amperage",
+      "category": "Smart Home",
+      "sku": "AMP-10374"
+    },
+    {
+      "id": 934,
+      "name": "Amperage Motion Sensor Studio",
+      "brand": "Amperage",
+      "category": "Smart Home",
+      "sku": "AMP-10934"
+    },
+    {
+      "id": 514,
+      "name": "Amperage Mouse Two",
+      "brand": "Amperage",
+      "category": "Peripherals",
+      "sku": "AMP-10514"
+    },
+    {
+      "id": 10,
+      "name": "Amperage Notebook Pro",
+      "brand": "Amperage",
+      "category": "Laptops",
+      "sku": "AMP-10010"
+    },
+    {
+      "id": 570,
+      "name": "Amperage Notebook Three",
+      "brand": "Amperage",
+      "category": "Laptops",
+      "sku": "AMP-10570"
+    },
+    {
+      "id": 38,
+      "name": "Amperage Numpad Pro",
+      "brand": "Amperage",
+      "category": "Peripherals",
+      "sku": "AMP-10038"
+    },
+    {
+      "id": 598,
+      "name": "Amperage Numpad Three",
+      "brand": "Amperage",
+      "category": "Peripherals",
+      "sku": "AMP-10598"
+    },
+    {
+      "id": 304,
+      "name": "Amperage Pouch Max",
+      "brand": "Amperage",
+      "category": "Bags",
+      "sku": "AMP-10304"
+    },
+    {
+      "id": 864,
+      "name": "Amperage Pouch XL",
+      "brand": "Amperage",
+      "category": "Bags",
+      "sku": "AMP-10864"
+    },
+    {
+      "id": 122,
+      "name": "Amperage Power Bank Mini",
+      "brand": "Amperage",
+      "category": "Power",
+      "sku": "AMP-10122"
+    },
+    {
+      "id": 682,
+      "name": "Amperage Power Bank S",
+      "brand": "Amperage",
+      "category": "Power",
+      "sku": "AMP-10682"
+    },
+    {
+      "id": 248,
+      "name": "Amperage Receiver Max",
+      "brand": "Amperage",
+      "category": "Audio",
+      "sku": "AMP-10248"
+    },
+    {
+      "id": 808,
+      "name": "Amperage Receiver XL",
+      "brand": "Amperage",
+      "category": "Audio",
+      "sku": "AMP-10808"
+    },
+    {
+      "id": 262,
+      "name": "Amperage Sleep Tracker Max",
+      "brand": "Amperage",
+      "category": "Wearables",
+      "sku": "AMP-10262"
+    },
+    {
+      "id": 822,
+      "name": "Amperage Sleep Tracker XL",
+      "brand": "Amperage",
+      "category": "Wearables",
+      "sku": "AMP-10822"
+    },
+    {
+      "id": 290,
+      "name": "Amperage Smart Bulb Max",
+      "brand": "Amperage",
+      "category": "Smart Home",
+      "sku": "AMP-10290"
+    },
+    {
+      "id": 850,
+      "name": "Amperage Smart Bulb XL",
+      "brand": "Amperage",
+      "category": "Smart Home",
+      "sku": "AMP-10850"
+    },
+    {
+      "id": 164,
+      "name": "Amperage Soundbar Air",
+      "brand": "Amperage",
+      "category": "Audio",
+      "sku": "AMP-10164"
+    },
+    {
+      "id": 724,
+      "name": "Amperage Soundbar X",
+      "brand": "Amperage",
+      "category": "Audio",
+      "sku": "AMP-10724"
+    },
+    {
+      "id": 444,
+      "name": "Amperage Surge Station Plus",
+      "brand": "Amperage",
+      "category": "Power",
+      "sku": "AMP-10444"
+    },
+    {
+      "id": 990,
+      "name": "Amperage Touch Monitor Neo",
+      "brand": "Amperage",
+      "category": "Monitors",
+      "sku": "AMP-10990"
+    },
+    {
+      "id": 430,
+      "name": "Amperage Touch Monitor Plus",
+      "brand": "Amperage",
+      "category": "Monitors",
+      "sku": "AMP-10430"
+    },
+    {
+      "id": 528,
+      "name": "Amperage Travel Adapter Two",
+      "brand": "Amperage",
+      "category": "Power",
+      "sku": "AMP-10528"
+    },
+    {
+      "id": 486,
+      "name": "Amperage Turntable Two",
+      "brand": "Amperage",
+      "category": "Audio",
+      "sku": "AMP-10486"
+    },
+    {
+      "id": 346,
+      "name": "Amperage Ultrawide Lite",
+      "brand": "Amperage",
+      "category": "Monitors",
+      "sku": "AMP-10346"
+    },
+    {
+      "id": 906,
+      "name": "Amperage Ultrawide Studio",
+      "brand": "Amperage",
+      "category": "Monitors",
+      "sku": "AMP-10906"
+    },
+    {
+      "id": 206,
+      "name": "Amperage USB Hub Air",
+      "brand": "Amperage",
+      "category": "Power",
+      "sku": "AMP-10206"
+    },
+    {
+      "id": 766,
+      "name": "Amperage USB Hub X",
+      "brand": "Amperage",
+      "category": "Power",
+      "sku": "AMP-10766"
+    },
+    {
+      "id": 388,
+      "name": "Amperage Water Bottle Lite",
+      "brand": "Amperage",
+      "category": "Kitchen",
+      "sku": "AMP-10388"
+    },
+    {
+      "id": 948,
+      "name": "Amperage Water Bottle Studio",
+      "brand": "Amperage",
+      "category": "Kitchen",
+      "sku": "AMP-10948"
+    },
+    {
+      "id": 556,
+      "name": "Amperage Waterproof Boot Two",
+      "brand": "Amperage",
+      "category": "Footwear",
+      "sku": "AMP-10556"
+    },
+    {
+      "id": 276,
+      "name": "Amperage Webcam Max",
+      "brand": "Amperage",
+      "category": "Peripherals",
+      "sku": "AMP-10276"
+    },
+    {
+      "id": 836,
+      "name": "Amperage Webcam XL",
+      "brand": "Amperage",
+      "category": "Peripherals",
+      "sku": "AMP-10836"
+    },
+    {
+      "id": 232,
+      "name": "Auralite Air Fryer Air",
+      "brand": "Auralite",
+      "category": "Kitchen",
+      "sku": "AUR-10232"
+    },
+    {
+      "id": 792,
+      "name": "Auralite Air Fryer X",
+      "brand": "Auralite",
+      "category": "Kitchen",
+      "sku": "AUR-10792"
+    },
+    {
+      "id": 554,
+      "name": "Auralite Approach Shoe Two",
+      "brand": "Auralite",
+      "category": "Footwear",
+      "sku": "AUR-10554"
+    },
+    {
+      "id": 260,
+      "name": "Auralite AR Glasses Max",
+      "brand": "Auralite",
+      "category": "Wearables",
+      "sku": "AUR-10260"
+    },
+    {
+      "id": 820,
+      "name": "Auralite AR Glasses XL",
+      "brand": "Auralite",
+      "category": "Wearables",
+      "sku": "AUR-10820"
+    },
+    {
+      "id": 470,
+      "name": "Auralite Blender Plus",
+      "brand": "Auralite",
+      "category": "Kitchen",
+      "sku": "AUR-10470"
+    },
+    {
+      "id": 456,
+      "name": "Auralite Bridge Hub Plus",
+      "brand": "Auralite",
+      "category": "Smart Home",
+      "sku": "AUR-10456"
+    },
+    {
+      "id": 92,
+      "name": "Auralite Cloudbook Mini",
+      "brand": "Auralite",
+      "category": "Laptops",
+      "sku": "AUR-10092"
+    },
+    {
+      "id": 652,
+      "name": "Auralite Cloudbook S",
+      "brand": "Auralite",
+      "category": "Laptops",
+      "sku": "AUR-10652"
+    },
+    {
+      "id": 974,
+      "name": "Auralite Creatorbook Neo",
+      "brand": "Auralite",
+      "category": "Laptops",
+      "sku": "AUR-10974"
+    },
+    {
+      "id": 414,
+      "name": "Auralite Creatorbook Plus",
+      "brand": "Auralite",
+      "category": "Laptops",
+      "sku": "AUR-10414"
+    },
+    {
+      "id": 400,
+      "name": "Auralite Cross Trainer Lite",
+      "brand": "Auralite",
+      "category": "Footwear",
+      "sku": "AUR-10400"
+    },
+    {
+      "id": 960,
+      "name": "Auralite Cross Trainer Studio",
+      "brand": "Auralite",
+      "category": "Footwear",
+      "sku": "AUR-10960"
+    },
+    {
+      "id": 344,
+      "name": "Auralite Dive Watch Lite",
+      "brand": "Auralite",
+      "category": "Wearables",
+      "sku": "AUR-10344"
+    },
+    {
+      "id": 904,
+      "name": "Auralite Dive Watch Studio",
+      "brand": "Auralite",
+      "category": "Wearables",
+      "sku": "AUR-10904"
+    },
+    {
+      "id": 120,
+      "name": "Auralite Docking Station Mini",
+      "brand": "Auralite",
+      "category": "Peripherals",
+      "sku": "AUR-10120"
+    },
+    {
+      "id": 680,
+      "name": "Auralite Docking Station S",
+      "brand": "Auralite",
+      "category": "Peripherals",
+      "sku": "AUR-10680"
+    },
+    {
+      "id": 302,
+      "name": "Auralite Duffel Max",
+      "brand": "Auralite",
+      "category": "Bags",
+      "sku": "AUR-10302"
+    },
+    {
+      "id": 862,
+      "name": "Auralite Duffel XL",
+      "brand": "Auralite",
+      "category": "Bags",
+      "sku": "AUR-10862"
+    },
+    {
+      "id": 162,
+      "name": "Auralite Earbuds Air",
+      "brand": "Auralite",
+      "category": "Audio",
+      "sku": "AUR-10162"
+    },
+    {
+      "id": 722,
+      "name": "Auralite Earbuds X",
+      "brand": "Auralite",
+      "category": "Audio",
+      "sku": "AUR-10722"
+    },
+    {
+      "id": 512,
+      "name": "Auralite Field Monitor Two",
+      "brand": "Auralite",
+      "category": "Monitors",
+      "sku": "AUR-10512"
+    },
+    {
+      "id": 498,
+      "name": "Auralite Fitness Band Two",
+      "brand": "Auralite",
+      "category": "Wearables",
+      "sku": "AUR-10498"
+    },
+    {
+      "id": 176,
+      "name": "Auralite Gamebook Air",
+      "brand": "Auralite",
+      "category": "Laptops",
+      "sku": "AUR-10176"
+    },
+    {
+      "id": 736,
+      "name": "Auralite Gamebook X",
+      "brand": "Auralite",
+      "category": "Laptops",
+      "sku": "AUR-10736"
+    },
+    {
+      "id": 988,
+      "name": "Auralite Gaming Monitor Neo",
+      "brand": "Auralite",
+      "category": "Monitors",
+      "sku": "AUR-10988"
+    },
+    {
+      "id": 428,
+      "name": "Auralite Gaming Monitor Plus",
+      "brand": "Auralite",
+      "category": "Monitors",
+      "sku": "AUR-10428"
+    },
+    {
+      "id": 386,
+      "name": "Auralite Grinder Lite",
+      "brand": "Auralite",
+      "category": "Kitchen",
+      "sku": "AUR-10386"
+    },
+    {
+      "id": 946,
+      "name": "Auralite Grinder Studio",
+      "brand": "Auralite",
+      "category": "Kitchen",
+      "sku": "AUR-10946"
+    },
+    {
+      "id": 540,
+      "name": "Auralite Hardshell Case Two",
+      "brand": "Auralite",
+      "category": "Bags",
+      "sku": "AUR-10540"
+    },
+    {
+      "id": 78,
+      "name": "Auralite Hiking Boot Pro",
+      "brand": "Auralite",
+      "category": "Footwear",
+      "sku": "AUR-10078"
+    },
+    {
+      "id": 638,
+      "name": "Auralite Hiking Boot Three",
+      "brand": "Auralite",
+      "category": "Footwear",
+      "sku": "AUR-10638"
+    },
+    {
+      "id": 372,
+      "name": "Auralite Indoor Camera Lite",
+      "brand": "Auralite",
+      "category": "Smart Home",
+      "sku": "AUR-10372"
+    },
+    {
+      "id": 932,
+      "name": "Auralite Indoor Camera Studio",
+      "brand": "Auralite",
+      "category": "Smart Home",
+      "sku": "AUR-10932"
+    },
+    {
+      "id": 218,
+      "name": "Auralite Messenger Bag Air",
+      "brand": "Auralite",
+      "category": "Bags",
+      "sku": "AUR-10218"
+    },
+    {
+      "id": 778,
+      "name": "Auralite Messenger Bag X",
+      "brand": "Auralite",
+      "category": "Bags",
+      "sku": "AUR-10778"
+    },
+    {
+      "id": 134,
+      "name": "Auralite Motion Sensor Mini",
+      "brand": "Auralite",
+      "category": "Smart Home",
+      "sku": "AUR-10134"
+    },
+    {
+      "id": 694,
+      "name": "Auralite Motion Sensor S",
+      "brand": "Auralite",
+      "category": "Smart Home",
+      "sku": "AUR-10694"
+    },
+    {
+      "id": 274,
+      "name": "Auralite Mouse Max",
+      "brand": "Auralite",
+      "category": "Peripherals",
+      "sku": "AUR-10274"
+    },
+    {
+      "id": 834,
+      "name": "Auralite Mouse XL",
+      "brand": "Auralite",
+      "category": "Peripherals",
+      "sku": "AUR-10834"
+    },
+    {
+      "id": 330,
+      "name": "Auralite Notebook Lite",
+      "brand": "Auralite",
+      "category": "Laptops",
+      "sku": "AUR-10330"
+    },
+    {
+      "id": 890,
+      "name": "Auralite Notebook Studio",
+      "brand": "Auralite",
+      "category": "Laptops",
+      "sku": "AUR-10890"
+    },
+    {
+      "id": 358,
+      "name": "Auralite Numpad Lite",
+      "brand": "Auralite",
+      "category": "Peripherals",
+      "sku": "AUR-10358"
+    },
+    {
+      "id": 918,
+      "name": "Auralite Numpad Studio",
+      "brand": "Auralite",
+      "category": "Peripherals",
+      "sku": "AUR-10918"
+    },
+    {
+      "id": 64,
+      "name": "Auralite Pouch Pro",
+      "brand": "Auralite",
+      "category": "Bags",
+      "sku": "AUR-10064"
+    },
+    {
+      "id": 624,
+      "name": "Auralite Pouch Three",
+      "brand": "Auralite",
+      "category": "Bags",
+      "sku": "AUR-10624"
+    },
+    {
+      "id": 442,
+      "name": "Auralite Power Bank Plus",
+      "brand": "Auralite",
+      "category": "Power",
+      "sku": "AUR-10442"
+    },
+    {
+      "id": 8,
+      "name": "Auralite Receiver Pro",
+      "brand": "Auralite",
+      "category": "Audio",
+      "sku": "AUR-10008"
+    },
+    {
+      "id": 568,
+      "name": "Auralite Receiver Three",
+      "brand": "Auralite",
+      "category": "Audio",
+      "sku": "AUR-10568"
+    },
+    {
+      "id": 22,
+      "name": "Auralite Sleep Tracker Pro",
+      "brand": "Auralite",
+      "category": "Wearables",
+      "sku": "AUR-10022"
+    },
+    {
+      "id": 582,
+      "name": "Auralite Sleep Tracker Three",
+      "brand": "Auralite",
+      "category": "Wearables",
+      "sku": "AUR-10582"
+    },
+    {
+      "id": 50,
+      "name": "Auralite Smart Bulb Pro",
+      "brand": "Auralite",
+      "category": "Smart Home",
+      "sku": "AUR-10050"
+    },
+    {
+      "id": 610,
+      "name": "Auralite Smart Bulb Three",
+      "brand": "Auralite",
+      "category": "Smart Home",
+      "sku": "AUR-10610"
+    },
+    {
+      "id": 484,
+      "name": "Auralite Soundbar Two",
+      "brand": "Auralite",
+      "category": "Audio",
+      "sku": "AUR-10484"
+    },
+    {
+      "id": 204,
+      "name": "Auralite Surge Station Air",
+      "brand": "Auralite",
+      "category": "Power",
+      "sku": "AUR-10204"
+    },
+    {
+      "id": 764,
+      "name": "Auralite Surge Station X",
+      "brand": "Auralite",
+      "category": "Power",
+      "sku": "AUR-10764"
+    },
+    {
+      "id": 190,
+      "name": "Auralite Touch Monitor Air",
+      "brand": "Auralite",
+      "category": "Monitors",
+      "sku": "AUR-10190"
+    },
+    {
+      "id": 750,
+      "name": "Auralite Touch Monitor X",
+      "brand": "Auralite",
+      "category": "Monitors",
+      "sku": "AUR-10750"
+    },
+    {
+      "id": 288,
+      "name": "Auralite Travel Adapter Max",
+      "brand": "Auralite",
+      "category": "Power",
+      "sku": "AUR-10288"
+    },
+    {
+      "id": 848,
+      "name": "Auralite Travel Adapter XL",
+      "brand": "Auralite",
+      "category": "Power",
+      "sku": "AUR-10848"
+    },
+    {
+      "id": 246,
+      "name": "Auralite Turntable Max",
+      "brand": "Auralite",
+      "category": "Audio",
+      "sku": "AUR-10246"
+    },
+    {
+      "id": 806,
+      "name": "Auralite Turntable XL",
+      "brand": "Auralite",
+      "category": "Audio",
+      "sku": "AUR-10806"
+    },
+    {
+      "id": 106,
+      "name": "Auralite Ultrawide Mini",
+      "brand": "Auralite",
+      "category": "Monitors",
+      "sku": "AUR-10106"
+    },
+    {
+      "id": 666,
+      "name": "Auralite Ultrawide S",
+      "brand": "Auralite",
+      "category": "Monitors",
+      "sku": "AUR-10666"
+    },
+    {
+      "id": 526,
+      "name": "Auralite USB Hub Two",
+      "brand": "Auralite",
+      "category": "Power",
+      "sku": "AUR-10526"
+    },
+    {
+      "id": 148,
+      "name": "Auralite Water Bottle Mini",
+      "brand": "Auralite",
+      "category": "Kitchen",
+      "sku": "AUR-10148"
+    },
+    {
+      "id": 708,
+      "name": "Auralite Water Bottle S",
+      "brand": "Auralite",
+      "category": "Kitchen",
+      "sku": "AUR-10708"
+    },
+    {
+      "id": 316,
+      "name": "Auralite Waterproof Boot Max",
+      "brand": "Auralite",
+      "category": "Footwear",
+      "sku": "AUR-10316"
+    },
+    {
+      "id": 876,
+      "name": "Auralite Waterproof Boot XL",
+      "brand": "Auralite",
+      "category": "Footwear",
+      "sku": "AUR-10876"
+    },
+    {
+      "id": 36,
+      "name": "Auralite Webcam Pro",
+      "brand": "Auralite",
+      "category": "Peripherals",
+      "sku": "AUR-10036"
+    },
+    {
+      "id": 596,
+      "name": "Auralite Webcam Three",
+      "brand": "Auralite",
+      "category": "Peripherals",
+      "sku": "AUR-10596"
+    },
+    {
+      "id": 152,
+      "name": "Basecamp Air Fryer Mini",
+      "brand": "Basecamp",
+      "category": "Kitchen",
+      "sku": "BAS-10152"
+    },
+    {
+      "id": 712,
+      "name": "Basecamp Air Fryer S",
+      "brand": "Basecamp",
+      "category": "Kitchen",
+      "sku": "BAS-10712"
+    },
+    {
+      "id": 474,
+      "name": "Basecamp Approach Shoe Plus",
+      "brand": "Basecamp",
+      "category": "Footwear",
+      "sku": "BAS-10474"
+    },
+    {
+      "id": 180,
+      "name": "Basecamp AR Glasses Air",
+      "brand": "Basecamp",
+      "category": "Wearables",
+      "sku": "BAS-10180"
+    },
+    {
+      "id": 740,
+      "name": "Basecamp AR Glasses X",
+      "brand": "Basecamp",
+      "category": "Wearables",
+      "sku": "BAS-10740"
+    },
+    {
+      "id": 390,
+      "name": "Basecamp Blender Lite",
+      "brand": "Basecamp",
+      "category": "Kitchen",
+      "sku": "BAS-10390"
+    },
+    {
+      "id": 950,
+      "name": "Basecamp Blender Studio",
+      "brand": "Basecamp",
+      "category": "Kitchen",
+      "sku": "BAS-10950"
+    },
+    {
+      "id": 376,
+      "name": "Basecamp Bridge Hub Lite",
+      "brand": "Basecamp",
+      "category": "Smart Home",
+      "sku": "BAS-10376"
+    },
+    {
+      "id": 936,
+      "name": "Basecamp Bridge Hub Studio",
+      "brand": "Basecamp",
+      "category": "Smart Home",
+      "sku": "BAS-10936"
+    },
+    {
+      "id": 12,
+      "name": "Basecamp Cloudbook Pro",
+      "brand": "Basecamp",
+      "category": "Laptops",
+      "sku": "BAS-10012"
+    },
+    {
+      "id": 572,
+      "name": "Basecamp Cloudbook Three",
+      "brand": "Basecamp",
+      "category": "Laptops",
+      "sku": "BAS-10572"
+    },
+    {
+      "id": 334,
+      "name": "Basecamp Creatorbook Lite",
+      "brand": "Basecamp",
+      "category": "Laptops",
+      "sku": "BAS-10334"
+    },
+    {
+      "id": 894,
+      "name": "Basecamp Creatorbook Studio",
+      "brand": "Basecamp",
+      "category": "Laptops",
+      "sku": "BAS-10894"
+    },
+    {
+      "id": 320,
+      "name": "Basecamp Cross Trainer Max",
+      "brand": "Basecamp",
+      "category": "Footwear",
+      "sku": "BAS-10320"
+    },
+    {
+      "id": 880,
+      "name": "Basecamp Cross Trainer XL",
+      "brand": "Basecamp",
+      "category": "Footwear",
+      "sku": "BAS-10880"
+    },
+    {
+      "id": 264,
+      "name": "Basecamp Dive Watch Max",
+      "brand": "Basecamp",
+      "category": "Wearables",
+      "sku": "BAS-10264"
+    },
+    {
+      "id": 824,
+      "name": "Basecamp Dive Watch XL",
+      "brand": "Basecamp",
+      "category": "Wearables",
+      "sku": "BAS-10824"
+    },
+    {
+      "id": 40,
+      "name": "Basecamp Docking Station Pro",
+      "brand": "Basecamp",
+      "category": "Peripherals",
+      "sku": "BAS-10040"
+    },
+    {
+      "id": 600,
+      "name": "Basecamp Docking Station Three",
+      "brand": "Basecamp",
+      "category": "Peripherals",
+      "sku": "BAS-10600"
+    },
+    {
+      "id": 222,
+      "name": "Basecamp Duffel Air",
+      "brand": "Basecamp",
+      "category": "Bags",
+      "sku": "BAS-10222"
+    },
+    {
+      "id": 782,
+      "name": "Basecamp Duffel X",
+      "brand": "Basecamp",
+      "category": "Bags",
+      "sku": "BAS-10782"
+    },
+    {
+      "id": 82,
+      "name": "Basecamp Earbuds Mini",
+      "brand": "Basecamp",
+      "category": "Audio",
+      "sku": "BAS-10082"
+    },
+    {
+      "id": 642,
+      "name": "Basecamp Earbuds S",
+      "brand": "Basecamp",
+      "category": "Audio",
+      "sku": "BAS-10642"
+    },
+    {
+      "id": 992,
+      "name": "Basecamp Field Monitor Neo",
+      "brand": "Basecamp",
+      "category": "Monitors",
+      "sku": "BAS-10992"
+    },
+    {
+      "id": 432,
+      "name": "Basecamp Field Monitor Plus",
+      "brand": "Basecamp",
+      "category": "Monitors",
+      "sku": "BAS-10432"
+    },
+    {
+      "id": 978,
+      "name": "Basecamp Fitness Band Neo",
+      "brand": "Basecamp",
+      "category": "Wearables",
+      "sku": "BAS-10978"
+    },
+    {
+      "id": 418,
+      "name": "Basecamp Fitness Band Plus",
+      "brand": "Basecamp",
+      "category": "Wearables",
+      "sku": "BAS-10418"
+    },
+    {
+      "id": 96,
+      "name": "Basecamp Gamebook Mini",
+      "brand": "Basecamp",
+      "category": "Laptops",
+      "sku": "BAS-10096"
+    },
+    {
+      "id": 656,
+      "name": "Basecamp Gamebook S",
+      "brand": "Basecamp",
+      "category": "Laptops",
+      "sku": "BAS-10656"
+    },
+    {
+      "id": 348,
+      "name": "Basecamp Gaming Monitor Lite",
+      "brand": "Basecamp",
+      "category": "Monitors",
+      "sku": "BAS-10348"
+    },
+    {
+      "id": 908,
+      "name": "Basecamp Gaming Monitor Studio",
+      "brand": "Basecamp",
+      "category": "Monitors",
+      "sku": "BAS-10908"
+    },
+    {
+      "id": 306,
+      "name": "Basecamp Grinder Max",
+      "brand": "Basecamp",
+      "category": "Kitchen",
+      "sku": "BAS-10306"
+    },
+    {
+      "id": 866,
+      "name": "Basecamp Grinder XL",
+      "brand": "Basecamp",
+      "category": "Kitchen",
+      "sku": "BAS-10866"
+    },
+    {
+      "id": 460,
+      "name": "Basecamp Hardshell Case Plus",
+      "brand": "Basecamp",
+      "category": "Bags",
+      "sku": "BAS-10460"
+    },
+    {
+      "id": 558,
+      "name": "Basecamp Hiking Boot Two",
+      "brand": "Basecamp",
+      "category": "Footwear",
+      "sku": "BAS-10558"
+    },
+    {
+      "id": 292,
+      "name": "Basecamp Indoor Camera Max",
+      "brand": "Basecamp",
+      "category": "Smart Home",
+      "sku": "BAS-10292"
+    },
+    {
+      "id": 852,
+      "name": "Basecamp Indoor Camera XL",
+      "brand": "Basecamp",
+      "category": "Smart Home",
+      "sku": "BAS-10852"
+    },
+    {
+      "id": 138,
+      "name": "Basecamp Messenger Bag Mini",
+      "brand": "Basecamp",
+      "category": "Bags",
+      "sku": "BAS-10138"
+    },
+    {
+      "id": 698,
+      "name": "Basecamp Messenger Bag S",
+      "brand": "Basecamp",
+      "category": "Bags",
+      "sku": "BAS-10698"
+    },
+    {
+      "id": 54,
+      "name": "Basecamp Motion Sensor Pro",
+      "brand": "Basecamp",
+      "category": "Smart Home",
+      "sku": "BAS-10054"
+    },
+    {
+      "id": 614,
+      "name": "Basecamp Motion Sensor Three",
+      "brand": "Basecamp",
+      "category": "Smart Home",
+      "sku": "BAS-10614"
+    },
+    {
+      "id": 194,
+      "name": "Basecamp Mouse Air",
+      "brand": "Basecamp",
+      "category": "Peripherals",
+      "sku": "BAS-10194"
+    },
+    {
+      "id": 754,
+      "name": "Basecamp Mouse X",
+      "brand": "Basecamp",
+      "category": "Peripherals",
+      "sku": "BAS-10754"
+    },
+    {
+      "id": 250,
+      "name": "Basecamp Notebook Max",
+      "brand": "Basecamp",
+      "category": "Laptops",
+      "sku": "BAS-10250"
+    },
+    {
+      "id": 810,
+      "name": "Basecamp Notebook XL",
+      "brand": "Basecamp",
+      "category": "Laptops",
+      "sku": "BAS-10810"
+    },
+    {
+      "id": 278,
+      "name": "Basecamp Numpad Max",
+      "brand": "Basecamp",
+      "category": "Peripherals",
+      "sku": "BAS-10278"
+    },
+    {
+      "id": 838,
+      "name": "Basecamp Numpad XL",
+      "brand": "Basecamp",
+      "category": "Peripherals",
+      "sku": "BAS-10838"
+    },
+    {
+      "id": 544,
+      "name": "Basecamp Pouch Two",
+      "brand": "Basecamp",
+      "category": "Bags",
+      "sku": "BAS-10544"
+    },
+    {
+      "id": 362,
+      "name": "Basecamp Power Bank Lite",
+      "brand": "Basecamp",
+      "category": "Power",
+      "sku": "BAS-10362"
+    },
+    {
+      "id": 922,
+      "name": "Basecamp Power Bank Studio",
+      "brand": "Basecamp",
+      "category": "Power",
+      "sku": "BAS-10922"
+    },
+    {
+      "id": 488,
+      "name": "Basecamp Receiver Two",
+      "brand": "Basecamp",
+      "category": "Audio",
+      "sku": "BAS-10488"
+    },
+    {
+      "id": 502,
+      "name": "Basecamp Sleep Tracker Two",
+      "brand": "Basecamp",
+      "category": "Wearables",
+      "sku": "BAS-10502"
+    },
+    {
+      "id": 530,
+      "name": "Basecamp Smart Bulb Two",
+      "brand": "Basecamp",
+      "category": "Smart Home",
+      "sku": "BAS-10530"
+    },
+    {
+      "id": 964,
+      "name": "Basecamp Soundbar Neo",
+      "brand": "Basecamp",
+      "category": "Audio",
+      "sku": "BAS-10964"
+    },
+    {
+      "id": 404,
+      "name": "Basecamp Soundbar Plus",
+      "brand": "Basecamp",
+      "category": "Audio",
+      "sku": "BAS-10404"
+    },
+    {
+      "id": 124,
+      "name": "Basecamp Surge Station Mini",
+      "brand": "Basecamp",
+      "category": "Power",
+      "sku": "BAS-10124"
+    },
+    {
+      "id": 684,
+      "name": "Basecamp Surge Station S",
+      "brand": "Basecamp",
+      "category": "Power",
+      "sku": "BAS-10684"
+    },
+    {
+      "id": 110,
+      "name": "Basecamp Touch Monitor Mini",
+      "brand": "Basecamp",
+      "category": "Monitors",
+      "sku": "BAS-10110"
+    },
+    {
+      "id": 670,
+      "name": "Basecamp Touch Monitor S",
+      "brand": "Basecamp",
+      "category": "Monitors",
+      "sku": "BAS-10670"
+    },
+    {
+      "id": 208,
+      "name": "Basecamp Travel Adapter Air",
+      "brand": "Basecamp",
+      "category": "Power",
+      "sku": "BAS-10208"
+    },
+    {
+      "id": 768,
+      "name": "Basecamp Travel Adapter X",
+      "brand": "Basecamp",
+      "category": "Power",
+      "sku": "BAS-10768"
+    },
+    {
+      "id": 166,
+      "name": "Basecamp Turntable Air",
+      "brand": "Basecamp",
+      "category": "Audio",
+      "sku": "BAS-10166"
+    },
+    {
+      "id": 726,
+      "name": "Basecamp Turntable X",
+      "brand": "Basecamp",
+      "category": "Audio",
+      "sku": "BAS-10726"
+    },
+    {
+      "id": 26,
+      "name": "Basecamp Ultrawide Pro",
+      "brand": "Basecamp",
+      "category": "Monitors",
+      "sku": "BAS-10026"
+    },
+    {
+      "id": 586,
+      "name": "Basecamp Ultrawide Three",
+      "brand": "Basecamp",
+      "category": "Monitors",
+      "sku": "BAS-10586"
+    },
+    {
+      "id": 446,
+      "name": "Basecamp USB Hub Plus",
+      "brand": "Basecamp",
+      "category": "Power",
+      "sku": "BAS-10446"
+    },
+    {
+      "id": 68,
+      "name": "Basecamp Water Bottle Pro",
+      "brand": "Basecamp",
+      "category": "Kitchen",
+      "sku": "BAS-10068"
+    },
+    {
+      "id": 628,
+      "name": "Basecamp Water Bottle Three",
+      "brand": "Basecamp",
+      "category": "Kitchen",
+      "sku": "BAS-10628"
+    },
+    {
+      "id": 236,
+      "name": "Basecamp Waterproof Boot Air",
+      "brand": "Basecamp",
+      "category": "Footwear",
+      "sku": "BAS-10236"
+    },
+    {
+      "id": 796,
+      "name": "Basecamp Waterproof Boot X",
+      "brand": "Basecamp",
+      "category": "Footwear",
+      "sku": "BAS-10796"
+    },
+    {
+      "id": 516,
+      "name": "Basecamp Webcam Two",
+      "brand": "Basecamp",
+      "category": "Peripherals",
+      "sku": "BAS-10516"
+    },
+    {
+      "id": 7,
+      "name": "Cobalt Amplifier Pro",
+      "brand": "Cobalt",
+      "category": "Audio",
+      "sku": "COB-10007"
+    },
+    {
+      "id": 567,
+      "name": "Cobalt Amplifier Three",
+      "brand": "Cobalt",
+      "category": "Audio",
+      "sku": "COB-10567"
+    },
+    {
+      "id": 217,
+      "name": "Cobalt Backpack Air",
+      "brand": "Cobalt",
+      "category": "Bags",
+      "sku": "COB-10217"
+    },
+    {
+      "id": 777,
+      "name": "Cobalt Backpack X",
+      "brand": "Cobalt",
+      "category": "Bags",
+      "sku": "COB-10777"
+    },
+    {
+      "id": 287,
+      "name": "Cobalt Cable Kit Max",
+      "brand": "Cobalt",
+      "category": "Power",
+      "sku": "COB-10287"
+    },
+    {
+      "id": 847,
+      "name": "Cobalt Cable Kit XL",
+      "brand": "Cobalt",
+      "category": "Power",
+      "sku": "COB-10847"
+    },
+    {
+      "id": 441,
+      "name": "Cobalt Charger Plus",
+      "brand": "Cobalt",
+      "category": "Power",
+      "sku": "COB-10441"
+    },
+    {
+      "id": 203,
+      "name": "Cobalt Charging Pad Air",
+      "brand": "Cobalt",
+      "category": "Power",
+      "sku": "COB-10203"
+    },
+    {
+      "id": 763,
+      "name": "Cobalt Charging Pad X",
+      "brand": "Cobalt",
+      "category": "Power",
+      "sku": "COB-10763"
+    },
+    {
+      "id": 973,
+      "name": "Cobalt Convertible Neo",
+      "brand": "Cobalt",
+      "category": "Laptops",
+      "sku": "COB-10973"
+    },
+    {
+      "id": 413,
+      "name": "Cobalt Convertible Plus",
+      "brand": "Cobalt",
+      "category": "Laptops",
+      "sku": "COB-10413"
+    },
+    {
+      "id": 511,
+      "name": "Cobalt Curved Monitor Two",
+      "brand": "Cobalt",
+      "category": "Monitors",
+      "sku": "COB-10511"
+    },
+    {
+      "id": 343,
+      "name": "Cobalt Field Watch Lite",
+      "brand": "Cobalt",
+      "category": "Wearables",
+      "sku": "COB-10343"
+    },
+    {
+      "id": 903,
+      "name": "Cobalt Field Watch Studio",
+      "brand": "Cobalt",
+      "category": "Wearables",
+      "sku": "COB-10903"
+    },
+    {
+      "id": 119,
+      "name": "Cobalt Graphics Tablet Mini",
+      "brand": "Cobalt",
+      "category": "Peripherals",
+      "sku": "COB-10119"
+    },
+    {
+      "id": 679,
+      "name": "Cobalt Graphics Tablet S",
+      "brand": "Cobalt",
+      "category": "Peripherals",
+      "sku": "COB-10679"
+    },
+    {
+      "id": 161,
+      "name": "Cobalt Headphones Air",
+      "brand": "Cobalt",
+      "category": "Audio",
+      "sku": "COB-10161"
+    },
+    {
+      "id": 721,
+      "name": "Cobalt Headphones X",
+      "brand": "Cobalt",
+      "category": "Audio",
+      "sku": "COB-10721"
+    },
+    {
+      "id": 385,
+      "name": "Cobalt Kettle Lite",
+      "brand": "Cobalt",
+      "category": "Kitchen",
+      "sku": "COB-10385"
+    },
+    {
+      "id": 945,
+      "name": "Cobalt Kettle Studio",
+      "brand": "Cobalt",
+      "category": "Kitchen",
+      "sku": "COB-10945"
+    },
+    {
+      "id": 273,
+      "name": "Cobalt Keyboard Max",
+      "brand": "Cobalt",
+      "category": "Peripherals",
+      "sku": "COB-10273"
+    },
+    {
+      "id": 833,
+      "name": "Cobalt Keyboard XL",
+      "brand": "Cobalt",
+      "category": "Peripherals",
+      "sku": "COB-10833"
+    },
+    {
+      "id": 245,
+      "name": "Cobalt Microphone Max",
+      "brand": "Cobalt",
+      "category": "Audio",
+      "sku": "COB-10245"
+    },
+    {
+      "id": 805,
+      "name": "Cobalt Microphone XL",
+      "brand": "Cobalt",
+      "category": "Audio",
+      "sku": "COB-10805"
+    },
+    {
+      "id": 105,
+      "name": "Cobalt Monitor Mini",
+      "brand": "Cobalt",
+      "category": "Monitors",
+      "sku": "COB-10105"
+    },
+    {
+      "id": 665,
+      "name": "Cobalt Monitor S",
+      "brand": "Cobalt",
+      "category": "Monitors",
+      "sku": "COB-10665"
+    },
+    {
+      "id": 987,
+      "name": "Cobalt Portable Monitor Neo",
+      "brand": "Cobalt",
+      "category": "Monitors",
+      "sku": "COB-10987"
+    },
+    {
+      "id": 427,
+      "name": "Cobalt Portable Monitor Plus",
+      "brand": "Cobalt",
+      "category": "Monitors",
+      "sku": "COB-10427"
+    },
+    {
+      "id": 189,
+      "name": "Cobalt Pro Display Air",
+      "brand": "Cobalt",
+      "category": "Monitors",
+      "sku": "COB-10189"
+    },
+    {
+      "id": 749,
+      "name": "Cobalt Pro Display X",
+      "brand": "Cobalt",
+      "category": "Monitors",
+      "sku": "COB-10749"
+    },
+    {
+      "id": 315,
+      "name": "Cobalt Recovery Slide Max",
+      "brand": "Cobalt",
+      "category": "Footwear",
+      "sku": "COB-10315"
+    },
+    {
+      "id": 875,
+      "name": "Cobalt Recovery Slide XL",
+      "brand": "Cobalt",
+      "category": "Footwear",
+      "sku": "COB-10875"
+    },
+    {
+      "id": 21,
+      "name": "Cobalt Running Watch Pro",
+      "brand": "Cobalt",
+      "category": "Wearables",
+      "sku": "COB-10021"
+    },
+    {
+      "id": 581,
+      "name": "Cobalt Running Watch Three",
+      "brand": "Cobalt",
+      "category": "Wearables",
+      "sku": "COB-10581"
+    },
+    {
+      "id": 399,
+      "name": "Cobalt Sandal Lite",
+      "brand": "Cobalt",
+      "category": "Footwear",
+      "sku": "COB-10399"
+    },
+    {
+      "id": 959,
+      "name": "Cobalt Sandal Studio",
+      "brand": "Cobalt",
+      "category": "Footwear",
+      "sku": "COB-10959"
+    },
+    {
+      "id": 147,
+      "name": "Cobalt Skillet Mini",
+      "brand": "Cobalt",
+      "category": "Kitchen",
+      "sku": "COB-10147"
+    },
+    {
+      "id": 707,
+      "name": "Cobalt Skillet S",
+      "brand": "Cobalt",
+      "category": "Kitchen",
+      "sku": "COB-10707"
+    },
+    {
+      "id": 301,
+      "name": "Cobalt Sleeve Max",
+      "brand": "Cobalt",
+      "category": "Bags",
+      "sku": "COB-10301"
+    },
+    {
+      "id": 861,
+      "name": "Cobalt Sleeve XL",
+      "brand": "Cobalt",
+      "category": "Bags",
+      "sku": "COB-10861"
+    },
+    {
+      "id": 175,
+      "name": "Cobalt Slimbook Air",
+      "brand": "Cobalt",
+      "category": "Laptops",
+      "sku": "COB-10175"
+    },
+    {
+      "id": 735,
+      "name": "Cobalt Slimbook X",
+      "brand": "Cobalt",
+      "category": "Laptops",
+      "sku": "COB-10735"
+    },
+    {
+      "id": 539,
+      "name": "Cobalt Sling Two",
+      "brand": "Cobalt",
+      "category": "Bags",
+      "sku": "COB-10539"
+    },
+    {
+      "id": 455,
+      "name": "Cobalt Smart Lock Plus",
+      "brand": "Cobalt",
+      "category": "Smart Home",
+      "sku": "COB-10455"
+    },
+    {
+      "id": 133,
+      "name": "Cobalt Smart Plug Mini",
+      "brand": "Cobalt",
+      "category": "Smart Home",
+      "sku": "COB-10133"
+    },
+    {
+      "id": 693,
+      "name": "Cobalt Smart Plug S",
+      "brand": "Cobalt",
+      "category": "Smart Home",
+      "sku": "COB-10693"
+    },
+    {
+      "id": 259,
+      "name": "Cobalt Smart Ring Max",
+      "brand": "Cobalt",
+      "category": "Wearables",
+      "sku": "COB-10259"
+    },
+    {
+      "id": 819,
+      "name": "Cobalt Smart Ring XL",
+      "brand": "Cobalt",
+      "category": "Wearables",
+      "sku": "COB-10819"
+    },
+    {
+      "id": 497,
+      "name": "Cobalt Smartwatch Two",
+      "brand": "Cobalt",
+      "category": "Wearables",
+      "sku": "COB-10497"
+    },
+    {
+      "id": 77,
+      "name": "Cobalt Sneaker Pro",
+      "brand": "Cobalt",
+      "category": "Footwear",
+      "sku": "COB-10077"
+    },
+    {
+      "id": 637,
+      "name": "Cobalt Sneaker Three",
+      "brand": "Cobalt",
+      "category": "Footwear",
+      "sku": "COB-10637"
+    },
+    {
+      "id": 525,
+      "name": "Cobalt Solar Charger Two",
+      "brand": "Cobalt",
+      "category": "Power",
+      "sku": "COB-10525"
+    },
+    {
+      "id": 469,
+      "name": "Cobalt Sous-Vide Wand Plus",
+      "brand": "Cobalt",
+      "category": "Kitchen",
+      "sku": "COB-10469"
+    },
+    {
+      "id": 483,
+      "name": "Cobalt Speaker Two",
+      "brand": "Cobalt",
+      "category": "Audio",
+      "sku": "COB-10483"
+    },
+    {
+      "id": 357,
+      "name": "Cobalt Stream Controller Lite",
+      "brand": "Cobalt",
+      "category": "Peripherals",
+      "sku": "COB-10357"
+    },
+    {
+      "id": 917,
+      "name": "Cobalt Stream Controller Studio",
+      "brand": "Cobalt",
+      "category": "Peripherals",
+      "sku": "COB-10917"
+    },
+    {
+      "id": 49,
+      "name": "Cobalt Thermostat Pro",
+      "brand": "Cobalt",
+      "category": "Smart Home",
+      "sku": "COB-10049"
+    },
+    {
+      "id": 609,
+      "name": "Cobalt Thermostat Three",
+      "brand": "Cobalt",
+      "category": "Smart Home",
+      "sku": "COB-10609"
+    },
+    {
+      "id": 231,
+      "name": "Cobalt Toaster Air",
+      "brand": "Cobalt",
+      "category": "Kitchen",
+      "sku": "COB-10231"
+    },
+    {
+      "id": 791,
+      "name": "Cobalt Toaster X",
+      "brand": "Cobalt",
+      "category": "Kitchen",
+      "sku": "COB-10791"
+    },
+    {
+      "id": 63,
+      "name": "Cobalt Tote Pro",
+      "brand": "Cobalt",
+      "category": "Bags",
+      "sku": "COB-10063"
+    },
+    {
+      "id": 623,
+      "name": "Cobalt Tote Three",
+      "brand": "Cobalt",
+      "category": "Bags",
+      "sku": "COB-10623"
+    },
+    {
+      "id": 35,
+      "name": "Cobalt Trackpad Pro",
+      "brand": "Cobalt",
+      "category": "Peripherals",
+      "sku": "COB-10035"
+    },
+    {
+      "id": 595,
+      "name": "Cobalt Trackpad Three",
+      "brand": "Cobalt",
+      "category": "Peripherals",
+      "sku": "COB-10595"
+    },
+    {
+      "id": 553,
+      "name": "Cobalt Trail Runners Two",
+      "brand": "Cobalt",
+      "category": "Footwear",
+      "sku": "COB-10553"
+    },
+    {
+      "id": 329,
+      "name": "Cobalt Ultrabook Lite",
+      "brand": "Cobalt",
+      "category": "Laptops",
+      "sku": "COB-10329"
+    },
+    {
+      "id": 889,
+      "name": "Cobalt Ultrabook Studio",
+      "brand": "Cobalt",
+      "category": "Laptops",
+      "sku": "COB-10889"
+    },
+    {
+      "id": 371,
+      "name": "Cobalt Video Doorbell Lite",
+      "brand": "Cobalt",
+      "category": "Smart Home",
+      "sku": "COB-10371"
+    },
+    {
+      "id": 931,
+      "name": "Cobalt Video Doorbell Studio",
+      "brand": "Cobalt",
+      "category": "Smart Home",
+      "sku": "COB-10931"
+    },
+    {
+      "id": 91,
+      "name": "Cobalt Workstation Mini",
+      "brand": "Cobalt",
+      "category": "Laptops",
+      "sku": "COB-10091"
+    },
+    {
+      "id": 651,
+      "name": "Cobalt Workstation S",
+      "brand": "Cobalt",
+      "category": "Laptops",
+      "sku": "COB-10651"
+    },
+    {
+      "id": 167,
+      "name": "Copperpot Amplifier Air",
+      "brand": "Copperpot",
+      "category": "Audio",
+      "sku": "COP-10167"
+    },
+    {
+      "id": 727,
+      "name": "Copperpot Amplifier X",
+      "brand": "Copperpot",
+      "category": "Audio",
+      "sku": "COP-10727"
+    },
+    {
+      "id": 377,
+      "name": "Copperpot Backpack Lite",
+      "brand": "Copperpot",
+      "category": "Bags",
+      "sku": "COP-10377"
+    },
+    {
+      "id": 937,
+      "name": "Copperpot Backpack Studio",
+      "brand": "Copperpot",
+      "category": "Bags",
+      "sku": "COP-10937"
+    },
+    {
+      "id": 447,
+      "name": "Copperpot Cable Kit Plus",
+      "brand": "Copperpot",
+      "category": "Power",
+      "sku": "COP-10447"
+    },
+    {
+      "id": 41,
+      "name": "Copperpot Charger Pro",
+      "brand": "Copperpot",
+      "category": "Power",
+      "sku": "COP-10041"
+    },
+    {
+      "id": 601,
+      "name": "Copperpot Charger Three",
+      "brand": "Copperpot",
+      "category": "Power",
+      "sku": "COP-10601"
+    },
+    {
+      "id": 363,
+      "name": "Copperpot Charging Pad Lite",
+      "brand": "Copperpot",
+      "category": "Power",
+      "sku": "COP-10363"
+    },
+    {
+      "id": 923,
+      "name": "Copperpot Charging Pad Studio",
+      "brand": "Copperpot",
+      "category": "Power",
+      "sku": "COP-10923"
+    },
+    {
+      "id": 13,
+      "name": "Copperpot Convertible Pro",
+      "brand": "Copperpot",
+      "category": "Laptops",
+      "sku": "COP-10013"
+    },
+    {
+      "id": 573,
+      "name": "Copperpot Convertible Three",
+      "brand": "Copperpot",
+      "category": "Laptops",
+      "sku": "COP-10573"
+    },
+    {
+      "id": 111,
+      "name": "Copperpot Curved Monitor Mini",
+      "brand": "Copperpot",
+      "category": "Monitors",
+      "sku": "COP-10111"
+    },
+    {
+      "id": 671,
+      "name": "Copperpot Curved Monitor S",
+      "brand": "Copperpot",
+      "category": "Monitors",
+      "sku": "COP-10671"
+    },
+    {
+      "id": 503,
+      "name": "Copperpot Field Watch Two",
+      "brand": "Copperpot",
+      "category": "Wearables",
+      "sku": "COP-10503"
+    },
+    {
+      "id": 279,
+      "name": "Copperpot Graphics Tablet Max",
+      "brand": "Copperpot",
+      "category": "Peripherals",
+      "sku": "COP-10279"
+    },
+    {
+      "id": 839,
+      "name": "Copperpot Graphics Tablet XL",
+      "brand": "Copperpot",
+      "category": "Peripherals",
+      "sku": "COP-10839"
+    },
+    {
+      "id": 321,
+      "name": "Copperpot Headphones Lite",
+      "brand": "Copperpot",
+      "category": "Audio",
+      "sku": "COP-10321"
+    },
+    {
+      "id": 881,
+      "name": "Copperpot Headphones Studio",
+      "brand": "Copperpot",
+      "category": "Audio",
+      "sku": "COP-10881"
+    },
+    {
+      "id": 545,
+      "name": "Copperpot Kettle Two",
+      "brand": "Copperpot",
+      "category": "Kitchen",
+      "sku": "COP-10545"
+    },
+    {
+      "id": 993,
+      "name": "Copperpot Keyboard Neo",
+      "brand": "Copperpot",
+      "category": "Peripherals",
+      "sku": "COP-10993"
+    },
+    {
+      "id": 433,
+      "name": "Copperpot Keyboard Plus",
+      "brand": "Copperpot",
+      "category": "Peripherals",
+      "sku": "COP-10433"
+    },
+    {
+      "id": 965,
+      "name": "Copperpot Microphone Neo",
+      "brand": "Copperpot",
+      "category": "Audio",
+      "sku": "COP-10965"
+    },
+    {
+      "id": 405,
+      "name": "Copperpot Microphone Plus",
+      "brand": "Copperpot",
+      "category": "Audio",
+      "sku": "COP-10405"
+    },
+    {
+      "id": 265,
+      "name": "Copperpot Monitor Max",
+      "brand": "Copperpot",
+      "category": "Monitors",
+      "sku": "COP-10265"
+    },
+    {
+      "id": 825,
+      "name": "Copperpot Monitor XL",
+      "brand": "Copperpot",
+      "category": "Monitors",
+      "sku": "COP-10825"
+    },
+    {
+      "id": 27,
+      "name": "Copperpot Portable Monitor Pro",
+      "brand": "Copperpot",
+      "category": "Monitors",
+      "sku": "COP-10027"
+    },
+    {
+      "id": 587,
+      "name": "Copperpot Portable Monitor Three",
+      "brand": "Copperpot",
+      "category": "Monitors",
+      "sku": "COP-10587"
+    },
+    {
+      "id": 349,
+      "name": "Copperpot Pro Display Lite",
+      "brand": "Copperpot",
+      "category": "Monitors",
+      "sku": "COP-10349"
+    },
+    {
+      "id": 909,
+      "name": "Copperpot Pro Display Studio",
+      "brand": "Copperpot",
+      "category": "Monitors",
+      "sku": "COP-10909"
+    },
+    {
+      "id": 475,
+      "name": "Copperpot Recovery Slide Plus",
+      "brand": "Copperpot",
+      "category": "Footwear",
+      "sku": "COP-10475"
+    },
+    {
+      "id": 181,
+      "name": "Copperpot Running Watch Air",
+      "brand": "Copperpot",
+      "category": "Wearables",
+      "sku": "COP-10181"
+    },
+    {
+      "id": 741,
+      "name": "Copperpot Running Watch X",
+      "brand": "Copperpot",
+      "category": "Wearables",
+      "sku": "COP-10741"
+    },
+    {
+      "id": 559,
+      "name": "Copperpot Sandal Two",
+      "brand": "Copperpot",
+      "category": "Footwear",
+      "sku": "COP-10559"
+    },
+    {
+      "id": 307,
+      "name": "Copperpot Skillet Max",
+      "brand": "Copperpot",
+      "category": "Kitchen",
+      "sku": "COP-10307"
+    },
+    {
+      "id": 867,
+      "name": "Copperpot Skillet XL",
+      "brand": "Copperpot",
+      "category": "Kitchen",
+      "sku": "COP-10867"
+    },
+    {
+      "id": 461,
+      "name": "Copperpot Sleeve Plus",
+      "brand": "Copperpot",
+      "category": "Bags",
+      "sku": "COP-10461"
+    },
+    {
+      "id": 335,
+      "name": "Copperpot Slimbook Lite",
+      "brand": "Copperpot",
+      "category": "Laptops",
+      "sku": "COP-10335"
+    },
+    {
+      "id": 895,
+      "name": "Copperpot Slimbook Studio",
+      "brand": "Copperpot",
+      "category": "Laptops",
+      "sku": "COP-10895"
+    },
+    {
+      "id": 139,
+      "name": "Copperpot Sling Mini",
+      "brand": "Copperpot",
+      "category": "Bags",
+      "sku": "COP-10139"
+    },
+    {
+      "id": 699,
+      "name": "Copperpot Sling S",
+      "brand": "Copperpot",
+      "category": "Bags",
+      "sku": "COP-10699"
+    },
+    {
+      "id": 55,
+      "name": "Copperpot Smart Lock Pro",
+      "brand": "Copperpot",
+      "category": "Smart Home",
+      "sku": "COP-10055"
+    },
+    {
+      "id": 615,
+      "name": "Copperpot Smart Lock Three",
+      "brand": "Copperpot",
+      "category": "Smart Home",
+      "sku": "COP-10615"
+    },
+    {
+      "id": 293,
+      "name": "Copperpot Smart Plug Max",
+      "brand": "Copperpot",
+      "category": "Smart Home",
+      "sku": "COP-10293"
+    },
+    {
+      "id": 853,
+      "name": "Copperpot Smart Plug XL",
+      "brand": "Copperpot",
+      "category": "Smart Home",
+      "sku": "COP-10853"
+    },
+    {
+      "id": 979,
+      "name": "Copperpot Smart Ring Neo",
+      "brand": "Copperpot",
+      "category": "Wearables",
+      "sku": "COP-10979"
+    },
+    {
+      "id": 419,
+      "name": "Copperpot Smart Ring Plus",
+      "brand": "Copperpot",
+      "category": "Wearables",
+      "sku": "COP-10419"
+    },
+    {
+      "id": 97,
+      "name": "Copperpot Smartwatch Mini",
+      "brand": "Copperpot",
+      "category": "Wearables",
+      "sku": "COP-10097"
+    },
+    {
+      "id": 657,
+      "name": "Copperpot Smartwatch S",
+      "brand": "Copperpot",
+      "category": "Wearables",
+      "sku": "COP-10657"
+    },
+    {
+      "id": 237,
+      "name": "Copperpot Sneaker Air",
+      "brand": "Copperpot",
+      "category": "Footwear",
+      "sku": "COP-10237"
+    },
+    {
+      "id": 797,
+      "name": "Copperpot Sneaker X",
+      "brand": "Copperpot",
+      "category": "Footwear",
+      "sku": "COP-10797"
+    },
+    {
+      "id": 125,
+      "name": "Copperpot Solar Charger Mini",
+      "brand": "Copperpot",
+      "category": "Power",
+      "sku": "COP-10125"
+    },
+    {
+      "id": 685,
+      "name": "Copperpot Solar Charger S",
+      "brand": "Copperpot",
+      "category": "Power",
+      "sku": "COP-10685"
+    },
+    {
+      "id": 69,
+      "name": "Copperpot Sous-Vide Wand Pro",
+      "brand": "Copperpot",
+      "category": "Kitchen",
+      "sku": "COP-10069"
+    },
+    {
+      "id": 629,
+      "name": "Copperpot Sous-Vide Wand Three",
+      "brand": "Copperpot",
+      "category": "Kitchen",
+      "sku": "COP-10629"
+    },
+    {
+      "id": 83,
+      "name": "Copperpot Speaker Mini",
+      "brand": "Copperpot",
+      "category": "Audio",
+      "sku": "COP-10083"
+    },
+    {
+      "id": 643,
+      "name": "Copperpot Speaker S",
+      "brand": "Copperpot",
+      "category": "Audio",
+      "sku": "COP-10643"
+    },
+    {
+      "id": 517,
+      "name": "Copperpot Stream Controller Two",
+      "brand": "Copperpot",
+      "category": "Peripherals",
+      "sku": "COP-10517"
+    },
+    {
+      "id": 209,
+      "name": "Copperpot Thermostat Air",
+      "brand": "Copperpot",
+      "category": "Smart Home",
+      "sku": "COP-10209"
+    },
+    {
+      "id": 769,
+      "name": "Copperpot Thermostat X",
+      "brand": "Copperpot",
+      "category": "Smart Home",
+      "sku": "COP-10769"
+    },
+    {
+      "id": 391,
+      "name": "Copperpot Toaster Lite",
+      "brand": "Copperpot",
+      "category": "Kitchen",
+      "sku": "COP-10391"
+    },
+    {
+      "id": 951,
+      "name": "Copperpot Toaster Studio",
+      "brand": "Copperpot",
+      "category": "Kitchen",
+      "sku": "COP-10951"
+    },
+    {
+      "id": 223,
+      "name": "Copperpot Tote Air",
+      "brand": "Copperpot",
+      "category": "Bags",
+      "sku": "COP-10223"
+    },
+    {
+      "id": 783,
+      "name": "Copperpot Tote X",
+      "brand": "Copperpot",
+      "category": "Bags",
+      "sku": "COP-10783"
+    },
+    {
+      "id": 195,
+      "name": "Copperpot Trackpad Air",
+      "brand": "Copperpot",
+      "category": "Peripherals",
+      "sku": "COP-10195"
+    },
+    {
+      "id": 755,
+      "name": "Copperpot Trackpad X",
+      "brand": "Copperpot",
+      "category": "Peripherals",
+      "sku": "COP-10755"
+    },
+    {
+      "id": 153,
+      "name": "Copperpot Trail Runners Mini",
+      "brand": "Copperpot",
+      "category": "Footwear",
+      "sku": "COP-10153"
+    },
+    {
+      "id": 713,
+      "name": "Copperpot Trail Runners S",
+      "brand": "Copperpot",
+      "category": "Footwear",
+      "sku": "COP-10713"
+    },
+    {
+      "id": 489,
+      "name": "Copperpot Ultrabook Two",
+      "brand": "Copperpot",
+      "category": "Laptops",
+      "sku": "COP-10489"
+    },
+    {
+      "id": 531,
+      "name": "Copperpot Video Doorbell Two",
+      "brand": "Copperpot",
+      "category": "Smart Home",
+      "sku": "COP-10531"
+    },
+    {
+      "id": 251,
+      "name": "Copperpot Workstation Max",
+      "brand": "Copperpot",
+      "category": "Laptops",
+      "sku": "COP-10251"
+    },
+    {
+      "id": 811,
+      "name": "Copperpot Workstation XL",
+      "brand": "Copperpot",
+      "category": "Laptops",
+      "sku": "COP-10811"
+    },
+    {
+      "id": 487,
+      "name": "Domus Amplifier Two",
+      "brand": "Domus",
+      "category": "Audio",
+      "sku": "DOM-10487"
+    },
+    {
+      "id": 137,
+      "name": "Domus Backpack Mini",
+      "brand": "Domus",
+      "category": "Bags",
+      "sku": "DOM-10137"
+    },
+    {
+      "id": 697,
+      "name": "Domus Backpack S",
+      "brand": "Domus",
+      "category": "Bags",
+      "sku": "DOM-10697"
+    },
+    {
+      "id": 207,
+      "name": "Domus Cable Kit Air",
+      "brand": "Domus",
+      "category": "Power",
+      "sku": "DOM-10207"
+    },
+    {
+      "id": 767,
+      "name": "Domus Cable Kit X",
+      "brand": "Domus",
+      "category": "Power",
+      "sku": "DOM-10767"
+    },
+    {
+      "id": 361,
+      "name": "Domus Charger Lite",
+      "brand": "Domus",
+      "category": "Power",
+      "sku": "DOM-10361"
+    },
+    {
+      "id": 921,
+      "name": "Domus Charger Studio",
+      "brand": "Domus",
+      "category": "Power",
+      "sku": "DOM-10921"
+    },
+    {
+      "id": 123,
+      "name": "Domus Charging Pad Mini",
+      "brand": "Domus",
+      "category": "Power",
+      "sku": "DOM-10123"
+    },
+    {
+      "id": 683,
+      "name": "Domus Charging Pad S",
+      "brand": "Domus",
+      "category": "Power",
+      "sku": "DOM-10683"
+    },
+    {
+      "id": 333,
+      "name": "Domus Convertible Lite",
+      "brand": "Domus",
+      "category": "Laptops",
+      "sku": "DOM-10333"
+    },
+    {
+      "id": 893,
+      "name": "Domus Convertible Studio",
+      "brand": "Domus",
+      "category": "Laptops",
+      "sku": "DOM-10893"
+    },
+    {
+      "id": 991,
+      "name": "Domus Curved Monitor Neo",
+      "brand": "Domus",
+      "category": "Monitors",
+      "sku": "DOM-10991"
+    },
+    {
+      "id": 431,
+      "name": "Domus Curved Monitor Plus",
+      "brand": "Domus",
+      "category": "Monitors",
+      "sku": "DOM-10431"
+    },
+    {
+      "id": 263,
+      "name": "Domus Field Watch Max",
+      "brand": "Domus",
+      "category": "Wearables",
+      "sku": "DOM-10263"
+    },
+    {
+      "id": 823,
+      "name": "Domus Field Watch XL",
+      "brand": "Domus",
+      "category": "Wearables",
+      "sku": "DOM-10823"
+    },
+    {
+      "id": 39,
+      "name": "Domus Graphics Tablet Pro",
+      "brand": "Domus",
+      "category": "Peripherals",
+      "sku": "DOM-10039"
+    },
+    {
+      "id": 599,
+      "name": "Domus Graphics Tablet Three",
+      "brand": "Domus",
+      "category": "Peripherals",
+      "sku": "DOM-10599"
+    },
+    {
+      "id": 81,
+      "name": "Domus Headphones Mini",
+      "brand": "Domus",
+      "category": "Audio",
+      "sku": "DOM-10081"
+    },
+    {
+      "id": 641,
+      "name": "Domus Headphones S",
+      "brand": "Domus",
+      "category": "Audio",
+      "sku": "DOM-10641"
+    },
+    {
+      "id": 305,
+      "name": "Domus Kettle Max",
+      "brand": "Domus",
+      "category": "Kitchen",
+      "sku": "DOM-10305"
+    },
+    {
+      "id": 865,
+      "name": "Domus Kettle XL",
+      "brand": "Domus",
+      "category": "Kitchen",
+      "sku": "DOM-10865"
+    },
+    {
+      "id": 193,
+      "name": "Domus Keyboard Air",
+      "brand": "Domus",
+      "category": "Peripherals",
+      "sku": "DOM-10193"
+    },
+    {
+      "id": 753,
+      "name": "Domus Keyboard X",
+      "brand": "Domus",
+      "category": "Peripherals",
+      "sku": "DOM-10753"
+    },
+    {
+      "id": 165,
+      "name": "Domus Microphone Air",
+      "brand": "Domus",
+      "category": "Audio",
+      "sku": "DOM-10165"
+    },
+    {
+      "id": 725,
+      "name": "Domus Microphone X",
+      "brand": "Domus",
+      "category": "Audio",
+      "sku": "DOM-10725"
+    },
+    {
+      "id": 25,
+      "name": "Domus Monitor Pro",
+      "brand": "Domus",
+      "category": "Monitors",
+      "sku": "DOM-10025"
+    },
+    {
+      "id": 585,
+      "name": "Domus Monitor Three",
+      "brand": "Domus",
+      "category": "Monitors",
+      "sku": "DOM-10585"
+    },
+    {
+      "id": 347,
+      "name": "Domus Portable Monitor Lite",
+      "brand": "Domus",
+      "category": "Monitors",
+      "sku": "DOM-10347"
+    },
+    {
+      "id": 907,
+      "name": "Domus Portable Monitor Studio",
+      "brand": "Domus",
+      "category": "Monitors",
+      "sku": "DOM-10907"
+    },
+    {
+      "id": 109,
+      "name": "Domus Pro Display Mini",
+      "brand": "Domus",
+      "category": "Monitors",
+      "sku": "DOM-10109"
+    },
+    {
+      "id": 669,
+      "name": "Domus Pro Display S",
+      "brand": "Domus",
+      "category": "Monitors",
+      "sku": "DOM-10669"
+    },
+    {
+      "id": 235,
+      "name": "Domus Recovery Slide Air",
+      "brand": "Domus",
+      "category": "Footwear",
+      "sku": "DOM-10235"
+    },
+    {
+      "id": 795,
+      "name": "Domus Recovery Slide X",
+      "brand": "Domus",
+      "category": "Footwear",
+      "sku": "DOM-10795"
+    },
+    {
+      "id": 501,
+      "name": "Domus Running Watch Two",
+      "brand": "Domus",
+      "category": "Wearables",
+      "sku": "DOM-10501"
+    },
+    {
+      "id": 319,
+      "name": "Domus Sandal Max",
+      "brand": "Domus",
+      "category": "Footwear",
+      "sku": "DOM-10319"
+    },
+    {
+      "id": 879,
+      "name": "Domus Sandal XL",
+      "brand": "Domus",
+      "category": "Footwear",
+      "sku": "DOM-10879"
+    },
+    {
+      "id": 67,
+      "name": "Domus Skillet Pro",
+      "brand": "Domus",
+      "category": "Kitchen",
+      "sku": "DOM-10067"
+    },
+    {
+      "id": 627,
+      "name": "Domus Skillet Three",
+      "brand": "Domus",
+      "category": "Kitchen",
+      "sku": "DOM-10627"
+    },
+    {
+      "id": 221,
+      "name": "Domus Sleeve Air",
+      "brand": "Domus",
+      "category": "Bags",
+      "sku": "DOM-10221"
+    },
+    {
+      "id": 781,
+      "name": "Domus Sleeve X",
+      "brand": "Domus",
+      "category": "Bags",
+      "sku": "DOM-10781"
+    },
+    {
+      "id": 95,
+      "name": "Domus Slimbook Mini",
+      "brand": "Domus",
+      "category": "Laptops",
+      "sku": "DOM-10095"
+    },
+    {
+      "id": 655,
+      "name": "Domus Slimbook S",
+      "brand": "Domus",
+      "category": "Laptops",
+      "sku": "DOM-10655"
+    },
+    {
+      "id": 459,
+      "name": "Domus Sling Plus",
+      "brand": "Domus",
+      "category": "Bags",
+      "sku": "DOM-10459"
+    },
+    {
+      "id": 375,
+      "name": "Domus Smart Lock Lite",
+      "brand": "Domus",
+      "category": "Smart Home",
+      "sku": "DOM-10375"
+    },
+    {
+      "id": 935,
+      "name": "Domus Smart Lock Studio",
+      "brand": "Domus",
+      "category": "Smart Home",
+      "sku": "DOM-10935"
+    },
+    {
+      "id": 53,
+      "name": "Domus Smart Plug Pro",
+      "brand": "Domus",
+      "category": "Smart Home",
+      "sku": "DOM-10053"
+    },
+    {
+      "id": 613,
+      "name": "Domus Smart Plug Three",
+      "brand": "Domus",
+      "category": "Smart Home",
+      "sku": "DOM-10613"
+    },
+    {
+      "id": 179,
+      "name": "Domus Smart Ring Air",
+      "brand": "Domus",
+      "category": "Wearables",
+      "sku": "DOM-10179"
+    },
+    {
+      "id": 739,
+      "name": "Domus Smart Ring X",
+      "brand": "Domus",
+      "category": "Wearables",
+      "sku": "DOM-10739"
+    },
+    {
+      "id": 977,
+      "name": "Domus Smartwatch Neo",
+      "brand": "Domus",
+      "category": "Wearables",
+      "sku": "DOM-10977"
+    },
+    {
+      "id": 417,
+      "name": "Domus Smartwatch Plus",
+      "brand": "Domus",
+      "category": "Wearables",
+      "sku": "DOM-10417"
+    },
+    {
+      "id": 557,
+      "name": "Domus Sneaker Two",
+      "brand": "Domus",
+      "category": "Footwear",
+      "sku": "DOM-10557"
+    },
+    {
+      "id": 445,
+      "name": "Domus Solar Charger Plus",
+      "brand": "Domus",
+      "category": "Power",
+      "sku": "DOM-10445"
+    },
+    {
+      "id": 389,
+      "name": "Domus Sous-Vide Wand Lite",
+      "brand": "Domus",
+      "category": "Kitchen",
+      "sku": "DOM-10389"
+    },
+    {
+      "id": 949,
+      "name": "Domus Sous-Vide Wand Studio",
+      "brand": "Domus",
+      "category": "Kitchen",
+      "sku": "DOM-10949"
+    },
+    {
+      "id": 963,
+      "name": "Domus Speaker Neo",
+      "brand": "Domus",
+      "category": "Audio",
+      "sku": "DOM-10963"
+    },
+    {
+      "id": 403,
+      "name": "Domus Speaker Plus",
+      "brand": "Domus",
+      "category": "Audio",
+      "sku": "DOM-10403"
+    },
+    {
+      "id": 277,
+      "name": "Domus Stream Controller Max",
+      "brand": "Domus",
+      "category": "Peripherals",
+      "sku": "DOM-10277"
+    },
+    {
+      "id": 837,
+      "name": "Domus Stream Controller XL",
+      "brand": "Domus",
+      "category": "Peripherals",
+      "sku": "DOM-10837"
+    },
+    {
+      "id": 529,
+      "name": "Domus Thermostat Two",
+      "brand": "Domus",
+      "category": "Smart Home",
+      "sku": "DOM-10529"
+    },
+    {
+      "id": 151,
+      "name": "Domus Toaster Mini",
+      "brand": "Domus",
+      "category": "Kitchen",
+      "sku": "DOM-10151"
+    },
+    {
+      "id": 711,
+      "name": "Domus Toaster S",
+      "brand": "Domus",
+      "category": "Kitchen",
+      "sku": "DOM-10711"
+    },
+    {
+      "id": 543,
+      "name": "Domus Tote Two",
+      "brand": "Domus",
+      "category": "Bags",
+      "sku": "DOM-10543"
+    },
+    {
+      "id": 515,
+      "name": "Domus Trackpad Two",
+      "brand": "Domus",
+      "category": "Peripherals",
+      "sku": "DOM-10515"
+    },
+    {
+      "id": 473,
+      "name": "Domus Trail Runners Plus",
+      "brand": "Domus",
+      "category": "Footwear",
+      "sku": "DOM-10473"
+    },
+    {
+      "id": 249,
+      "name": "Domus Ultrabook Max",
+      "brand": "Domus",
+      "category": "Laptops",
+      "sku": "DOM-10249"
+    },
+    {
+      "id": 809,
+      "name": "Domus Ultrabook XL",
+      "brand": "Domus",
+      "category": "Laptops",
+      "sku": "DOM-10809"
+    },
+    {
+      "id": 291,
+      "name": "Domus Video Doorbell Max",
+      "brand": "Domus",
+      "category": "Smart Home",
+      "sku": "DOM-10291"
+    },
+    {
+      "id": 851,
+      "name": "Domus Video Doorbell XL",
+      "brand": "Domus",
+      "category": "Smart Home",
+      "sku": "DOM-10851"
+    },
+    {
+      "id": 11,
+      "name": "Domus Workstation Pro",
+      "brand": "Domus",
+      "category": "Laptops",
+      "sku": "DOM-10011"
+    },
+    {
+      "id": 571,
+      "name": "Domus Workstation Three",
+      "brand": "Domus",
+      "category": "Laptops",
+      "sku": "DOM-10571"
+    },
+    {
+      "id": 312,
+      "name": "Helix Air Fryer Max",
+      "brand": "Helix",
+      "category": "Kitchen",
+      "sku": "HEL-10312"
+    },
+    {
+      "id": 872,
+      "name": "Helix Air Fryer XL",
+      "brand": "Helix",
+      "category": "Kitchen",
+      "sku": "HEL-10872"
+    },
+    {
+      "id": 74,
+      "name": "Helix Approach Shoe Pro",
+      "brand": "Helix",
+      "category": "Footwear",
+      "sku": "HEL-10074"
+    },
+    {
+      "id": 634,
+      "name": "Helix Approach Shoe Three",
+      "brand": "Helix",
+      "category": "Footwear",
+      "sku": "HEL-10634"
+    },
+    {
+      "id": 340,
+      "name": "Helix AR Glasses Lite",
+      "brand": "Helix",
+      "category": "Wearables",
+      "sku": "HEL-10340"
+    },
+    {
+      "id": 900,
+      "name": "Helix AR Glasses Studio",
+      "brand": "Helix",
+      "category": "Wearables",
+      "sku": "HEL-10900"
+    },
+    {
+      "id": 550,
+      "name": "Helix Blender Two",
+      "brand": "Helix",
+      "category": "Kitchen",
+      "sku": "HEL-10550"
+    },
+    {
+      "id": 536,
+      "name": "Helix Bridge Hub Two",
+      "brand": "Helix",
+      "category": "Smart Home",
+      "sku": "HEL-10536"
+    },
+    {
+      "id": 172,
+      "name": "Helix Cloudbook Air",
+      "brand": "Helix",
+      "category": "Laptops",
+      "sku": "HEL-10172"
+    },
+    {
+      "id": 732,
+      "name": "Helix Cloudbook X",
+      "brand": "Helix",
+      "category": "Laptops",
+      "sku": "HEL-10732"
+    },
+    {
+      "id": 494,
+      "name": "Helix Creatorbook Two",
+      "brand": "Helix",
+      "category": "Laptops",
+      "sku": "HEL-10494"
+    },
+    {
+      "id": 480,
+      "name": "Helix Cross Trainer Plus",
+      "brand": "Helix",
+      "category": "Footwear",
+      "sku": "HEL-10480"
+    },
+    {
+      "id": 984,
+      "name": "Helix Dive Watch Neo",
+      "brand": "Helix",
+      "category": "Wearables",
+      "sku": "HEL-10984"
+    },
+    {
+      "id": 424,
+      "name": "Helix Dive Watch Plus",
+      "brand": "Helix",
+      "category": "Wearables",
+      "sku": "HEL-10424"
+    },
+    {
+      "id": 200,
+      "name": "Helix Docking Station Air",
+      "brand": "Helix",
+      "category": "Peripherals",
+      "sku": "HEL-10200"
+    },
+    {
+      "id": 760,
+      "name": "Helix Docking Station X",
+      "brand": "Helix",
+      "category": "Peripherals",
+      "sku": "HEL-10760"
+    },
+    {
+      "id": 382,
+      "name": "Helix Duffel Lite",
+      "brand": "Helix",
+      "category": "Bags",
+      "sku": "HEL-10382"
+    },
+    {
+      "id": 942,
+      "name": "Helix Duffel Studio",
+      "brand": "Helix",
+      "category": "Bags",
+      "sku": "HEL-10942"
+    },
+    {
+      "id": 242,
+      "name": "Helix Earbuds Max",
+      "brand": "Helix",
+      "category": "Audio",
+      "sku": "HEL-10242"
+    },
+    {
+      "id": 802,
+      "name": "Helix Earbuds XL",
+      "brand": "Helix",
+      "category": "Audio",
+      "sku": "HEL-10802"
+    },
+    {
+      "id": 32,
+      "name": "Helix Field Monitor Pro",
+      "brand": "Helix",
+      "category": "Monitors",
+      "sku": "HEL-10032"
+    },
+    {
+      "id": 592,
+      "name": "Helix Field Monitor Three",
+      "brand": "Helix",
+      "category": "Monitors",
+      "sku": "HEL-10592"
+    },
+    {
+      "id": 18,
+      "name": "Helix Fitness Band Pro",
+      "brand": "Helix",
+      "category": "Wearables",
+      "sku": "HEL-10018"
+    },
+    {
+      "id": 578,
+      "name": "Helix Fitness Band Three",
+      "brand": "Helix",
+      "category": "Wearables",
+      "sku": "HEL-10578"
+    },
+    {
+      "id": 256,
+      "name": "Helix Gamebook Max",
+      "brand": "Helix",
+      "category": "Laptops",
+      "sku": "HEL-10256"
+    },
+    {
+      "id": 816,
+      "name": "Helix Gamebook XL",
+      "brand": "Helix",
+      "category": "Laptops",
+      "sku": "HEL-10816"
+    },
+    {
+      "id": 508,
+      "name": "Helix Gaming Monitor Two",
+      "brand": "Helix",
+      "category": "Monitors",
+      "sku": "HEL-10508"
+    },
+    {
+      "id": 466,
+      "name": "Helix Grinder Plus",
+      "brand": "Helix",
+      "category": "Kitchen",
+      "sku": "HEL-10466"
+    },
+    {
+      "id": 60,
+      "name": "Helix Hardshell Case Pro",
+      "brand": "Helix",
+      "category": "Bags",
+      "sku": "HEL-10060"
+    },
+    {
+      "id": 620,
+      "name": "Helix Hardshell Case Three",
+      "brand": "Helix",
+      "category": "Bags",
+      "sku": "HEL-10620"
+    },
+    {
+      "id": 158,
+      "name": "Helix Hiking Boot Mini",
+      "brand": "Helix",
+      "category": "Footwear",
+      "sku": "HEL-10158"
+    },
+    {
+      "id": 718,
+      "name": "Helix Hiking Boot S",
+      "brand": "Helix",
+      "category": "Footwear",
+      "sku": "HEL-10718"
+    },
+    {
+      "id": 452,
+      "name": "Helix Indoor Camera Plus",
+      "brand": "Helix",
+      "category": "Smart Home",
+      "sku": "HEL-10452"
+    },
+    {
+      "id": 298,
+      "name": "Helix Messenger Bag Max",
+      "brand": "Helix",
+      "category": "Bags",
+      "sku": "HEL-10298"
+    },
+    {
+      "id": 858,
+      "name": "Helix Messenger Bag XL",
+      "brand": "Helix",
+      "category": "Bags",
+      "sku": "HEL-10858"
+    },
+    {
+      "id": 214,
+      "name": "Helix Motion Sensor Air",
+      "brand": "Helix",
+      "category": "Smart Home",
+      "sku": "HEL-10214"
+    },
+    {
+      "id": 774,
+      "name": "Helix Motion Sensor X",
+      "brand": "Helix",
+      "category": "Smart Home",
+      "sku": "HEL-10774"
+    },
+    {
+      "id": 354,
+      "name": "Helix Mouse Lite",
+      "brand": "Helix",
+      "category": "Peripherals",
+      "sku": "HEL-10354"
+    },
+    {
+      "id": 914,
+      "name": "Helix Mouse Studio",
+      "brand": "Helix",
+      "category": "Peripherals",
+      "sku": "HEL-10914"
+    },
+    {
+      "id": 970,
+      "name": "Helix Notebook Neo",
+      "brand": "Helix",
+      "category": "Laptops",
+      "sku": "HEL-10970"
+    },
+    {
+      "id": 410,
+      "name": "Helix Notebook Plus",
+      "brand": "Helix",
+      "category": "Laptops",
+      "sku": "HEL-10410"
+    },
+    {
+      "id": 998,
+      "name": "Helix Numpad Neo",
+      "brand": "Helix",
+      "category": "Peripherals",
+      "sku": "HEL-10998"
+    },
+    {
+      "id": 438,
+      "name": "Helix Numpad Plus",
+      "brand": "Helix",
+      "category": "Peripherals",
+      "sku": "HEL-10438"
+    },
+    {
+      "id": 144,
+      "name": "Helix Pouch Mini",
+      "brand": "Helix",
+      "category": "Bags",
+      "sku": "HEL-10144"
+    },
+    {
+      "id": 704,
+      "name": "Helix Pouch S",
+      "brand": "Helix",
+      "category": "Bags",
+      "sku": "HEL-10704"
+    },
+    {
+      "id": 522,
+      "name": "Helix Power Bank Two",
+      "brand": "Helix",
+      "category": "Power",
+      "sku": "HEL-10522"
+    },
+    {
+      "id": 88,
+      "name": "Helix Receiver Mini",
+      "brand": "Helix",
+      "category": "Audio",
+      "sku": "HEL-10088"
+    },
+    {
+      "id": 648,
+      "name": "Helix Receiver S",
+      "brand": "Helix",
+      "category": "Audio",
+      "sku": "HEL-10648"
+    },
+    {
+      "id": 102,
+      "name": "Helix Sleep Tracker Mini",
+      "brand": "Helix",
+      "category": "Wearables",
+      "sku": "HEL-10102"
+    },
+    {
+      "id": 662,
+      "name": "Helix Sleep Tracker S",
+      "brand": "Helix",
+      "category": "Wearables",
+      "sku": "HEL-10662"
+    },
+    {
+      "id": 130,
+      "name": "Helix Smart Bulb Mini",
+      "brand": "Helix",
+      "category": "Smart Home",
+      "sku": "HEL-10130"
+    },
+    {
+      "id": 690,
+      "name": "Helix Smart Bulb S",
+      "brand": "Helix",
+      "category": "Smart Home",
+      "sku": "HEL-10690"
+    },
+    {
+      "id": 4,
+      "name": "Helix Soundbar Pro",
+      "brand": "Helix",
+      "category": "Audio",
+      "sku": "HEL-10004"
+    },
+    {
+      "id": 564,
+      "name": "Helix Soundbar Three",
+      "brand": "Helix",
+      "category": "Audio",
+      "sku": "HEL-10564"
+    },
+    {
+      "id": 284,
+      "name": "Helix Surge Station Max",
+      "brand": "Helix",
+      "category": "Power",
+      "sku": "HEL-10284"
+    },
+    {
+      "id": 844,
+      "name": "Helix Surge Station XL",
+      "brand": "Helix",
+      "category": "Power",
+      "sku": "HEL-10844"
+    },
+    {
+      "id": 270,
+      "name": "Helix Touch Monitor Max",
+      "brand": "Helix",
+      "category": "Monitors",
+      "sku": "HEL-10270"
+    },
+    {
+      "id": 830,
+      "name": "Helix Touch Monitor XL",
+      "brand": "Helix",
+      "category": "Monitors",
+      "sku": "HEL-10830"
+    },
+    {
+      "id": 368,
+      "name": "Helix Travel Adapter Lite",
+      "brand": "Helix",
+      "category": "Power",
+      "sku": "HEL-10368"
+    },
+    {
+      "id": 928,
+      "name": "Helix Travel Adapter Studio",
+      "brand": "Helix",
+      "category": "Power",
+      "sku": "HEL-10928"
+    },
+    {
+      "id": 326,
+      "name": "Helix Turntable Lite",
+      "brand": "Helix",
+      "category": "Audio",
+      "sku": "HEL-10326"
+    },
+    {
+      "id": 886,
+      "name": "Helix Turntable Studio",
+      "brand": "Helix",
+      "category": "Audio",
+      "sku": "HEL-10886"
+    },
+    {
+      "id": 186,
+      "name": "Helix Ultrawide Air",
+      "brand": "Helix",
+      "category": "Monitors",
+      "sku": "HEL-10186"
+    },
+    {
+      "id": 746,
+      "name": "Helix Ultrawide X",
+      "brand": "Helix",
+      "category": "Monitors",
+      "sku": "HEL-10746"
+    },
+    {
+      "id": 46,
+      "name": "Helix USB Hub Pro",
+      "brand": "Helix",
+      "category": "Power",
+      "sku": "HEL-10046"
+    },
+    {
+      "id": 606,
+      "name": "Helix USB Hub Three",
+      "brand": "Helix",
+      "category": "Power",
+      "sku": "HEL-10606"
+    },
+    {
+      "id": 228,
+      "name": "Helix Water Bottle Air",
+      "brand": "Helix",
+      "category": "Kitchen",
+      "sku": "HEL-10228"
+    },
+    {
+      "id": 788,
+      "name": "Helix Water Bottle X",
+      "brand": "Helix",
+      "category": "Kitchen",
+      "sku": "HEL-10788"
+    },
+    {
+      "id": 396,
+      "name": "Helix Waterproof Boot Lite",
+      "brand": "Helix",
+      "category": "Footwear",
+      "sku": "HEL-10396"
+    },
+    {
+      "id": 956,
+      "name": "Helix Waterproof Boot Studio",
+      "brand": "Helix",
+      "category": "Footwear",
+      "sku": "HEL-10956"
+    },
+    {
+      "id": 116,
+      "name": "Helix Webcam Mini",
+      "brand": "Helix",
+      "category": "Peripherals",
+      "sku": "HEL-10116"
+    },
+    {
+      "id": 676,
+      "name": "Helix Webcam S",
+      "brand": "Helix",
+      "category": "Peripherals",
+      "sku": "HEL-10676"
+    },
+    {
+      "id": 327,
+      "name": "Ironwood Amplifier Lite",
+      "brand": "Ironwood",
+      "category": "Audio",
+      "sku": "IRO-10327"
+    },
+    {
+      "id": 887,
+      "name": "Ironwood Amplifier Studio",
+      "brand": "Ironwood",
+      "category": "Audio",
+      "sku": "IRO-10887"
+    },
+    {
+      "id": 537,
+      "name": "Ironwood Backpack Two",
+      "brand": "Ironwood",
+      "category": "Bags",
+      "sku": "IRO-10537"
+    },
+    {
+      "id": 47,
+      "name": "Ironwood Cable Kit Pro",
+      "brand": "Ironwood",
+      "category": "Power",
+      "sku": "IRO-10047"
+    },
+    {
+      "id": 607,
+      "name": "Ironwood Cable Kit Three",
+      "brand": "Ironwood",
+      "category": "Power",
+      "sku": "IRO-10607"
+    },
+    {
+      "id": 201,
+      "name": "Ironwood Charger Air",
+      "brand": "Ironwood",
+      "category": "Power",
+      "sku": "IRO-10201"
+    },
+    {
+      "id": 761,
+      "name": "Ironwood Charger X",
+      "brand": "Ironwood",
+      "category": "Power",
+      "sku": "IRO-10761"
+    },
+    {
+      "id": 523,
+      "name": "Ironwood Charging Pad Two",
+      "brand": "Ironwood",
+      "category": "Power",
+      "sku": "IRO-10523"
+    },
+    {
+      "id": 173,
+      "name": "Ironwood Convertible Air",
+      "brand": "Ironwood",
+      "category": "Laptops",
+      "sku": "IRO-10173"
+    },
+    {
+      "id": 733,
+      "name": "Ironwood Convertible X",
+      "brand": "Ironwood",
+      "category": "Laptops",
+      "sku": "IRO-10733"
+    },
+    {
+      "id": 271,
+      "name": "Ironwood Curved Monitor Max",
+      "brand": "Ironwood",
+      "category": "Monitors",
+      "sku": "IRO-10271"
+    },
+    {
+      "id": 831,
+      "name": "Ironwood Curved Monitor XL",
+      "brand": "Ironwood",
+      "category": "Monitors",
+      "sku": "IRO-10831"
+    },
+    {
+      "id": 103,
+      "name": "Ironwood Field Watch Mini",
+      "brand": "Ironwood",
+      "category": "Wearables",
+      "sku": "IRO-10103"
+    },
+    {
+      "id": 663,
+      "name": "Ironwood Field Watch S",
+      "brand": "Ironwood",
+      "category": "Wearables",
+      "sku": "IRO-10663"
+    },
+    {
+      "id": 999,
+      "name": "Ironwood Graphics Tablet Neo",
+      "brand": "Ironwood",
+      "category": "Peripherals",
+      "sku": "IRO-10999"
+    },
+    {
+      "id": 439,
+      "name": "Ironwood Graphics Tablet Plus",
+      "brand": "Ironwood",
+      "category": "Peripherals",
+      "sku": "IRO-10439"
+    },
+    {
+      "id": 481,
+      "name": "Ironwood Headphones Two",
+      "brand": "Ironwood",
+      "category": "Audio",
+      "sku": "IRO-10481"
+    },
+    {
+      "id": 145,
+      "name": "Ironwood Kettle Mini",
+      "brand": "Ironwood",
+      "category": "Kitchen",
+      "sku": "IRO-10145"
+    },
+    {
+      "id": 705,
+      "name": "Ironwood Kettle S",
+      "brand": "Ironwood",
+      "category": "Kitchen",
+      "sku": "IRO-10705"
+    },
+    {
+      "id": 33,
+      "name": "Ironwood Keyboard Pro",
+      "brand": "Ironwood",
+      "category": "Peripherals",
+      "sku": "IRO-10033"
+    },
+    {
+      "id": 593,
+      "name": "Ironwood Keyboard Three",
+      "brand": "Ironwood",
+      "category": "Peripherals",
+      "sku": "IRO-10593"
+    },
+    {
+      "id": 5,
+      "name": "Ironwood Microphone Pro",
+      "brand": "Ironwood",
+      "category": "Audio",
+      "sku": "IRO-10005"
+    },
+    {
+      "id": 565,
+      "name": "Ironwood Microphone Three",
+      "brand": "Ironwood",
+      "category": "Audio",
+      "sku": "IRO-10565"
+    },
+    {
+      "id": 985,
+      "name": "Ironwood Monitor Neo",
+      "brand": "Ironwood",
+      "category": "Monitors",
+      "sku": "IRO-10985"
+    },
+    {
+      "id": 425,
+      "name": "Ironwood Monitor Plus",
+      "brand": "Ironwood",
+      "category": "Monitors",
+      "sku": "IRO-10425"
+    },
+    {
+      "id": 187,
+      "name": "Ironwood Portable Monitor Air",
+      "brand": "Ironwood",
+      "category": "Monitors",
+      "sku": "IRO-10187"
+    },
+    {
+      "id": 747,
+      "name": "Ironwood Portable Monitor X",
+      "brand": "Ironwood",
+      "category": "Monitors",
+      "sku": "IRO-10747"
+    },
+    {
+      "id": 509,
+      "name": "Ironwood Pro Display Two",
+      "brand": "Ironwood",
+      "category": "Monitors",
+      "sku": "IRO-10509"
+    },
+    {
+      "id": 75,
+      "name": "Ironwood Recovery Slide Pro",
+      "brand": "Ironwood",
+      "category": "Footwear",
+      "sku": "IRO-10075"
+    },
+    {
+      "id": 635,
+      "name": "Ironwood Recovery Slide Three",
+      "brand": "Ironwood",
+      "category": "Footwear",
+      "sku": "IRO-10635"
+    },
+    {
+      "id": 341,
+      "name": "Ironwood Running Watch Lite",
+      "brand": "Ironwood",
+      "category": "Wearables",
+      "sku": "IRO-10341"
+    },
+    {
+      "id": 901,
+      "name": "Ironwood Running Watch Studio",
+      "brand": "Ironwood",
+      "category": "Wearables",
+      "sku": "IRO-10901"
+    },
+    {
+      "id": 159,
+      "name": "Ironwood Sandal Mini",
+      "brand": "Ironwood",
+      "category": "Footwear",
+      "sku": "IRO-10159"
+    },
+    {
+      "id": 719,
+      "name": "Ironwood Sandal S",
+      "brand": "Ironwood",
+      "category": "Footwear",
+      "sku": "IRO-10719"
+    },
+    {
+      "id": 467,
+      "name": "Ironwood Skillet Plus",
+      "brand": "Ironwood",
+      "category": "Kitchen",
+      "sku": "IRO-10467"
+    },
+    {
+      "id": 61,
+      "name": "Ironwood Sleeve Pro",
+      "brand": "Ironwood",
+      "category": "Bags",
+      "sku": "IRO-10061"
+    },
+    {
+      "id": 621,
+      "name": "Ironwood Sleeve Three",
+      "brand": "Ironwood",
+      "category": "Bags",
+      "sku": "IRO-10621"
+    },
+    {
+      "id": 495,
+      "name": "Ironwood Slimbook Two",
+      "brand": "Ironwood",
+      "category": "Laptops",
+      "sku": "IRO-10495"
+    },
+    {
+      "id": 299,
+      "name": "Ironwood Sling Max",
+      "brand": "Ironwood",
+      "category": "Bags",
+      "sku": "IRO-10299"
+    },
+    {
+      "id": 859,
+      "name": "Ironwood Sling XL",
+      "brand": "Ironwood",
+      "category": "Bags",
+      "sku": "IRO-10859"
+    },
+    {
+      "id": 215,
+      "name": "Ironwood Smart Lock Air",
+      "brand": "Ironwood",
+      "category": "Smart Home",
+      "sku": "IRO-10215"
+    },
+    {
+      "id": 775,
+      "name": "Ironwood Smart Lock X",
+      "brand": "Ironwood",
+      "category": "Smart Home",
+      "sku": "IRO-10775"
+    },
+    {
+      "id": 453,
+      "name": "Ironwood Smart Plug Plus",
+      "brand": "Ironwood",
+      "category": "Smart Home",
+      "sku": "IRO-10453"
+    },
+    {
+      "id": 19,
+      "name": "Ironwood Smart Ring Pro",
+      "brand": "Ironwood",
+      "category": "Wearables",
+      "sku": "IRO-10019"
+    },
+    {
+      "id": 579,
+      "name": "Ironwood Smart Ring Three",
+      "brand": "Ironwood",
+      "category": "Wearables",
+      "sku": "IRO-10579"
+    },
+    {
+      "id": 257,
+      "name": "Ironwood Smartwatch Max",
+      "brand": "Ironwood",
+      "category": "Wearables",
+      "sku": "IRO-10257"
+    },
+    {
+      "id": 817,
+      "name": "Ironwood Smartwatch XL",
+      "brand": "Ironwood",
+      "category": "Wearables",
+      "sku": "IRO-10817"
+    },
+    {
+      "id": 397,
+      "name": "Ironwood Sneaker Lite",
+      "brand": "Ironwood",
+      "category": "Footwear",
+      "sku": "IRO-10397"
+    },
+    {
+      "id": 957,
+      "name": "Ironwood Sneaker Studio",
+      "brand": "Ironwood",
+      "category": "Footwear",
+      "sku": "IRO-10957"
+    },
+    {
+      "id": 285,
+      "name": "Ironwood Solar Charger Max",
+      "brand": "Ironwood",
+      "category": "Power",
+      "sku": "IRO-10285"
+    },
+    {
+      "id": 845,
+      "name": "Ironwood Solar Charger XL",
+      "brand": "Ironwood",
+      "category": "Power",
+      "sku": "IRO-10845"
+    },
+    {
+      "id": 229,
+      "name": "Ironwood Sous-Vide Wand Air",
+      "brand": "Ironwood",
+      "category": "Kitchen",
+      "sku": "IRO-10229"
+    },
+    {
+      "id": 789,
+      "name": "Ironwood Sous-Vide Wand X",
+      "brand": "Ironwood",
+      "category": "Kitchen",
+      "sku": "IRO-10789"
+    },
+    {
+      "id": 243,
+      "name": "Ironwood Speaker Max",
+      "brand": "Ironwood",
+      "category": "Audio",
+      "sku": "IRO-10243"
+    },
+    {
+      "id": 803,
+      "name": "Ironwood Speaker XL",
+      "brand": "Ironwood",
+      "category": "Audio",
+      "sku": "IRO-10803"
+    },
+    {
+      "id": 117,
+      "name": "Ironwood Stream Controller Mini",
+      "brand": "Ironwood",
+      "category": "Peripherals",
+      "sku": "IRO-10117"
+    },
+    {
+      "id": 677,
+      "name": "Ironwood Stream Controller S",
+      "brand": "Ironwood",
+      "category": "Peripherals",
+      "sku": "IRO-10677"
+    },
+    {
+      "id": 369,
+      "name": "Ironwood Thermostat Lite",
+      "brand": "Ironwood",
+      "category": "Smart Home",
+      "sku": "IRO-10369"
+    },
+    {
+      "id": 929,
+      "name": "Ironwood Thermostat Studio",
+      "brand": "Ironwood",
+      "category": "Smart Home",
+      "sku": "IRO-10929"
+    },
+    {
+      "id": 551,
+      "name": "Ironwood Toaster Two",
+      "brand": "Ironwood",
+      "category": "Kitchen",
+      "sku": "IRO-10551"
+    },
+    {
+      "id": 383,
+      "name": "Ironwood Tote Lite",
+      "brand": "Ironwood",
+      "category": "Bags",
+      "sku": "IRO-10383"
+    },
+    {
+      "id": 943,
+      "name": "Ironwood Tote Studio",
+      "brand": "Ironwood",
+      "category": "Bags",
+      "sku": "IRO-10943"
+    },
+    {
+      "id": 355,
+      "name": "Ironwood Trackpad Lite",
+      "brand": "Ironwood",
+      "category": "Peripherals",
+      "sku": "IRO-10355"
+    },
+    {
+      "id": 915,
+      "name": "Ironwood Trackpad Studio",
+      "brand": "Ironwood",
+      "category": "Peripherals",
+      "sku": "IRO-10915"
+    },
+    {
+      "id": 313,
+      "name": "Ironwood Trail Runners Max",
+      "brand": "Ironwood",
+      "category": "Footwear",
+      "sku": "IRO-10313"
+    },
+    {
+      "id": 873,
+      "name": "Ironwood Trail Runners XL",
+      "brand": "Ironwood",
+      "category": "Footwear",
+      "sku": "IRO-10873"
+    },
+    {
+      "id": 89,
+      "name": "Ironwood Ultrabook Mini",
+      "brand": "Ironwood",
+      "category": "Laptops",
+      "sku": "IRO-10089"
+    },
+    {
+      "id": 649,
+      "name": "Ironwood Ultrabook S",
+      "brand": "Ironwood",
+      "category": "Laptops",
+      "sku": "IRO-10649"
+    },
+    {
+      "id": 131,
+      "name": "Ironwood Video Doorbell Mini",
+      "brand": "Ironwood",
+      "category": "Smart Home",
+      "sku": "IRO-10131"
+    },
+    {
+      "id": 691,
+      "name": "Ironwood Video Doorbell S",
+      "brand": "Ironwood",
+      "category": "Smart Home",
+      "sku": "IRO-10691"
+    },
+    {
+      "id": 971,
+      "name": "Ironwood Workstation Neo",
+      "brand": "Ironwood",
+      "category": "Laptops",
+      "sku": "IRO-10971"
+    },
+    {
+      "id": 411,
+      "name": "Ironwood Workstation Plus",
+      "brand": "Ironwood",
+      "category": "Laptops",
+      "sku": "IRO-10411"
+    },
+    {
+      "id": 87,
+      "name": "Larkspur Amplifier Mini",
+      "brand": "Larkspur",
+      "category": "Audio",
+      "sku": "LAR-10087"
+    },
+    {
+      "id": 647,
+      "name": "Larkspur Amplifier S",
+      "brand": "Larkspur",
+      "category": "Audio",
+      "sku": "LAR-10647"
+    },
+    {
+      "id": 297,
+      "name": "Larkspur Backpack Max",
+      "brand": "Larkspur",
+      "category": "Bags",
+      "sku": "LAR-10297"
+    },
+    {
+      "id": 857,
+      "name": "Larkspur Backpack XL",
+      "brand": "Larkspur",
+      "category": "Bags",
+      "sku": "LAR-10857"
+    },
+    {
+      "id": 367,
+      "name": "Larkspur Cable Kit Lite",
+      "brand": "Larkspur",
+      "category": "Power",
+      "sku": "LAR-10367"
+    },
+    {
+      "id": 927,
+      "name": "Larkspur Cable Kit Studio",
+      "brand": "Larkspur",
+      "category": "Power",
+      "sku": "LAR-10927"
+    },
+    {
+      "id": 521,
+      "name": "Larkspur Charger Two",
+      "brand": "Larkspur",
+      "category": "Power",
+      "sku": "LAR-10521"
+    },
+    {
+      "id": 283,
+      "name": "Larkspur Charging Pad Max",
+      "brand": "Larkspur",
+      "category": "Power",
+      "sku": "LAR-10283"
+    },
+    {
+      "id": 843,
+      "name": "Larkspur Charging Pad XL",
+      "brand": "Larkspur",
+      "category": "Power",
+      "sku": "LAR-10843"
+    },
+    {
+      "id": 493,
+      "name": "Larkspur Convertible Two",
+      "brand": "Larkspur",
+      "category": "Laptops",
+      "sku": "LAR-10493"
+    },
+    {
+      "id": 31,
+      "name": "Larkspur Curved Monitor Pro",
+      "brand": "Larkspur",
+      "category": "Monitors",
+      "sku": "LAR-10031"
+    },
+    {
+      "id": 591,
+      "name": "Larkspur Curved Monitor Three",
+      "brand": "Larkspur",
+      "category": "Monitors",
+      "sku": "LAR-10591"
+    },
+    {
+      "id": 983,
+      "name": "Larkspur Field Watch Neo",
+      "brand": "Larkspur",
+      "category": "Wearables",
+      "sku": "LAR-10983"
+    },
+    {
+      "id": 423,
+      "name": "Larkspur Field Watch Plus",
+      "brand": "Larkspur",
+      "category": "Wearables",
+      "sku": "LAR-10423"
+    },
+    {
+      "id": 199,
+      "name": "Larkspur Graphics Tablet Air",
+      "brand": "Larkspur",
+      "category": "Peripherals",
+      "sku": "LAR-10199"
+    },
+    {
+      "id": 759,
+      "name": "Larkspur Graphics Tablet X",
+      "brand": "Larkspur",
+      "category": "Peripherals",
+      "sku": "LAR-10759"
+    },
+    {
+      "id": 241,
+      "name": "Larkspur Headphones Max",
+      "brand": "Larkspur",
+      "category": "Audio",
+      "sku": "LAR-10241"
+    },
+    {
+      "id": 801,
+      "name": "Larkspur Headphones XL",
+      "brand": "Larkspur",
+      "category": "Audio",
+      "sku": "LAR-10801"
+    },
+    {
+      "id": 465,
+      "name": "Larkspur Kettle Plus",
+      "brand": "Larkspur",
+      "category": "Kitchen",
+      "sku": "LAR-10465"
+    },
+    {
+      "id": 353,
+      "name": "Larkspur Keyboard Lite",
+      "brand": "Larkspur",
+      "category": "Peripherals",
+      "sku": "LAR-10353"
+    },
+    {
+      "id": 913,
+      "name": "Larkspur Keyboard Studio",
+      "brand": "Larkspur",
+      "category": "Peripherals",
+      "sku": "LAR-10913"
+    },
+    {
+      "id": 325,
+      "name": "Larkspur Microphone Lite",
+      "brand": "Larkspur",
+      "category": "Audio",
+      "sku": "LAR-10325"
+    },
+    {
+      "id": 885,
+      "name": "Larkspur Microphone Studio",
+      "brand": "Larkspur",
+      "category": "Audio",
+      "sku": "LAR-10885"
+    },
+    {
+      "id": 185,
+      "name": "Larkspur Monitor Air",
+      "brand": "Larkspur",
+      "category": "Monitors",
+      "sku": "LAR-10185"
+    },
+    {
+      "id": 745,
+      "name": "Larkspur Monitor X",
+      "brand": "Larkspur",
+      "category": "Monitors",
+      "sku": "LAR-10745"
+    },
+    {
+      "id": 507,
+      "name": "Larkspur Portable Monitor Two",
+      "brand": "Larkspur",
+      "category": "Monitors",
+      "sku": "LAR-10507"
+    },
+    {
+      "id": 269,
+      "name": "Larkspur Pro Display Max",
+      "brand": "Larkspur",
+      "category": "Monitors",
+      "sku": "LAR-10269"
+    },
+    {
+      "id": 829,
+      "name": "Larkspur Pro Display XL",
+      "brand": "Larkspur",
+      "category": "Monitors",
+      "sku": "LAR-10829"
+    },
+    {
+      "id": 395,
+      "name": "Larkspur Recovery Slide Lite",
+      "brand": "Larkspur",
+      "category": "Footwear",
+      "sku": "LAR-10395"
+    },
+    {
+      "id": 955,
+      "name": "Larkspur Recovery Slide Studio",
+      "brand": "Larkspur",
+      "category": "Footwear",
+      "sku": "LAR-10955"
+    },
+    {
+      "id": 101,
+      "name": "Larkspur Running Watch Mini",
+      "brand": "Larkspur",
+      "category": "Wearables",
+      "sku": "LAR-10101"
+    },
+    {
+      "id": 661,
+      "name": "Larkspur Running Watch S",
+      "brand": "Larkspur",
+      "category": "Wearables",
+      "sku": "LAR-10661"
+    },
+    {
+      "id": 479,
+      "name": "Larkspur Sandal Plus",
+      "brand": "Larkspur",
+      "category": "Footwear",
+      "sku": "LAR-10479"
+    },
+    {
+      "id": 227,
+      "name": "Larkspur Skillet Air",
+      "brand": "Larkspur",
+      "category": "Kitchen",
+      "sku": "LAR-10227"
+    },
+    {
+      "id": 787,
+      "name": "Larkspur Skillet X",
+      "brand": "Larkspur",
+      "category": "Kitchen",
+      "sku": "LAR-10787"
+    },
+    {
+      "id": 381,
+      "name": "Larkspur Sleeve Lite",
+      "brand": "Larkspur",
+      "category": "Bags",
+      "sku": "LAR-10381"
+    },
+    {
+      "id": 941,
+      "name": "Larkspur Sleeve Studio",
+      "brand": "Larkspur",
+      "category": "Bags",
+      "sku": "LAR-10941"
+    },
+    {
+      "id": 255,
+      "name": "Larkspur Slimbook Max",
+      "brand": "Larkspur",
+      "category": "Laptops",
+      "sku": "LAR-10255"
+    },
+    {
+      "id": 815,
+      "name": "Larkspur Slimbook XL",
+      "brand": "Larkspur",
+      "category": "Laptops",
+      "sku": "LAR-10815"
+    },
+    {
+      "id": 59,
+      "name": "Larkspur Sling Pro",
+      "brand": "Larkspur",
+      "category": "Bags",
+      "sku": "LAR-10059"
+    },
+    {
+      "id": 619,
+      "name": "Larkspur Sling Three",
+      "brand": "Larkspur",
+      "category": "Bags",
+      "sku": "LAR-10619"
+    },
+    {
+      "id": 535,
+      "name": "Larkspur Smart Lock Two",
+      "brand": "Larkspur",
+      "category": "Smart Home",
+      "sku": "LAR-10535"
+    },
+    {
+      "id": 213,
+      "name": "Larkspur Smart Plug Air",
+      "brand": "Larkspur",
+      "category": "Smart Home",
+      "sku": "LAR-10213"
+    },
+    {
+      "id": 773,
+      "name": "Larkspur Smart Plug X",
+      "brand": "Larkspur",
+      "category": "Smart Home",
+      "sku": "LAR-10773"
+    },
+    {
+      "id": 339,
+      "name": "Larkspur Smart Ring Lite",
+      "brand": "Larkspur",
+      "category": "Wearables",
+      "sku": "LAR-10339"
+    },
+    {
+      "id": 899,
+      "name": "Larkspur Smart Ring Studio",
+      "brand": "Larkspur",
+      "category": "Wearables",
+      "sku": "LAR-10899"
+    },
+    {
+      "id": 17,
+      "name": "Larkspur Smartwatch Pro",
+      "brand": "Larkspur",
+      "category": "Wearables",
+      "sku": "LAR-10017"
+    },
+    {
+      "id": 577,
+      "name": "Larkspur Smartwatch Three",
+      "brand": "Larkspur",
+      "category": "Wearables",
+      "sku": "LAR-10577"
+    },
+    {
+      "id": 157,
+      "name": "Larkspur Sneaker Mini",
+      "brand": "Larkspur",
+      "category": "Footwear",
+      "sku": "LAR-10157"
+    },
+    {
+      "id": 717,
+      "name": "Larkspur Sneaker S",
+      "brand": "Larkspur",
+      "category": "Footwear",
+      "sku": "LAR-10717"
+    },
+    {
+      "id": 45,
+      "name": "Larkspur Solar Charger Pro",
+      "brand": "Larkspur",
+      "category": "Power",
+      "sku": "LAR-10045"
+    },
+    {
+      "id": 605,
+      "name": "Larkspur Solar Charger Three",
+      "brand": "Larkspur",
+      "category": "Power",
+      "sku": "LAR-10605"
+    },
+    {
+      "id": 549,
+      "name": "Larkspur Sous-Vide Wand Two",
+      "brand": "Larkspur",
+      "category": "Kitchen",
+      "sku": "LAR-10549"
+    },
+    {
+      "id": 3,
+      "name": "Larkspur Speaker Pro",
+      "brand": "Larkspur",
+      "category": "Audio",
+      "sku": "LAR-10003"
+    },
+    {
+      "id": 563,
+      "name": "Larkspur Speaker Three",
+      "brand": "Larkspur",
+      "category": "Audio",
+      "sku": "LAR-10563"
+    },
+    {
+      "id": 997,
+      "name": "Larkspur Stream Controller Neo",
+      "brand": "Larkspur",
+      "category": "Peripherals",
+      "sku": "LAR-10997"
+    },
+    {
+      "id": 437,
+      "name": "Larkspur Stream Controller Plus",
+      "brand": "Larkspur",
+      "category": "Peripherals",
+      "sku": "LAR-10437"
+    },
+    {
+      "id": 129,
+      "name": "Larkspur Thermostat Mini",
+      "brand": "Larkspur",
+      "category": "Smart Home",
+      "sku": "LAR-10129"
+    },
+    {
+      "id": 689,
+      "name": "Larkspur Thermostat S",
+      "brand": "Larkspur",
+      "category": "Smart Home",
+      "sku": "LAR-10689"
+    },
+    {
+      "id": 311,
+      "name": "Larkspur Toaster Max",
+      "brand": "Larkspur",
+      "category": "Kitchen",
+      "sku": "LAR-10311"
+    },
+    {
+      "id": 871,
+      "name": "Larkspur Toaster XL",
+      "brand": "Larkspur",
+      "category": "Kitchen",
+      "sku": "LAR-10871"
+    },
+    {
+      "id": 143,
+      "name": "Larkspur Tote Mini",
+      "brand": "Larkspur",
+      "category": "Bags",
+      "sku": "LAR-10143"
+    },
+    {
+      "id": 703,
+      "name": "Larkspur Tote S",
+      "brand": "Larkspur",
+      "category": "Bags",
+      "sku": "LAR-10703"
+    },
+    {
+      "id": 115,
+      "name": "Larkspur Trackpad Mini",
+      "brand": "Larkspur",
+      "category": "Peripherals",
+      "sku": "LAR-10115"
+    },
+    {
+      "id": 675,
+      "name": "Larkspur Trackpad S",
+      "brand": "Larkspur",
+      "category": "Peripherals",
+      "sku": "LAR-10675"
+    },
+    {
+      "id": 73,
+      "name": "Larkspur Trail Runners Pro",
+      "brand": "Larkspur",
+      "category": "Footwear",
+      "sku": "LAR-10073"
+    },
+    {
+      "id": 633,
+      "name": "Larkspur Trail Runners Three",
+      "brand": "Larkspur",
+      "category": "Footwear",
+      "sku": "LAR-10633"
+    },
+    {
+      "id": 969,
+      "name": "Larkspur Ultrabook Neo",
+      "brand": "Larkspur",
+      "category": "Laptops",
+      "sku": "LAR-10969"
+    },
+    {
+      "id": 409,
+      "name": "Larkspur Ultrabook Plus",
+      "brand": "Larkspur",
+      "category": "Laptops",
+      "sku": "LAR-10409"
+    },
+    {
+      "id": 451,
+      "name": "Larkspur Video Doorbell Plus",
+      "brand": "Larkspur",
+      "category": "Smart Home",
+      "sku": "LAR-10451"
+    },
+    {
+      "id": 171,
+      "name": "Larkspur Workstation Air",
+      "brand": "Larkspur",
+      "category": "Laptops",
+      "sku": "LAR-10171"
+    },
+    {
+      "id": 731,
+      "name": "Larkspur Workstation X",
+      "brand": "Larkspur",
+      "category": "Laptops",
+      "sku": "LAR-10731"
+    },
+    {
+      "id": 552,
+      "name": "Meridian Air Fryer Two",
+      "brand": "Meridian",
+      "category": "Kitchen",
+      "sku": "MER-10552"
+    },
+    {
+      "id": 314,
+      "name": "Meridian Approach Shoe Max",
+      "brand": "Meridian",
+      "category": "Footwear",
+      "sku": "MER-10314"
+    },
+    {
+      "id": 874,
+      "name": "Meridian Approach Shoe XL",
+      "brand": "Meridian",
+      "category": "Footwear",
+      "sku": "MER-10874"
+    },
+    {
+      "id": 20,
+      "name": "Meridian AR Glasses Pro",
+      "brand": "Meridian",
+      "category": "Wearables",
+      "sku": "MER-10020"
+    },
+    {
+      "id": 580,
+      "name": "Meridian AR Glasses Three",
+      "brand": "Meridian",
+      "category": "Wearables",
+      "sku": "MER-10580"
+    },
+    {
+      "id": 230,
+      "name": "Meridian Blender Air",
+      "brand": "Meridian",
+      "category": "Kitchen",
+      "sku": "MER-10230"
+    },
+    {
+      "id": 790,
+      "name": "Meridian Blender X",
+      "brand": "Meridian",
+      "category": "Kitchen",
+      "sku": "MER-10790"
+    },
+    {
+      "id": 216,
+      "name": "Meridian Bridge Hub Air",
+      "brand": "Meridian",
+      "category": "Smart Home",
+      "sku": "MER-10216"
+    },
+    {
+      "id": 776,
+      "name": "Meridian Bridge Hub X",
+      "brand": "Meridian",
+      "category": "Smart Home",
+      "sku": "MER-10776"
+    },
+    {
+      "id": 972,
+      "name": "Meridian Cloudbook Neo",
+      "brand": "Meridian",
+      "category": "Laptops",
+      "sku": "MER-10972"
+    },
+    {
+      "id": 412,
+      "name": "Meridian Cloudbook Plus",
+      "brand": "Meridian",
+      "category": "Laptops",
+      "sku": "MER-10412"
+    },
+    {
+      "id": 174,
+      "name": "Meridian Creatorbook Air",
+      "brand": "Meridian",
+      "category": "Laptops",
+      "sku": "MER-10174"
+    },
+    {
+      "id": 734,
+      "name": "Meridian Creatorbook X",
+      "brand": "Meridian",
+      "category": "Laptops",
+      "sku": "MER-10734"
+    },
+    {
+      "id": 160,
+      "name": "Meridian Cross Trainer Mini",
+      "brand": "Meridian",
+      "category": "Footwear",
+      "sku": "MER-10160"
+    },
+    {
+      "id": 720,
+      "name": "Meridian Cross Trainer S",
+      "brand": "Meridian",
+      "category": "Footwear",
+      "sku": "MER-10720"
+    },
+    {
+      "id": 104,
+      "name": "Meridian Dive Watch Mini",
+      "brand": "Meridian",
+      "category": "Wearables",
+      "sku": "MER-10104"
+    },
+    {
+      "id": 664,
+      "name": "Meridian Dive Watch S",
+      "brand": "Meridian",
+      "category": "Wearables",
+      "sku": "MER-10664"
+    },
+    {
+      "id": 1000,
+      "name": "Meridian Docking Station Neo",
+      "brand": "Meridian",
+      "category": "Peripherals",
+      "sku": "MER-11000"
+    },
+    {
+      "id": 440,
+      "name": "Meridian Docking Station Plus",
+      "brand": "Meridian",
+      "category": "Peripherals",
+      "sku": "MER-10440"
+    },
+    {
+      "id": 62,
+      "name": "Meridian Duffel Pro",
+      "brand": "Meridian",
+      "category": "Bags",
+      "sku": "MER-10062"
+    },
+    {
+      "id": 622,
+      "name": "Meridian Duffel Three",
+      "brand": "Meridian",
+      "category": "Bags",
+      "sku": "MER-10622"
+    },
+    {
+      "id": 482,
+      "name": "Meridian Earbuds Two",
+      "brand": "Meridian",
+      "category": "Audio",
+      "sku": "MER-10482"
+    },
+    {
+      "id": 272,
+      "name": "Meridian Field Monitor Max",
+      "brand": "Meridian",
+      "category": "Monitors",
+      "sku": "MER-10272"
+    },
+    {
+      "id": 832,
+      "name": "Meridian Field Monitor XL",
+      "brand": "Meridian",
+      "category": "Monitors",
+      "sku": "MER-10832"
+    },
+    {
+      "id": 258,
+      "name": "Meridian Fitness Band Max",
+      "brand": "Meridian",
+      "category": "Wearables",
+      "sku": "MER-10258"
+    },
+    {
+      "id": 818,
+      "name": "Meridian Fitness Band XL",
+      "brand": "Meridian",
+      "category": "Wearables",
+      "sku": "MER-10818"
+    },
+    {
+      "id": 496,
+      "name": "Meridian Gamebook Two",
+      "brand": "Meridian",
+      "category": "Laptops",
+      "sku": "MER-10496"
+    },
+    {
+      "id": 188,
+      "name": "Meridian Gaming Monitor Air",
+      "brand": "Meridian",
+      "category": "Monitors",
+      "sku": "MER-10188"
+    },
+    {
+      "id": 748,
+      "name": "Meridian Gaming Monitor X",
+      "brand": "Meridian",
+      "category": "Monitors",
+      "sku": "MER-10748"
+    },
+    {
+      "id": 146,
+      "name": "Meridian Grinder Mini",
+      "brand": "Meridian",
+      "category": "Kitchen",
+      "sku": "MER-10146"
+    },
+    {
+      "id": 706,
+      "name": "Meridian Grinder S",
+      "brand": "Meridian",
+      "category": "Kitchen",
+      "sku": "MER-10706"
+    },
+    {
+      "id": 300,
+      "name": "Meridian Hardshell Case Max",
+      "brand": "Meridian",
+      "category": "Bags",
+      "sku": "MER-10300"
+    },
+    {
+      "id": 860,
+      "name": "Meridian Hardshell Case XL",
+      "brand": "Meridian",
+      "category": "Bags",
+      "sku": "MER-10860"
+    },
+    {
+      "id": 398,
+      "name": "Meridian Hiking Boot Lite",
+      "brand": "Meridian",
+      "category": "Footwear",
+      "sku": "MER-10398"
+    },
+    {
+      "id": 958,
+      "name": "Meridian Hiking Boot Studio",
+      "brand": "Meridian",
+      "category": "Footwear",
+      "sku": "MER-10958"
+    },
+    {
+      "id": 132,
+      "name": "Meridian Indoor Camera Mini",
+      "brand": "Meridian",
+      "category": "Smart Home",
+      "sku": "MER-10132"
+    },
+    {
+      "id": 692,
+      "name": "Meridian Indoor Camera S",
+      "brand": "Meridian",
+      "category": "Smart Home",
+      "sku": "MER-10692"
+    },
+    {
+      "id": 538,
+      "name": "Meridian Messenger Bag Two",
+      "brand": "Meridian",
+      "category": "Bags",
+      "sku": "MER-10538"
+    },
+    {
+      "id": 454,
+      "name": "Meridian Motion Sensor Plus",
+      "brand": "Meridian",
+      "category": "Smart Home",
+      "sku": "MER-10454"
+    },
+    {
+      "id": 34,
+      "name": "Meridian Mouse Pro",
+      "brand": "Meridian",
+      "category": "Peripherals",
+      "sku": "MER-10034"
+    },
+    {
+      "id": 594,
+      "name": "Meridian Mouse Three",
+      "brand": "Meridian",
+      "category": "Peripherals",
+      "sku": "MER-10594"
+    },
+    {
+      "id": 90,
+      "name": "Meridian Notebook Mini",
+      "brand": "Meridian",
+      "category": "Laptops",
+      "sku": "MER-10090"
+    },
+    {
+      "id": 650,
+      "name": "Meridian Notebook S",
+      "brand": "Meridian",
+      "category": "Laptops",
+      "sku": "MER-10650"
+    },
+    {
+      "id": 118,
+      "name": "Meridian Numpad Mini",
+      "brand": "Meridian",
+      "category": "Peripherals",
+      "sku": "MER-10118"
+    },
+    {
+      "id": 678,
+      "name": "Meridian Numpad S",
+      "brand": "Meridian",
+      "category": "Peripherals",
+      "sku": "MER-10678"
+    },
+    {
+      "id": 384,
+      "name": "Meridian Pouch Lite",
+      "brand": "Meridian",
+      "category": "Bags",
+      "sku": "MER-10384"
+    },
+    {
+      "id": 944,
+      "name": "Meridian Pouch Studio",
+      "brand": "Meridian",
+      "category": "Bags",
+      "sku": "MER-10944"
+    },
+    {
+      "id": 202,
+      "name": "Meridian Power Bank Air",
+      "brand": "Meridian",
+      "category": "Power",
+      "sku": "MER-10202"
+    },
+    {
+      "id": 762,
+      "name": "Meridian Power Bank X",
+      "brand": "Meridian",
+      "category": "Power",
+      "sku": "MER-10762"
+    },
+    {
+      "id": 328,
+      "name": "Meridian Receiver Lite",
+      "brand": "Meridian",
+      "category": "Audio",
+      "sku": "MER-10328"
+    },
+    {
+      "id": 888,
+      "name": "Meridian Receiver Studio",
+      "brand": "Meridian",
+      "category": "Audio",
+      "sku": "MER-10888"
+    },
+    {
+      "id": 342,
+      "name": "Meridian Sleep Tracker Lite",
+      "brand": "Meridian",
+      "category": "Wearables",
+      "sku": "MER-10342"
+    },
+    {
+      "id": 902,
+      "name": "Meridian Sleep Tracker Studio",
+      "brand": "Meridian",
+      "category": "Wearables",
+      "sku": "MER-10902"
+    },
+    {
+      "id": 370,
+      "name": "Meridian Smart Bulb Lite",
+      "brand": "Meridian",
+      "category": "Smart Home",
+      "sku": "MER-10370"
+    },
+    {
+      "id": 930,
+      "name": "Meridian Smart Bulb Studio",
+      "brand": "Meridian",
+      "category": "Smart Home",
+      "sku": "MER-10930"
+    },
+    {
+      "id": 244,
+      "name": "Meridian Soundbar Max",
+      "brand": "Meridian",
+      "category": "Audio",
+      "sku": "MER-10244"
+    },
+    {
+      "id": 804,
+      "name": "Meridian Soundbar XL",
+      "brand": "Meridian",
+      "category": "Audio",
+      "sku": "MER-10804"
+    },
+    {
+      "id": 524,
+      "name": "Meridian Surge Station Two",
+      "brand": "Meridian",
+      "category": "Power",
+      "sku": "MER-10524"
+    },
+    {
+      "id": 510,
+      "name": "Meridian Touch Monitor Two",
+      "brand": "Meridian",
+      "category": "Monitors",
+      "sku": "MER-10510"
+    },
+    {
+      "id": 48,
+      "name": "Meridian Travel Adapter Pro",
+      "brand": "Meridian",
+      "category": "Power",
+      "sku": "MER-10048"
+    },
+    {
+      "id": 608,
+      "name": "Meridian Travel Adapter Three",
+      "brand": "Meridian",
+      "category": "Power",
+      "sku": "MER-10608"
+    },
+    {
+      "id": 6,
+      "name": "Meridian Turntable Pro",
+      "brand": "Meridian",
+      "category": "Audio",
+      "sku": "MER-10006"
+    },
+    {
+      "id": 566,
+      "name": "Meridian Turntable Three",
+      "brand": "Meridian",
+      "category": "Audio",
+      "sku": "MER-10566"
+    },
+    {
+      "id": 986,
+      "name": "Meridian Ultrawide Neo",
+      "brand": "Meridian",
+      "category": "Monitors",
+      "sku": "MER-10986"
+    },
+    {
+      "id": 426,
+      "name": "Meridian Ultrawide Plus",
+      "brand": "Meridian",
+      "category": "Monitors",
+      "sku": "MER-10426"
+    },
+    {
+      "id": 286,
+      "name": "Meridian USB Hub Max",
+      "brand": "Meridian",
+      "category": "Power",
+      "sku": "MER-10286"
+    },
+    {
+      "id": 846,
+      "name": "Meridian USB Hub XL",
+      "brand": "Meridian",
+      "category": "Power",
+      "sku": "MER-10846"
+    },
+    {
+      "id": 468,
+      "name": "Meridian Water Bottle Plus",
+      "brand": "Meridian",
+      "category": "Kitchen",
+      "sku": "MER-10468"
+    },
+    {
+      "id": 76,
+      "name": "Meridian Waterproof Boot Pro",
+      "brand": "Meridian",
+      "category": "Footwear",
+      "sku": "MER-10076"
+    },
+    {
+      "id": 636,
+      "name": "Meridian Waterproof Boot Three",
+      "brand": "Meridian",
+      "category": "Footwear",
+      "sku": "MER-10636"
+    },
+    {
+      "id": 356,
+      "name": "Meridian Webcam Lite",
+      "brand": "Meridian",
+      "category": "Peripherals",
+      "sku": "MER-10356"
+    },
+    {
+      "id": 916,
+      "name": "Meridian Webcam Studio",
+      "brand": "Meridian",
+      "category": "Peripherals",
+      "sku": "MER-10916"
+    },
+    {
+      "id": 967,
+      "name": "Nordkraft Amplifier Neo",
+      "brand": "Nordkraft",
+      "category": "Audio",
+      "sku": "NOR-10967"
+    },
+    {
+      "id": 407,
+      "name": "Nordkraft Amplifier Plus",
+      "brand": "Nordkraft",
+      "category": "Audio",
+      "sku": "NOR-10407"
+    },
+    {
+      "id": 57,
+      "name": "Nordkraft Backpack Pro",
+      "brand": "Nordkraft",
+      "category": "Bags",
+      "sku": "NOR-10057"
+    },
+    {
+      "id": 617,
+      "name": "Nordkraft Backpack Three",
+      "brand": "Nordkraft",
+      "category": "Bags",
+      "sku": "NOR-10617"
+    },
+    {
+      "id": 127,
+      "name": "Nordkraft Cable Kit Mini",
+      "brand": "Nordkraft",
+      "category": "Power",
+      "sku": "NOR-10127"
+    },
+    {
+      "id": 687,
+      "name": "Nordkraft Cable Kit S",
+      "brand": "Nordkraft",
+      "category": "Power",
+      "sku": "NOR-10687"
+    },
+    {
+      "id": 281,
+      "name": "Nordkraft Charger Max",
+      "brand": "Nordkraft",
+      "category": "Power",
+      "sku": "NOR-10281"
+    },
+    {
+      "id": 841,
+      "name": "Nordkraft Charger XL",
+      "brand": "Nordkraft",
+      "category": "Power",
+      "sku": "NOR-10841"
+    },
+    {
+      "id": 43,
+      "name": "Nordkraft Charging Pad Pro",
+      "brand": "Nordkraft",
+      "category": "Power",
+      "sku": "NOR-10043"
+    },
+    {
+      "id": 603,
+      "name": "Nordkraft Charging Pad Three",
+      "brand": "Nordkraft",
+      "category": "Power",
+      "sku": "NOR-10603"
+    },
+    {
+      "id": 253,
+      "name": "Nordkraft Convertible Max",
+      "brand": "Nordkraft",
+      "category": "Laptops",
+      "sku": "NOR-10253"
+    },
+    {
+      "id": 813,
+      "name": "Nordkraft Convertible XL",
+      "brand": "Nordkraft",
+      "category": "Laptops",
+      "sku": "NOR-10813"
+    },
+    {
+      "id": 351,
+      "name": "Nordkraft Curved Monitor Lite",
+      "brand": "Nordkraft",
+      "category": "Monitors",
+      "sku": "NOR-10351"
+    },
+    {
+      "id": 911,
+      "name": "Nordkraft Curved Monitor Studio",
+      "brand": "Nordkraft",
+      "category": "Monitors",
+      "sku": "NOR-10911"
+    },
+    {
+      "id": 183,
+      "name": "Nordkraft Field Watch Air",
+      "brand": "Nordkraft",
+      "category": "Wearables",
+      "sku": "NOR-10183"
+    },
+    {
+      "id": 743,
+      "name": "Nordkraft Field Watch X",
+      "brand": "Nordkraft",
+      "category": "Wearables",
+      "sku": "NOR-10743"
+    },
+    {
+      "id": 519,
+      "name": "Nordkraft Graphics Tablet Two",
+      "brand": "Nordkraft",
+      "category": "Peripherals",
+      "sku": "NOR-10519"
+    },
+    {
+      "id": 1,
+      "name": "Nordkraft Headphones Pro",
+      "brand": "Nordkraft",
+      "category": "Audio",
+      "sku": "NOR-10001"
+    },
+    {
+      "id": 561,
+      "name": "Nordkraft Headphones Three",
+      "brand": "Nordkraft",
+      "category": "Audio",
+      "sku": "NOR-10561"
+    },
+    {
+      "id": 225,
+      "name": "Nordkraft Kettle Air",
+      "brand": "Nordkraft",
+      "category": "Kitchen",
+      "sku": "NOR-10225"
+    },
+    {
+      "id": 785,
+      "name": "Nordkraft Kettle X",
+      "brand": "Nordkraft",
+      "category": "Kitchen",
+      "sku": "NOR-10785"
+    },
+    {
+      "id": 113,
+      "name": "Nordkraft Keyboard Mini",
+      "brand": "Nordkraft",
+      "category": "Peripherals",
+      "sku": "NOR-10113"
+    },
+    {
+      "id": 673,
+      "name": "Nordkraft Keyboard S",
+      "brand": "Nordkraft",
+      "category": "Peripherals",
+      "sku": "NOR-10673"
+    },
+    {
+      "id": 85,
+      "name": "Nordkraft Microphone Mini",
+      "brand": "Nordkraft",
+      "category": "Audio",
+      "sku": "NOR-10085"
+    },
+    {
+      "id": 645,
+      "name": "Nordkraft Microphone S",
+      "brand": "Nordkraft",
+      "category": "Audio",
+      "sku": "NOR-10645"
+    },
+    {
+      "id": 505,
+      "name": "Nordkraft Monitor Two",
+      "brand": "Nordkraft",
+      "category": "Monitors",
+      "sku": "NOR-10505"
+    },
+    {
+      "id": 267,
+      "name": "Nordkraft Portable Monitor Max",
+      "brand": "Nordkraft",
+      "category": "Monitors",
+      "sku": "NOR-10267"
+    },
+    {
+      "id": 827,
+      "name": "Nordkraft Portable Monitor XL",
+      "brand": "Nordkraft",
+      "category": "Monitors",
+      "sku": "NOR-10827"
+    },
+    {
+      "id": 29,
+      "name": "Nordkraft Pro Display Pro",
+      "brand": "Nordkraft",
+      "category": "Monitors",
+      "sku": "NOR-10029"
+    },
+    {
+      "id": 589,
+      "name": "Nordkraft Pro Display Three",
+      "brand": "Nordkraft",
+      "category": "Monitors",
+      "sku": "NOR-10589"
+    },
+    {
+      "id": 155,
+      "name": "Nordkraft Recovery Slide Mini",
+      "brand": "Nordkraft",
+      "category": "Footwear",
+      "sku": "NOR-10155"
+    },
+    {
+      "id": 715,
+      "name": "Nordkraft Recovery Slide S",
+      "brand": "Nordkraft",
+      "category": "Footwear",
+      "sku": "NOR-10715"
+    },
+    {
+      "id": 981,
+      "name": "Nordkraft Running Watch Neo",
+      "brand": "Nordkraft",
+      "category": "Wearables",
+      "sku": "NOR-10981"
+    },
+    {
+      "id": 421,
+      "name": "Nordkraft Running Watch Plus",
+      "brand": "Nordkraft",
+      "category": "Wearables",
+      "sku": "NOR-10421"
+    },
+    {
+      "id": 239,
+      "name": "Nordkraft Sandal Air",
+      "brand": "Nordkraft",
+      "category": "Footwear",
+      "sku": "NOR-10239"
+    },
+    {
+      "id": 799,
+      "name": "Nordkraft Sandal X",
+      "brand": "Nordkraft",
+      "category": "Footwear",
+      "sku": "NOR-10799"
+    },
+    {
+      "id": 547,
+      "name": "Nordkraft Skillet Two",
+      "brand": "Nordkraft",
+      "category": "Kitchen",
+      "sku": "NOR-10547"
+    },
+    {
+      "id": 141,
+      "name": "Nordkraft Sleeve Mini",
+      "brand": "Nordkraft",
+      "category": "Bags",
+      "sku": "NOR-10141"
+    },
+    {
+      "id": 701,
+      "name": "Nordkraft Sleeve S",
+      "brand": "Nordkraft",
+      "category": "Bags",
+      "sku": "NOR-10701"
+    },
+    {
+      "id": 15,
+      "name": "Nordkraft Slimbook Pro",
+      "brand": "Nordkraft",
+      "category": "Laptops",
+      "sku": "NOR-10015"
+    },
+    {
+      "id": 575,
+      "name": "Nordkraft Slimbook Three",
+      "brand": "Nordkraft",
+      "category": "Laptops",
+      "sku": "NOR-10575"
+    },
+    {
+      "id": 379,
+      "name": "Nordkraft Sling Lite",
+      "brand": "Nordkraft",
+      "category": "Bags",
+      "sku": "NOR-10379"
+    },
+    {
+      "id": 939,
+      "name": "Nordkraft Sling Studio",
+      "brand": "Nordkraft",
+      "category": "Bags",
+      "sku": "NOR-10939"
+    },
+    {
+      "id": 295,
+      "name": "Nordkraft Smart Lock Max",
+      "brand": "Nordkraft",
+      "category": "Smart Home",
+      "sku": "NOR-10295"
+    },
+    {
+      "id": 855,
+      "name": "Nordkraft Smart Lock XL",
+      "brand": "Nordkraft",
+      "category": "Smart Home",
+      "sku": "NOR-10855"
+    },
+    {
+      "id": 533,
+      "name": "Nordkraft Smart Plug Two",
+      "brand": "Nordkraft",
+      "category": "Smart Home",
+      "sku": "NOR-10533"
+    },
+    {
+      "id": 99,
+      "name": "Nordkraft Smart Ring Mini",
+      "brand": "Nordkraft",
+      "category": "Wearables",
+      "sku": "NOR-10099"
+    },
+    {
+      "id": 659,
+      "name": "Nordkraft Smart Ring S",
+      "brand": "Nordkraft",
+      "category": "Wearables",
+      "sku": "NOR-10659"
+    },
+    {
+      "id": 337,
+      "name": "Nordkraft Smartwatch Lite",
+      "brand": "Nordkraft",
+      "category": "Wearables",
+      "sku": "NOR-10337"
+    },
+    {
+      "id": 897,
+      "name": "Nordkraft Smartwatch Studio",
+      "brand": "Nordkraft",
+      "category": "Wearables",
+      "sku": "NOR-10897"
+    },
+    {
+      "id": 477,
+      "name": "Nordkraft Sneaker Plus",
+      "brand": "Nordkraft",
+      "category": "Footwear",
+      "sku": "NOR-10477"
+    },
+    {
+      "id": 365,
+      "name": "Nordkraft Solar Charger Lite",
+      "brand": "Nordkraft",
+      "category": "Power",
+      "sku": "NOR-10365"
+    },
+    {
+      "id": 925,
+      "name": "Nordkraft Solar Charger Studio",
+      "brand": "Nordkraft",
+      "category": "Power",
+      "sku": "NOR-10925"
+    },
+    {
+      "id": 309,
+      "name": "Nordkraft Sous-Vide Wand Max",
+      "brand": "Nordkraft",
+      "category": "Kitchen",
+      "sku": "NOR-10309"
+    },
+    {
+      "id": 869,
+      "name": "Nordkraft Sous-Vide Wand XL",
+      "brand": "Nordkraft",
+      "category": "Kitchen",
+      "sku": "NOR-10869"
+    },
+    {
+      "id": 323,
+      "name": "Nordkraft Speaker Lite",
+      "brand": "Nordkraft",
+      "category": "Audio",
+      "sku": "NOR-10323"
+    },
+    {
+      "id": 883,
+      "name": "Nordkraft Speaker Studio",
+      "brand": "Nordkraft",
+      "category": "Audio",
+      "sku": "NOR-10883"
+    },
+    {
+      "id": 197,
+      "name": "Nordkraft Stream Controller Air",
+      "brand": "Nordkraft",
+      "category": "Peripherals",
+      "sku": "NOR-10197"
+    },
+    {
+      "id": 757,
+      "name": "Nordkraft Stream Controller X",
+      "brand": "Nordkraft",
+      "category": "Peripherals",
+      "sku": "NOR-10757"
+    },
+    {
+      "id": 449,
+      "name": "Nordkraft Thermostat Plus",
+      "brand": "Nordkraft",
+      "category": "Smart Home",
+      "sku": "NOR-10449"
+    },
+    {
+      "id": 71,
+      "name": "Nordkraft Toaster Pro",
+      "brand": "Nordkraft",
+      "category": "Kitchen",
+      "sku": "NOR-10071"
+    },
+    {
+      "id": 631,
+      "name": "Nordkraft Toaster Three",
+      "brand": "Nordkraft",
+      "category": "Kitchen",
+      "sku": "NOR-10631"
+    },
+    {
+      "id": 463,
+      "name": "Nordkraft Tote Plus",
+      "brand": "Nordkraft",
+      "category": "Bags",
+      "sku": "NOR-10463"
+    },
+    {
+      "id": 995,
+      "name": "Nordkraft Trackpad Neo",
+      "brand": "Nordkraft",
+      "category": "Peripherals",
+      "sku": "NOR-10995"
+    },
+    {
+      "id": 435,
+      "name": "Nordkraft Trackpad Plus",
+      "brand": "Nordkraft",
+      "category": "Peripherals",
+      "sku": "NOR-10435"
+    },
+    {
+      "id": 393,
+      "name": "Nordkraft Trail Runners Lite",
+      "brand": "Nordkraft",
+      "category": "Footwear",
+      "sku": "NOR-10393"
+    },
+    {
+      "id": 953,
+      "name": "Nordkraft Trail Runners Studio",
+      "brand": "Nordkraft",
+      "category": "Footwear",
+      "sku": "NOR-10953"
+    },
+    {
+      "id": 169,
+      "name": "Nordkraft Ultrabook Air",
+      "brand": "Nordkraft",
+      "category": "Laptops",
+      "sku": "NOR-10169"
+    },
+    {
+      "id": 729,
+      "name": "Nordkraft Ultrabook X",
+      "brand": "Nordkraft",
+      "category": "Laptops",
+      "sku": "NOR-10729"
+    },
+    {
+      "id": 211,
+      "name": "Nordkraft Video Doorbell Air",
+      "brand": "Nordkraft",
+      "category": "Smart Home",
+      "sku": "NOR-10211"
+    },
+    {
+      "id": 771,
+      "name": "Nordkraft Video Doorbell X",
+      "brand": "Nordkraft",
+      "category": "Smart Home",
+      "sku": "NOR-10771"
+    },
+    {
+      "id": 491,
+      "name": "Nordkraft Workstation Two",
+      "brand": "Nordkraft",
+      "category": "Laptops",
+      "sku": "NOR-10491"
+    },
+    {
+      "id": 392,
+      "name": "Summit Air Fryer Lite",
+      "brand": "Summit",
+      "category": "Kitchen",
+      "sku": "SUM-10392"
+    },
+    {
+      "id": 952,
+      "name": "Summit Air Fryer Studio",
+      "brand": "Summit",
+      "category": "Kitchen",
+      "sku": "SUM-10952"
+    },
+    {
+      "id": 154,
+      "name": "Summit Approach Shoe Mini",
+      "brand": "Summit",
+      "category": "Footwear",
+      "sku": "SUM-10154"
+    },
+    {
+      "id": 714,
+      "name": "Summit Approach Shoe S",
+      "brand": "Summit",
+      "category": "Footwear",
+      "sku": "SUM-10714"
+    },
+    {
+      "id": 980,
+      "name": "Summit AR Glasses Neo",
+      "brand": "Summit",
+      "category": "Wearables",
+      "sku": "SUM-10980"
+    },
+    {
+      "id": 420,
+      "name": "Summit AR Glasses Plus",
+      "brand": "Summit",
+      "category": "Wearables",
+      "sku": "SUM-10420"
+    },
+    {
+      "id": 70,
+      "name": "Summit Blender Pro",
+      "brand": "Summit",
+      "category": "Kitchen",
+      "sku": "SUM-10070"
+    },
+    {
+      "id": 630,
+      "name": "Summit Blender Three",
+      "brand": "Summit",
+      "category": "Kitchen",
+      "sku": "SUM-10630"
+    },
+    {
+      "id": 56,
+      "name": "Summit Bridge Hub Pro",
+      "brand": "Summit",
+      "category": "Smart Home",
+      "sku": "SUM-10056"
+    },
+    {
+      "id": 616,
+      "name": "Summit Bridge Hub Three",
+      "brand": "Summit",
+      "category": "Smart Home",
+      "sku": "SUM-10616"
+    },
+    {
+      "id": 252,
+      "name": "Summit Cloudbook Max",
+      "brand": "Summit",
+      "category": "Laptops",
+      "sku": "SUM-10252"
+    },
+    {
+      "id": 812,
+      "name": "Summit Cloudbook XL",
+      "brand": "Summit",
+      "category": "Laptops",
+      "sku": "SUM-10812"
+    },
+    {
+      "id": 14,
+      "name": "Summit Creatorbook Pro",
+      "brand": "Summit",
+      "category": "Laptops",
+      "sku": "SUM-10014"
+    },
+    {
+      "id": 574,
+      "name": "Summit Creatorbook Three",
+      "brand": "Summit",
+      "category": "Laptops",
+      "sku": "SUM-10574"
+    },
+    {
+      "id": 560,
+      "name": "Summit Cross Trainer Two",
+      "brand": "Summit",
+      "category": "Footwear",
+      "sku": "SUM-10560"
+    },
+    {
+      "id": 504,
+      "name": "Summit Dive Watch Two",
+      "brand": "Summit",
+      "category": "Wearables",
+      "sku": "SUM-10504"
+    },
+    {
+      "id": 280,
+      "name": "Summit Docking Station Max",
+      "brand": "Summit",
+      "category": "Peripherals",
+      "sku": "SUM-10280"
+    },
+    {
+      "id": 840,
+      "name": "Summit Docking Station XL",
+      "brand": "Summit",
+      "category": "Peripherals",
+      "sku": "SUM-10840"
+    },
+    {
+      "id": 462,
+      "name": "Summit Duffel Plus",
+      "brand": "Summit",
+      "category": "Bags",
+      "sku": "SUM-10462"
+    },
+    {
+      "id": 322,
+      "name": "Summit Earbuds Lite",
+      "brand": "Summit",
+      "category": "Audio",
+      "sku": "SUM-10322"
+    },
+    {
+      "id": 882,
+      "name": "Summit Earbuds Studio",
+      "brand": "Summit",
+      "category": "Audio",
+      "sku": "SUM-10882"
+    },
+    {
+      "id": 112,
+      "name": "Summit Field Monitor Mini",
+      "brand": "Summit",
+      "category": "Monitors",
+      "sku": "SUM-10112"
+    },
+    {
+      "id": 672,
+      "name": "Summit Field Monitor S",
+      "brand": "Summit",
+      "category": "Monitors",
+      "sku": "SUM-10672"
+    },
+    {
+      "id": 98,
+      "name": "Summit Fitness Band Mini",
+      "brand": "Summit",
+      "category": "Wearables",
+      "sku": "SUM-10098"
+    },
+    {
+      "id": 658,
+      "name": "Summit Fitness Band S",
+      "brand": "Summit",
+      "category": "Wearables",
+      "sku": "SUM-10658"
+    },
+    {
+      "id": 336,
+      "name": "Summit Gamebook Lite",
+      "brand": "Summit",
+      "category": "Laptops",
+      "sku": "SUM-10336"
+    },
+    {
+      "id": 896,
+      "name": "Summit Gamebook Studio",
+      "brand": "Summit",
+      "category": "Laptops",
+      "sku": "SUM-10896"
+    },
+    {
+      "id": 28,
+      "name": "Summit Gaming Monitor Pro",
+      "brand": "Summit",
+      "category": "Monitors",
+      "sku": "SUM-10028"
+    },
+    {
+      "id": 588,
+      "name": "Summit Gaming Monitor Three",
+      "brand": "Summit",
+      "category": "Monitors",
+      "sku": "SUM-10588"
+    },
+    {
+      "id": 546,
+      "name": "Summit Grinder Two",
+      "brand": "Summit",
+      "category": "Kitchen",
+      "sku": "SUM-10546"
+    },
+    {
+      "id": 140,
+      "name": "Summit Hardshell Case Mini",
+      "brand": "Summit",
+      "category": "Bags",
+      "sku": "SUM-10140"
+    },
+    {
+      "id": 700,
+      "name": "Summit Hardshell Case S",
+      "brand": "Summit",
+      "category": "Bags",
+      "sku": "SUM-10700"
+    },
+    {
+      "id": 238,
+      "name": "Summit Hiking Boot Air",
+      "brand": "Summit",
+      "category": "Footwear",
+      "sku": "SUM-10238"
+    },
+    {
+      "id": 798,
+      "name": "Summit Hiking Boot X",
+      "brand": "Summit",
+      "category": "Footwear",
+      "sku": "SUM-10798"
+    },
+    {
+      "id": 532,
+      "name": "Summit Indoor Camera Two",
+      "brand": "Summit",
+      "category": "Smart Home",
+      "sku": "SUM-10532"
+    },
+    {
+      "id": 378,
+      "name": "Summit Messenger Bag Lite",
+      "brand": "Summit",
+      "category": "Bags",
+      "sku": "SUM-10378"
+    },
+    {
+      "id": 938,
+      "name": "Summit Messenger Bag Studio",
+      "brand": "Summit",
+      "category": "Bags",
+      "sku": "SUM-10938"
+    },
+    {
+      "id": 294,
+      "name": "Summit Motion Sensor Max",
+      "brand": "Summit",
+      "category": "Smart Home",
+      "sku": "SUM-10294"
+    },
+    {
+      "id": 854,
+      "name": "Summit Motion Sensor XL",
+      "brand": "Summit",
+      "category": "Smart Home",
+      "sku": "SUM-10854"
+    },
+    {
+      "id": 994,
+      "name": "Summit Mouse Neo",
+      "brand": "Summit",
+      "category": "Peripherals",
+      "sku": "SUM-10994"
+    },
+    {
+      "id": 434,
+      "name": "Summit Mouse Plus",
+      "brand": "Summit",
+      "category": "Peripherals",
+      "sku": "SUM-10434"
+    },
+    {
+      "id": 490,
+      "name": "Summit Notebook Two",
+      "brand": "Summit",
+      "category": "Laptops",
+      "sku": "SUM-10490"
+    },
+    {
+      "id": 518,
+      "name": "Summit Numpad Two",
+      "brand": "Summit",
+      "category": "Peripherals",
+      "sku": "SUM-10518"
+    },
+    {
+      "id": 224,
+      "name": "Summit Pouch Air",
+      "brand": "Summit",
+      "category": "Bags",
+      "sku": "SUM-10224"
+    },
+    {
+      "id": 784,
+      "name": "Summit Pouch X",
+      "brand": "Summit",
+      "category": "Bags",
+      "sku": "SUM-10784"
+    },
+    {
+      "id": 42,
+      "name": "Summit Power Bank Pro",
+      "brand": "Summit",
+      "category": "Power",
+      "sku": "SUM-10042"
+    },
+    {
+      "id": 602,
+      "name": "Summit Power Bank Three",
+      "brand": "Summit",
+      "category": "Power",
+      "sku": "SUM-10602"
+    },
+    {
+      "id": 168,
+      "name": "Summit Receiver Air",
+      "brand": "Summit",
+      "category": "Audio",
+      "sku": "SUM-10168"
+    },
+    {
+      "id": 728,
+      "name": "Summit Receiver X",
+      "brand": "Summit",
+      "category": "Audio",
+      "sku": "SUM-10728"
+    },
+    {
+      "id": 182,
+      "name": "Summit Sleep Tracker Air",
+      "brand": "Summit",
+      "category": "Wearables",
+      "sku": "SUM-10182"
+    },
+    {
+      "id": 742,
+      "name": "Summit Sleep Tracker X",
+      "brand": "Summit",
+      "category": "Wearables",
+      "sku": "SUM-10742"
+    },
+    {
+      "id": 210,
+      "name": "Summit Smart Bulb Air",
+      "brand": "Summit",
+      "category": "Smart Home",
+      "sku": "SUM-10210"
+    },
+    {
+      "id": 770,
+      "name": "Summit Smart Bulb X",
+      "brand": "Summit",
+      "category": "Smart Home",
+      "sku": "SUM-10770"
+    },
+    {
+      "id": 84,
+      "name": "Summit Soundbar Mini",
+      "brand": "Summit",
+      "category": "Audio",
+      "sku": "SUM-10084"
+    },
+    {
+      "id": 644,
+      "name": "Summit Soundbar S",
+      "brand": "Summit",
+      "category": "Audio",
+      "sku": "SUM-10644"
+    },
+    {
+      "id": 364,
+      "name": "Summit Surge Station Lite",
+      "brand": "Summit",
+      "category": "Power",
+      "sku": "SUM-10364"
+    },
+    {
+      "id": 924,
+      "name": "Summit Surge Station Studio",
+      "brand": "Summit",
+      "category": "Power",
+      "sku": "SUM-10924"
+    },
+    {
+      "id": 350,
+      "name": "Summit Touch Monitor Lite",
+      "brand": "Summit",
+      "category": "Monitors",
+      "sku": "SUM-10350"
+    },
+    {
+      "id": 910,
+      "name": "Summit Touch Monitor Studio",
+      "brand": "Summit",
+      "category": "Monitors",
+      "sku": "SUM-10910"
+    },
+    {
+      "id": 448,
+      "name": "Summit Travel Adapter Plus",
+      "brand": "Summit",
+      "category": "Power",
+      "sku": "SUM-10448"
+    },
+    {
+      "id": 966,
+      "name": "Summit Turntable Neo",
+      "brand": "Summit",
+      "category": "Audio",
+      "sku": "SUM-10966"
+    },
+    {
+      "id": 406,
+      "name": "Summit Turntable Plus",
+      "brand": "Summit",
+      "category": "Audio",
+      "sku": "SUM-10406"
+    },
+    {
+      "id": 266,
+      "name": "Summit Ultrawide Max",
+      "brand": "Summit",
+      "category": "Monitors",
+      "sku": "SUM-10266"
+    },
+    {
+      "id": 826,
+      "name": "Summit Ultrawide XL",
+      "brand": "Summit",
+      "category": "Monitors",
+      "sku": "SUM-10826"
+    },
+    {
+      "id": 126,
+      "name": "Summit USB Hub Mini",
+      "brand": "Summit",
+      "category": "Power",
+      "sku": "SUM-10126"
+    },
+    {
+      "id": 686,
+      "name": "Summit USB Hub S",
+      "brand": "Summit",
+      "category": "Power",
+      "sku": "SUM-10686"
+    },
+    {
+      "id": 308,
+      "name": "Summit Water Bottle Max",
+      "brand": "Summit",
+      "category": "Kitchen",
+      "sku": "SUM-10308"
+    },
+    {
+      "id": 868,
+      "name": "Summit Water Bottle XL",
+      "brand": "Summit",
+      "category": "Kitchen",
+      "sku": "SUM-10868"
+    },
+    {
+      "id": 476,
+      "name": "Summit Waterproof Boot Plus",
+      "brand": "Summit",
+      "category": "Footwear",
+      "sku": "SUM-10476"
+    },
+    {
+      "id": 196,
+      "name": "Summit Webcam Air",
+      "brand": "Summit",
+      "category": "Peripherals",
+      "sku": "SUM-10196"
+    },
+    {
+      "id": 756,
+      "name": "Summit Webcam X",
+      "brand": "Summit",
+      "category": "Peripherals",
+      "sku": "SUM-10756"
+    },
+    {
+      "id": 72,
+      "name": "Vantablack Air Fryer Pro",
+      "brand": "Vantablack",
+      "category": "Kitchen",
+      "sku": "VAN-10072"
+    },
+    {
+      "id": 632,
+      "name": "Vantablack Air Fryer Three",
+      "brand": "Vantablack",
+      "category": "Kitchen",
+      "sku": "VAN-10632"
+    },
+    {
+      "id": 394,
+      "name": "Vantablack Approach Shoe Lite",
+      "brand": "Vantablack",
+      "category": "Footwear",
+      "sku": "VAN-10394"
+    },
+    {
+      "id": 954,
+      "name": "Vantablack Approach Shoe Studio",
+      "brand": "Vantablack",
+      "category": "Footwear",
+      "sku": "VAN-10954"
+    },
+    {
+      "id": 100,
+      "name": "Vantablack AR Glasses Mini",
+      "brand": "Vantablack",
+      "category": "Wearables",
+      "sku": "VAN-10100"
+    },
+    {
+      "id": 660,
+      "name": "Vantablack AR Glasses S",
+      "brand": "Vantablack",
+      "category": "Wearables",
+      "sku": "VAN-10660"
+    },
+    {
+      "id": 310,
+      "name": "Vantablack Blender Max",
+      "brand": "Vantablack",
+      "category": "Kitchen",
+      "sku": "VAN-10310"
+    },
+    {
+      "id": 870,
+      "name": "Vantablack Blender XL",
+      "brand": "Vantablack",
+      "category": "Kitchen",
+      "sku": "VAN-10870"
+    },
+    {
+      "id": 296,
+      "name": "Vantablack Bridge Hub Max",
+      "brand": "Vantablack",
+      "category": "Smart Home",
+      "sku": "VAN-10296"
+    },
+    {
+      "id": 856,
+      "name": "Vantablack Bridge Hub XL",
+      "brand": "Vantablack",
+      "category": "Smart Home",
+      "sku": "VAN-10856"
+    },
+    {
+      "id": 492,
+      "name": "Vantablack Cloudbook Two",
+      "brand": "Vantablack",
+      "category": "Laptops",
+      "sku": "VAN-10492"
+    },
+    {
+      "id": 254,
+      "name": "Vantablack Creatorbook Max",
+      "brand": "Vantablack",
+      "category": "Laptops",
+      "sku": "VAN-10254"
+    },
+    {
+      "id": 814,
+      "name": "Vantablack Creatorbook XL",
+      "brand": "Vantablack",
+      "category": "Laptops",
+      "sku": "VAN-10814"
+    },
+    {
+      "id": 240,
+      "name": "Vantablack Cross Trainer Air",
+      "brand": "Vantablack",
+      "category": "Footwear",
+      "sku": "VAN-10240"
+    },
+    {
+      "id": 800,
+      "name": "Vantablack Cross Trainer X",
+      "brand": "Vantablack",
+      "category": "Footwear",
+      "sku": "VAN-10800"
+    },
+    {
+      "id": 184,
+      "name": "Vantablack Dive Watch Air",
+      "brand": "Vantablack",
+      "category": "Wearables",
+      "sku": "VAN-10184"
+    },
+    {
+      "id": 744,
+      "name": "Vantablack Dive Watch X",
+      "brand": "Vantablack",
+      "category": "Wearables",
+      "sku": "VAN-10744"
+    },
+    {
+      "id": 520,
+      "name": "Vantablack Docking Station Two",
+      "brand": "Vantablack",
+      "category": "Peripherals",
+      "sku": "VAN-10520"
+    },
+    {
+      "id": 142,
+      "name": "Vantablack Duffel Mini",
+      "brand": "Vantablack",
+      "category": "Bags",
+      "sku": "VAN-10142"
+    },
+    {
+      "id": 702,
+      "name": "Vantablack Duffel S",
+      "brand": "Vantablack",
+      "category": "Bags",
+      "sku": "VAN-10702"
+    },
+    {
+      "id": 2,
+      "name": "Vantablack Earbuds Pro",
+      "brand": "Vantablack",
+      "category": "Audio",
+      "sku": "VAN-10002"
+    },
+    {
+      "id": 562,
+      "name": "Vantablack Earbuds Three",
+      "brand": "Vantablack",
+      "category": "Audio",
+      "sku": "VAN-10562"
+    },
+    {
+      "id": 352,
+      "name": "Vantablack Field Monitor Lite",
+      "brand": "Vantablack",
+      "category": "Monitors",
+      "sku": "VAN-10352"
+    },
+    {
+      "id": 912,
+      "name": "Vantablack Field Monitor Studio",
+      "brand": "Vantablack",
+      "category": "Monitors",
+      "sku": "VAN-10912"
+    },
+    {
+      "id": 338,
+      "name": "Vantablack Fitness Band Lite",
+      "brand": "Vantablack",
+      "category": "Wearables",
+      "sku": "VAN-10338"
+    },
+    {
+      "id": 898,
+      "name": "Vantablack Fitness Band Studio",
+      "brand": "Vantablack",
+      "category": "Wearables",
+      "sku": "VAN-10898"
+    },
+    {
+      "id": 16,
+      "name": "Vantablack Gamebook Pro",
+      "brand": "Vantablack",
+      "category": "Laptops",
+      "sku": "VAN-10016"
+    },
+    {
+      "id": 576,
+      "name": "Vantablack Gamebook Three",
+      "brand": "Vantablack",
+      "category": "Laptops",
+      "sku": "VAN-10576"
+    },
+    {
+      "id": 268,
+      "name": "Vantablack Gaming Monitor Max",
+      "brand": "Vantablack",
+      "category": "Monitors",
+      "sku": "VAN-10268"
+    },
+    {
+      "id": 828,
+      "name": "Vantablack Gaming Monitor XL",
+      "brand": "Vantablack",
+      "category": "Monitors",
+      "sku": "VAN-10828"
+    },
+    {
+      "id": 226,
+      "name": "Vantablack Grinder Air",
+      "brand": "Vantablack",
+      "category": "Kitchen",
+      "sku": "VAN-10226"
+    },
+    {
+      "id": 786,
+      "name": "Vantablack Grinder X",
+      "brand": "Vantablack",
+      "category": "Kitchen",
+      "sku": "VAN-10786"
+    },
+    {
+      "id": 380,
+      "name": "Vantablack Hardshell Case Lite",
+      "brand": "Vantablack",
+      "category": "Bags",
+      "sku": "VAN-10380"
+    },
+    {
+      "id": 940,
+      "name": "Vantablack Hardshell Case Studio",
+      "brand": "Vantablack",
+      "category": "Bags",
+      "sku": "VAN-10940"
+    },
+    {
+      "id": 478,
+      "name": "Vantablack Hiking Boot Plus",
+      "brand": "Vantablack",
+      "category": "Footwear",
+      "sku": "VAN-10478"
+    },
+    {
+      "id": 212,
+      "name": "Vantablack Indoor Camera Air",
+      "brand": "Vantablack",
+      "category": "Smart Home",
+      "sku": "VAN-10212"
+    },
+    {
+      "id": 772,
+      "name": "Vantablack Indoor Camera X",
+      "brand": "Vantablack",
+      "category": "Smart Home",
+      "sku": "VAN-10772"
+    },
+    {
+      "id": 58,
+      "name": "Vantablack Messenger Bag Pro",
+      "brand": "Vantablack",
+      "category": "Bags",
+      "sku": "VAN-10058"
+    },
+    {
+      "id": 618,
+      "name": "Vantablack Messenger Bag Three",
+      "brand": "Vantablack",
+      "category": "Bags",
+      "sku": "VAN-10618"
+    },
+    {
+      "id": 534,
+      "name": "Vantablack Motion Sensor Two",
+      "brand": "Vantablack",
+      "category": "Smart Home",
+      "sku": "VAN-10534"
+    },
+    {
+      "id": 114,
+      "name": "Vantablack Mouse Mini",
+      "brand": "Vantablack",
+      "category": "Peripherals",
+      "sku": "VAN-10114"
+    },
+    {
+      "id": 674,
+      "name": "Vantablack Mouse S",
+      "brand": "Vantablack",
+      "category": "Peripherals",
+      "sku": "VAN-10674"
+    },
+    {
+      "id": 170,
+      "name": "Vantablack Notebook Air",
+      "brand": "Vantablack",
+      "category": "Laptops",
+      "sku": "VAN-10170"
+    },
+    {
+      "id": 730,
+      "name": "Vantablack Notebook X",
+      "brand": "Vantablack",
+      "category": "Laptops",
+      "sku": "VAN-10730"
+    },
+    {
+      "id": 198,
+      "name": "Vantablack Numpad Air",
+      "brand": "Vantablack",
+      "category": "Peripherals",
+      "sku": "VAN-10198"
+    },
+    {
+      "id": 758,
+      "name": "Vantablack Numpad X",
+      "brand": "Vantablack",
+      "category": "Peripherals",
+      "sku": "VAN-10758"
+    },
+    {
+      "id": 464,
+      "name": "Vantablack Pouch Plus",
+      "brand": "Vantablack",
+      "category": "Bags",
+      "sku": "VAN-10464"
+    },
+    {
+      "id": 282,
+      "name": "Vantablack Power Bank Max",
+      "brand": "Vantablack",
+      "category": "Power",
+      "sku": "VAN-10282"
+    },
+    {
+      "id": 842,
+      "name": "Vantablack Power Bank XL",
+      "brand": "Vantablack",
+      "category": "Power",
+      "sku": "VAN-10842"
+    },
+    {
+      "id": 968,
+      "name": "Vantablack Receiver Neo",
+      "brand": "Vantablack",
+      "category": "Audio",
+      "sku": "VAN-10968"
+    },
+    {
+      "id": 408,
+      "name": "Vantablack Receiver Plus",
+      "brand": "Vantablack",
+      "category": "Audio",
+      "sku": "VAN-10408"
+    },
+    {
+      "id": 982,
+      "name": "Vantablack Sleep Tracker Neo",
+      "brand": "Vantablack",
+      "category": "Wearables",
+      "sku": "VAN-10982"
+    },
+    {
+      "id": 422,
+      "name": "Vantablack Sleep Tracker Plus",
+      "brand": "Vantablack",
+      "category": "Wearables",
+      "sku": "VAN-10422"
+    },
+    {
+      "id": 450,
+      "name": "Vantablack Smart Bulb Plus",
+      "brand": "Vantablack",
+      "category": "Smart Home",
+      "sku": "VAN-10450"
+    },
+    {
+      "id": 324,
+      "name": "Vantablack Soundbar Lite",
+      "brand": "Vantablack",
+      "category": "Audio",
+      "sku": "VAN-10324"
+    },
+    {
+      "id": 884,
+      "name": "Vantablack Soundbar Studio",
+      "brand": "Vantablack",
+      "category": "Audio",
+      "sku": "VAN-10884"
+    },
+    {
+      "id": 44,
+      "name": "Vantablack Surge Station Pro",
+      "brand": "Vantablack",
+      "category": "Power",
+      "sku": "VAN-10044"
+    },
+    {
+      "id": 604,
+      "name": "Vantablack Surge Station Three",
+      "brand": "Vantablack",
+      "category": "Power",
+      "sku": "VAN-10604"
+    },
+    {
+      "id": 30,
+      "name": "Vantablack Touch Monitor Pro",
+      "brand": "Vantablack",
+      "category": "Monitors",
+      "sku": "VAN-10030"
+    },
+    {
+      "id": 590,
+      "name": "Vantablack Touch Monitor Three",
+      "brand": "Vantablack",
+      "category": "Monitors",
+      "sku": "VAN-10590"
+    },
+    {
+      "id": 128,
+      "name": "Vantablack Travel Adapter Mini",
+      "brand": "Vantablack",
+      "category": "Power",
+      "sku": "VAN-10128"
+    },
+    {
+      "id": 688,
+      "name": "Vantablack Travel Adapter S",
+      "brand": "Vantablack",
+      "category": "Power",
+      "sku": "VAN-10688"
+    },
+    {
+      "id": 86,
+      "name": "Vantablack Turntable Mini",
+      "brand": "Vantablack",
+      "category": "Audio",
+      "sku": "VAN-10086"
+    },
+    {
+      "id": 646,
+      "name": "Vantablack Turntable S",
+      "brand": "Vantablack",
+      "category": "Audio",
+      "sku": "VAN-10646"
+    },
+    {
+      "id": 506,
+      "name": "Vantablack Ultrawide Two",
+      "brand": "Vantablack",
+      "category": "Monitors",
+      "sku": "VAN-10506"
+    },
+    {
+      "id": 366,
+      "name": "Vantablack USB Hub Lite",
+      "brand": "Vantablack",
+      "category": "Power",
+      "sku": "VAN-10366"
+    },
+    {
+      "id": 926,
+      "name": "Vantablack USB Hub Studio",
+      "brand": "Vantablack",
+      "category": "Power",
+      "sku": "VAN-10926"
+    },
+    {
+      "id": 548,
+      "name": "Vantablack Water Bottle Two",
+      "brand": "Vantablack",
+      "category": "Kitchen",
+      "sku": "VAN-10548"
+    },
+    {
+      "id": 156,
+      "name": "Vantablack Waterproof Boot Mini",
+      "brand": "Vantablack",
+      "category": "Footwear",
+      "sku": "VAN-10156"
+    },
+    {
+      "id": 716,
+      "name": "Vantablack Waterproof Boot S",
+      "brand": "Vantablack",
+      "category": "Footwear",
+      "sku": "VAN-10716"
+    },
+    {
+      "id": 996,
+      "name": "Vantablack Webcam Neo",
+      "brand": "Vantablack",
+      "category": "Peripherals",
+      "sku": "VAN-10996"
+    },
+    {
+      "id": 436,
+      "name": "Vantablack Webcam Plus",
+      "brand": "Vantablack",
+      "category": "Peripherals",
+      "sku": "VAN-10436"
+    },
+    {
+      "id": 247,
+      "name": "Vista Amplifier Max",
+      "brand": "Vista",
+      "category": "Audio",
+      "sku": "VIS-10247"
+    },
+    {
+      "id": 807,
+      "name": "Vista Amplifier XL",
+      "brand": "Vista",
+      "category": "Audio",
+      "sku": "VIS-10807"
+    },
+    {
+      "id": 457,
+      "name": "Vista Backpack Plus",
+      "brand": "Vista",
+      "category": "Bags",
+      "sku": "VIS-10457"
+    },
+    {
+      "id": 527,
+      "name": "Vista Cable Kit Two",
+      "brand": "Vista",
+      "category": "Power",
+      "sku": "VIS-10527"
+    },
+    {
+      "id": 121,
+      "name": "Vista Charger Mini",
+      "brand": "Vista",
+      "category": "Power",
+      "sku": "VIS-10121"
+    },
+    {
+      "id": 681,
+      "name": "Vista Charger S",
+      "brand": "Vista",
+      "category": "Power",
+      "sku": "VIS-10681"
+    },
+    {
+      "id": 443,
+      "name": "Vista Charging Pad Plus",
+      "brand": "Vista",
+      "category": "Power",
+      "sku": "VIS-10443"
+    },
+    {
+      "id": 93,
+      "name": "Vista Convertible Mini",
+      "brand": "Vista",
+      "category": "Laptops",
+      "sku": "VIS-10093"
+    },
+    {
+      "id": 653,
+      "name": "Vista Convertible S",
+      "brand": "Vista",
+      "category": "Laptops",
+      "sku": "VIS-10653"
+    },
+    {
+      "id": 191,
+      "name": "Vista Curved Monitor Air",
+      "brand": "Vista",
+      "category": "Monitors",
+      "sku": "VIS-10191"
+    },
+    {
+      "id": 751,
+      "name": "Vista Curved Monitor X",
+      "brand": "Vista",
+      "category": "Monitors",
+      "sku": "VIS-10751"
+    },
+    {
+      "id": 23,
+      "name": "Vista Field Watch Pro",
+      "brand": "Vista",
+      "category": "Wearables",
+      "sku": "VIS-10023"
+    },
+    {
+      "id": 583,
+      "name": "Vista Field Watch Three",
+      "brand": "Vista",
+      "category": "Wearables",
+      "sku": "VIS-10583"
+    },
+    {
+      "id": 359,
+      "name": "Vista Graphics Tablet Lite",
+      "brand": "Vista",
+      "category": "Peripherals",
+      "sku": "VIS-10359"
+    },
+    {
+      "id": 919,
+      "name": "Vista Graphics Tablet Studio",
+      "brand": "Vista",
+      "category": "Peripherals",
+      "sku": "VIS-10919"
+    },
+    {
+      "id": 961,
+      "name": "Vista Headphones Neo",
+      "brand": "Vista",
+      "category": "Audio",
+      "sku": "VIS-10961"
+    },
+    {
+      "id": 401,
+      "name": "Vista Headphones Plus",
+      "brand": "Vista",
+      "category": "Audio",
+      "sku": "VIS-10401"
+    },
+    {
+      "id": 65,
+      "name": "Vista Kettle Pro",
+      "brand": "Vista",
+      "category": "Kitchen",
+      "sku": "VIS-10065"
+    },
+    {
+      "id": 625,
+      "name": "Vista Kettle Three",
+      "brand": "Vista",
+      "category": "Kitchen",
+      "sku": "VIS-10625"
+    },
+    {
+      "id": 513,
+      "name": "Vista Keyboard Two",
+      "brand": "Vista",
+      "category": "Peripherals",
+      "sku": "VIS-10513"
+    },
+    {
+      "id": 485,
+      "name": "Vista Microphone Two",
+      "brand": "Vista",
+      "category": "Audio",
+      "sku": "VIS-10485"
+    },
+    {
+      "id": 345,
+      "name": "Vista Monitor Lite",
+      "brand": "Vista",
+      "category": "Monitors",
+      "sku": "VIS-10345"
+    },
+    {
+      "id": 905,
+      "name": "Vista Monitor Studio",
+      "brand": "Vista",
+      "category": "Monitors",
+      "sku": "VIS-10905"
+    },
+    {
+      "id": 107,
+      "name": "Vista Portable Monitor Mini",
+      "brand": "Vista",
+      "category": "Monitors",
+      "sku": "VIS-10107"
+    },
+    {
+      "id": 667,
+      "name": "Vista Portable Monitor S",
+      "brand": "Vista",
+      "category": "Monitors",
+      "sku": "VIS-10667"
+    },
+    {
+      "id": 989,
+      "name": "Vista Pro Display Neo",
+      "brand": "Vista",
+      "category": "Monitors",
+      "sku": "VIS-10989"
+    },
+    {
+      "id": 429,
+      "name": "Vista Pro Display Plus",
+      "brand": "Vista",
+      "category": "Monitors",
+      "sku": "VIS-10429"
+    },
+    {
+      "id": 555,
+      "name": "Vista Recovery Slide Two",
+      "brand": "Vista",
+      "category": "Footwear",
+      "sku": "VIS-10555"
+    },
+    {
+      "id": 261,
+      "name": "Vista Running Watch Max",
+      "brand": "Vista",
+      "category": "Wearables",
+      "sku": "VIS-10261"
+    },
+    {
+      "id": 821,
+      "name": "Vista Running Watch XL",
+      "brand": "Vista",
+      "category": "Wearables",
+      "sku": "VIS-10821"
+    },
+    {
+      "id": 79,
+      "name": "Vista Sandal Pro",
+      "brand": "Vista",
+      "category": "Footwear",
+      "sku": "VIS-10079"
+    },
+    {
+      "id": 639,
+      "name": "Vista Sandal Three",
+      "brand": "Vista",
+      "category": "Footwear",
+      "sku": "VIS-10639"
+    },
+    {
+      "id": 387,
+      "name": "Vista Skillet Lite",
+      "brand": "Vista",
+      "category": "Kitchen",
+      "sku": "VIS-10387"
+    },
+    {
+      "id": 947,
+      "name": "Vista Skillet Studio",
+      "brand": "Vista",
+      "category": "Kitchen",
+      "sku": "VIS-10947"
+    },
+    {
+      "id": 541,
+      "name": "Vista Sleeve Two",
+      "brand": "Vista",
+      "category": "Bags",
+      "sku": "VIS-10541"
+    },
+    {
+      "id": 975,
+      "name": "Vista Slimbook Neo",
+      "brand": "Vista",
+      "category": "Laptops",
+      "sku": "VIS-10975"
+    },
+    {
+      "id": 415,
+      "name": "Vista Slimbook Plus",
+      "brand": "Vista",
+      "category": "Laptops",
+      "sku": "VIS-10415"
+    },
+    {
+      "id": 219,
+      "name": "Vista Sling Air",
+      "brand": "Vista",
+      "category": "Bags",
+      "sku": "VIS-10219"
+    },
+    {
+      "id": 779,
+      "name": "Vista Sling X",
+      "brand": "Vista",
+      "category": "Bags",
+      "sku": "VIS-10779"
+    },
+    {
+      "id": 135,
+      "name": "Vista Smart Lock Mini",
+      "brand": "Vista",
+      "category": "Smart Home",
+      "sku": "VIS-10135"
+    },
+    {
+      "id": 695,
+      "name": "Vista Smart Lock S",
+      "brand": "Vista",
+      "category": "Smart Home",
+      "sku": "VIS-10695"
+    },
+    {
+      "id": 373,
+      "name": "Vista Smart Plug Lite",
+      "brand": "Vista",
+      "category": "Smart Home",
+      "sku": "VIS-10373"
+    },
+    {
+      "id": 933,
+      "name": "Vista Smart Plug Studio",
+      "brand": "Vista",
+      "category": "Smart Home",
+      "sku": "VIS-10933"
+    },
+    {
+      "id": 499,
+      "name": "Vista Smart Ring Two",
+      "brand": "Vista",
+      "category": "Wearables",
+      "sku": "VIS-10499"
+    },
+    {
+      "id": 177,
+      "name": "Vista Smartwatch Air",
+      "brand": "Vista",
+      "category": "Wearables",
+      "sku": "VIS-10177"
+    },
+    {
+      "id": 737,
+      "name": "Vista Smartwatch X",
+      "brand": "Vista",
+      "category": "Wearables",
+      "sku": "VIS-10737"
+    },
+    {
+      "id": 317,
+      "name": "Vista Sneaker Max",
+      "brand": "Vista",
+      "category": "Footwear",
+      "sku": "VIS-10317"
+    },
+    {
+      "id": 877,
+      "name": "Vista Sneaker XL",
+      "brand": "Vista",
+      "category": "Footwear",
+      "sku": "VIS-10877"
+    },
+    {
+      "id": 205,
+      "name": "Vista Solar Charger Air",
+      "brand": "Vista",
+      "category": "Power",
+      "sku": "VIS-10205"
+    },
+    {
+      "id": 765,
+      "name": "Vista Solar Charger X",
+      "brand": "Vista",
+      "category": "Power",
+      "sku": "VIS-10765"
+    },
+    {
+      "id": 149,
+      "name": "Vista Sous-Vide Wand Mini",
+      "brand": "Vista",
+      "category": "Kitchen",
+      "sku": "VIS-10149"
+    },
+    {
+      "id": 709,
+      "name": "Vista Sous-Vide Wand S",
+      "brand": "Vista",
+      "category": "Kitchen",
+      "sku": "VIS-10709"
+    },
+    {
+      "id": 163,
+      "name": "Vista Speaker Air",
+      "brand": "Vista",
+      "category": "Audio",
+      "sku": "VIS-10163"
+    },
+    {
+      "id": 723,
+      "name": "Vista Speaker X",
+      "brand": "Vista",
+      "category": "Audio",
+      "sku": "VIS-10723"
+    },
+    {
+      "id": 37,
+      "name": "Vista Stream Controller Pro",
+      "brand": "Vista",
+      "category": "Peripherals",
+      "sku": "VIS-10037"
+    },
+    {
+      "id": 597,
+      "name": "Vista Stream Controller Three",
+      "brand": "Vista",
+      "category": "Peripherals",
+      "sku": "VIS-10597"
+    },
+    {
+      "id": 289,
+      "name": "Vista Thermostat Max",
+      "brand": "Vista",
+      "category": "Smart Home",
+      "sku": "VIS-10289"
+    },
+    {
+      "id": 849,
+      "name": "Vista Thermostat XL",
+      "brand": "Vista",
+      "category": "Smart Home",
+      "sku": "VIS-10849"
+    },
+    {
+      "id": 471,
+      "name": "Vista Toaster Plus",
+      "brand": "Vista",
+      "category": "Kitchen",
+      "sku": "VIS-10471"
+    },
+    {
+      "id": 303,
+      "name": "Vista Tote Max",
+      "brand": "Vista",
+      "category": "Bags",
+      "sku": "VIS-10303"
+    },
+    {
+      "id": 863,
+      "name": "Vista Tote XL",
+      "brand": "Vista",
+      "category": "Bags",
+      "sku": "VIS-10863"
+    },
+    {
+      "id": 275,
+      "name": "Vista Trackpad Max",
+      "brand": "Vista",
+      "category": "Peripherals",
+      "sku": "VIS-10275"
+    },
+    {
+      "id": 835,
+      "name": "Vista Trackpad XL",
+      "brand": "Vista",
+      "category": "Peripherals",
+      "sku": "VIS-10835"
+    },
+    {
+      "id": 233,
+      "name": "Vista Trail Runners Air",
+      "brand": "Vista",
+      "category": "Footwear",
+      "sku": "VIS-10233"
+    },
+    {
+      "id": 793,
+      "name": "Vista Trail Runners X",
+      "brand": "Vista",
+      "category": "Footwear",
+      "sku": "VIS-10793"
+    },
+    {
+      "id": 9,
+      "name": "Vista Ultrabook Pro",
+      "brand": "Vista",
+      "category": "Laptops",
+      "sku": "VIS-10009"
+    },
+    {
+      "id": 569,
+      "name": "Vista Ultrabook Three",
+      "brand": "Vista",
+      "category": "Laptops",
+      "sku": "VIS-10569"
+    },
+    {
+      "id": 51,
+      "name": "Vista Video Doorbell Pro",
+      "brand": "Vista",
+      "category": "Smart Home",
+      "sku": "VIS-10051"
+    },
+    {
+      "id": 611,
+      "name": "Vista Video Doorbell Three",
+      "brand": "Vista",
+      "category": "Smart Home",
+      "sku": "VIS-10611"
+    },
+    {
+      "id": 331,
+      "name": "Vista Workstation Lite",
+      "brand": "Vista",
+      "category": "Laptops",
+      "sku": "VIS-10331"
+    },
+    {
+      "id": 891,
+      "name": "Vista Workstation Studio",
+      "brand": "Vista",
+      "category": "Laptops",
+      "sku": "VIS-10891"
+    }
+  ]
+}

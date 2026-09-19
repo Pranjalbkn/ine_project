@@ -1,0 +1,35 @@
+name: Scrape tracked products
+
+on:
+  schedule:
+    # Every two hours, at minute 17 UTC (away from GitHub's busiest minute).
+    - cron: '17 */2 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: scrape-tracked-products
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Ask the API to scrape tracked products
+        env:
+          API_URL: ${{ secrets.API_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          set -euo pipefail
+          test -n "$API_URL"
+          test -n "$CRON_SECRET"
+
+          response=$(curl --fail-with-body --silent --show-error \
+            --connect-timeout 30 --max-time 2400 \
+            --request POST \
+            --header "Authorization: Bearer $CRON_SECRET" \
+            "${API_URL%/}/api/jobs/scrape")
+
+          echo "$response" | jq '{started, succeeded: ([.results[] | select(.outcome == "success")] | length), failed: ([.results[] | select(.outcome == "failed")] | length)}'
+          echo "$response" | jq -e '.results | type == "array"' > /dev/null
+          echo "$response" | jq -e '[.results[] | select(.outcome == "failed")] | length == 0' > /dev/null
