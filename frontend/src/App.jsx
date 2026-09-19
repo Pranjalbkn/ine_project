@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import PriceChart from './PriceChart.jsx';
 
 const API = import.meta.env.VITE_API_BASE_URL?.replace(/\/$/, '') || '';
 
@@ -46,11 +47,21 @@ export default function App() {
   const [history, setHistory] = useState([]);
   const [scrapeLog, setScrapeLog] = useState([]);
   const [historyError, setHistoryError] = useState('');
+  const [stats, setStats] = useState(null);
+
+  async function refreshStats() {
+    try {
+      setStats(await api('/api/stats'));
+    } catch {
+      setStats(null);
+    }
+  }
 
   useEffect(() => {
     api('/api/tracked')
       .then(({ products }) => { setTrackedProducts(products); setTrackingAvailable(true); })
       .catch((error) => { setTrackingAvailable(false); setTrackingError(error.message); });
+    refreshStats();
   }, []);
 
   async function loadSavedData(id) {
@@ -68,13 +79,13 @@ export default function App() {
   }
 
   useEffect(() => {
-    if (selectedId !== null && trackedProducts.some((item) => item.productId === selectedId)) {
+    setHistory([]);
+    setScrapeLog([]);
+    setHistoryError('');
+    if (selectedId !== null && trackingAvailable === true) {
       loadSavedData(selectedId);
-    } else {
-      setHistory([]);
-      setScrapeLog([]);
     }
-  }, [selectedId, trackedProducts]);
+  }, [selectedId, trackingAvailable]);
 
   useEffect(() => {
     if (!query.trim()) {
@@ -118,7 +129,10 @@ export default function App() {
       const data = await api(`/api/products/${id}/price-check`, { method: 'POST' });
       if (priceRequest.current === request) {
         setReading(data.reading);
-        if (data.saved) await loadSavedData(id);
+        if (data.saved) {
+          await loadSavedData(id);
+          refreshStats();
+        }
       }
     } catch (error) {
       if (priceRequest.current === request) setCheckError(error.message);
@@ -151,6 +165,7 @@ export default function App() {
     try {
       const { product } = await api(`/api/tracked/${selectedId}`, { method: 'POST' });
       setTrackedProducts((items) => [product, ...items.filter((item) => item.productId !== product.productId)]);
+      refreshStats();
     } catch (error) {
       setTrackingError(error.message);
     } finally {
@@ -164,7 +179,7 @@ export default function App() {
     <div className="app-shell">
       <header className="site-header">
         <div className="brand-mark" aria-hidden="true">◫</div>
-        <div className="brand-copy"><strong>INE Product Finder</strong><span>Explore the mock store</span></div>
+        <div className="brand-copy"><strong>INE Price Tracker</strong><span>Explore the mock store</span></div>
         <span className="header-tag">1,000 products</span>
       </header>
 
@@ -172,7 +187,7 @@ export default function App() {
         <section className="intro">
           <p className="eyebrow">PRODUCT SEARCH</p>
           <h1>Find the product you want to track.</h1>
-          <p>Search by any part of its name. Select a result to see its details and check the latest price and stock.</p>
+          <p>Search by any part of its name. Select a result to see its details, scrape count, and price history.</p>
           <label className="search-box">
             <span className="search-icon" aria-hidden="true">⌕</span>
             <span className="sr-only">Search product names</span>
@@ -183,6 +198,11 @@ export default function App() {
             />
             {query && <button type="button" onClick={() => changeQuery('')} aria-label="Clear search">×</button>}
           </label>
+          <div className="overview-stats" aria-label="Tracking summary">
+            <div><span>Total scrape attempts</span><strong>{stats?.totalScrapes ?? '—'}</strong><small>Includes retries</small></div>
+            <div><span>Tracked products</span><strong>{stats?.trackedProducts ?? '—'}</strong><small>Selected for regular checks</small></div>
+            <div><span>Saved prices</span><strong>{stats?.savedPrices ?? '—'}</strong><small>Valid readings</small></div>
+          </div>
           {trackedProducts.length > 0 && <div className="tracked-strip"><span>TRACKING</span>{trackedProducts.map((item) => <button type="button" key={item.productId} onClick={() => selectProduct(item.productId)}>{item.name}</button>)}</div>}
         </section>
 
@@ -214,14 +234,27 @@ export default function App() {
           </section>
 
           <section className="detail-panel" aria-label="Product details" aria-live="polite">
-            {!selectedId && <div className="detail-placeholder"><div className="placeholder-art" aria-hidden="true">◎</div><p className="eyebrow">PRODUCT DETAILS</p><h2>Pick a product</h2><p>Its description, specifications, reviews, current price, and stock will appear here.</p></div>}
+            {!selectedId && <div className="detail-placeholder"><div className="placeholder-art" aria-hidden="true">◎</div><p className="eyebrow">PRODUCT DETAILS</p><h2>Pick a product</h2><p>Its basic information, scrape count, price graph, and stock will appear here.</p></div>}
             {selectedId && detailsLoading && <div className="panel-message">Loading product details…</div>}
             {detailError && <div className="error-message">{detailError}</div>}
             {product && <>
               <div className="detail-top"><span className="category-pill">{product.category}</span><span className="sku">{product.sku}</span></div>
               <h2 className="product-title">{product.name}</h2>
-              <p className="product-brand">by {product.brand}</p>
-              <p className="product-description">{product.description}</p>
+              <div className="basic-info">
+                <p className="eyebrow">BASIC INFORMATION</p>
+                <dl className="basic-grid">
+                  <div><dt>Brand</dt><dd>{product.brand}</dd></div>
+                  <div><dt>Category</dt><dd>{product.category}</dd></div>
+                  <div><dt>SKU</dt><dd>{product.sku}</dd></div>
+                  <div><dt>Product ID</dt><dd>{product.id}</dd></div>
+                </dl>
+                <p>{product.description}</p>
+              </div>
+
+              <div className="product-stats">
+                <div><span>Product scrape attempts</span><strong>{scrapeLog.length}</strong></div>
+                <div><span>Saved price readings</span><strong>{history.length}</strong></div>
+              </div>
 
               <div className="price-card">
                 <div><p className="eyebrow">CURRENT STORE READING</p>
@@ -241,20 +274,22 @@ export default function App() {
               {trackingAvailable === false && <p className="helper-text">Set DATABASE_URL in backend/.env and run the database migration to enable tracking.</p>}
               {trackingError && trackingAvailable === true && <p className="error-message">{trackingError}</p>}
 
-              {selectedTracked && <>
-                <div className="detail-section"><h3>Price and stock history <span>({history.length})</span></h3>
-                  {historyError && <p className="error-message">{historyError}</p>}
-                  {history.length === 0 ? <p className="helper-text">No saved readings yet. Use “Check live price” or wait for the next scheduled run.</p> :
-                    <div className="table-wrap"><table><thead><tr><th>Checked</th><th>Price</th><th>Stock</th></tr></thead><tbody>{history.map((item) => <tr key={item.id}><td>{new Date(item.scrapedAt).toLocaleString()}</td><td>{formatPrice(item.price, item.currency)}</td><td>{item.stock === 0 ? 'Out' : item.stock}</td></tr>)}</tbody></table></div>}
-                </div>
-                <div className="detail-section"><h3>Scrape log <span>({scrapeLog.length})</span></h3>
-                  {scrapeLog.length === 0 ? <p className="helper-text">No scrape attempts have been recorded yet.</p> :
-                    <div className="table-wrap"><table><thead><tr><th>Time</th><th>Attempt</th><th>Outcome</th></tr></thead><tbody>{scrapeLog.map((entry) => <tr key={entry.id}><td>{new Date(entry.startedAt).toLocaleString()}</td><td>{entry.attempt}</td><td><span className={`log-status ${entry.outcome}`}>{entry.outcome}</span>{entry.error && <small className="log-error">{entry.error}</small>}</td></tr>)}</tbody></table></div>}
-                </div>
-              </>}
+              <div className="detail-section"><h3>Price over scrape time</h3>
+                <p className="chart-description">Each point is a saved price from a completed scrape.</p>
+                {historyError && <p className="error-message">{historyError}</p>}
+                <PriceChart history={history} formatPrice={formatPrice} />
+              </div>
+
+              <div className="detail-section"><h3>Price and stock history <span>({history.length})</span></h3>
+                {history.length === 0 ? <p className="helper-text">No saved readings yet. Track this product and check its live price.</p> :
+                  <div className="table-wrap"><table><thead><tr><th>Checked</th><th>Price</th><th>Stock</th></tr></thead><tbody>{history.map((item) => <tr key={item.id}><td>{new Date(item.scrapedAt).toLocaleString()}</td><td>{formatPrice(item.price, item.currency)}</td><td>{item.stock === 0 ? 'Out' : item.stock}</td></tr>)}</tbody></table></div>}
+              </div>
+              <div className="detail-section"><h3>Scrape log <span>({scrapeLog.length})</span></h3>
+                {scrapeLog.length === 0 ? <p className="helper-text">No scrape attempts have been recorded yet.</p> :
+                  <div className="table-wrap"><table><thead><tr><th>Time</th><th>Attempt</th><th>Outcome</th></tr></thead><tbody>{scrapeLog.map((entry) => <tr key={entry.id}><td>{new Date(entry.startedAt).toLocaleString()}</td><td>{entry.attempt}</td><td><span className={`log-status ${entry.outcome}`}>{entry.outcome}</span>{entry.error && <small className="log-error">{entry.error}</small>}</td></tr>)}</tbody></table></div>}
+              </div>
 
               <div className="detail-section"><h3>Specifications</h3><dl className="spec-grid">{Object.entries(product.specs || {}).map(([key, value]) => <div key={key}><dt>{label(key)}</dt><dd>{specValue(key, value)}</dd></div>)}</dl></div>
-              <div className="detail-section"><h3>Customer reviews <span>({product.reviews?.length || 0})</span></h3><div className="reviews">{(product.reviews || []).map((review) => <article className="review" key={review.id}><div><strong>{review.title}</strong><span className="stars" aria-label={`${review.rating} out of 5 stars`}>{'★'.repeat(review.rating)}{'☆'.repeat(5 - review.rating)}</span></div><small>{review.author} · {review.date}</small><p>{review.body}</p></article>)}</div></div>
               <a className="store-link" href={detail.storeUrl} target="_blank" rel="noreferrer">View on INE mock store ↗</a>
             </>}
           </section>

@@ -12,6 +12,10 @@ The source folders are separate: `frontend/` contains the page and styles;
 `backend/` contains the API, scraper, catalog, and SQL. Root npm commands run
 the two folders together for local development.
 
+The page shows total and per-product scrape attempts, basic product details,
+and a simple SVG price graph using saved timestamps and prices. Reviews are
+omitted to keep the tracker focused on the assignment's price history.
+
 ## Why these parts exist
 
 - **Catalog snapshot:** The store shuffles its catalog pages, so a saved list

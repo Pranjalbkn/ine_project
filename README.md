@@ -2,7 +2,8 @@
 
 A small price tracker for the [INE assignment mock store](https://demo.inelabteamdev.com).
 Search a product name, choose a result, and track its price and stock. The app
-shows saved readings and a log of every scrape attempt.
+shows overall scrape counts, basic product information, a price-over-time graph,
+saved readings, and a log of every scrape attempt.
 
 ## How it works
 
@@ -49,6 +50,9 @@ npm run dev
 Open `http://127.0.0.1:5173`. The API runs on port 3001. Search for a name,
 select a product, click **Track product**, then click **Check live price**.
 The first check can take a minute if the store is slow or the scraper retries.
+The graph appears after a saved reading; two readings show a price trend.
+"Scrape attempts" includes retries, while "saved prices" counts validated
+readings only.
 
 Useful commands:
 

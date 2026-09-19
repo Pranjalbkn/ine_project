@@ -7,7 +7,7 @@ import { timingSafeEqual } from 'node:crypto';
 import { searchCatalog } from './catalog.js';
 import { scrapeProduct } from './scraper.js';
 import { pool, requireDatabase } from './db.js';
-import { addTracked, getHistory, getScrapeLog, isTracked, listTracked, runTrackedScrape } from './tracking.js';
+import { addTracked, getHistory, getScrapeLog, getStats, isTracked, listTracked, runTrackedScrape } from './tracking.js';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const { products } = JSON.parse(await readFile(resolve(root, 'data/catalog.json'), 'utf8'));
@@ -38,6 +38,7 @@ async function storeProduct(id) {
       if (!response.ok) throw new Error(`INE store returned HTTP ${response.status}`);
       const product = await response.json();
       if (product.id !== id || !product.name) throw new Error('INE store returned an invalid product');
+      delete product.reviews;
       return product;
     } catch (error) {
       lastError = error;
@@ -75,6 +76,14 @@ function databaseError(res, error) {
 app.get('/api/tracked', requireDatabase, async (_req, res) => {
   try {
     res.json({ products: await listTracked() });
+  } catch (error) {
+    databaseError(res, error);
+  }
+});
+
+app.get('/api/stats', requireDatabase, async (_req, res) => {
+  try {
+    res.json(await getStats());
   } catch (error) {
     databaseError(res, error);
   }

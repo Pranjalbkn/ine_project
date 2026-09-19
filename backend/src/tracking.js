@@ -19,6 +19,15 @@ export async function listTracked() {
   return result.rows;
 }
 
+export async function getStats() {
+  const result = await pool.query(`
+    select (select count(*)::integer from scrape_log) as "totalScrapes",
+           (select count(*)::integer from tracked_products) as "trackedProducts",
+           (select count(*)::integer from price_history) as "savedPrices"
+  `);
+  return result.rows[0];
+}
+
 export async function isTracked(productId) {
   const result = await pool.query('select 1 from tracked_products where product_id = $1', [productId]);
   return result.rowCount > 0;
