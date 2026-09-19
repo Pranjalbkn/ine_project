@@ -8,6 +8,10 @@ mock store. Supabase stores the products being tracked, valid readings, and a
 log of scrape attempts. GitHub Actions calls the API's protected job every two
 hours.
 
+The source folders are separate: `frontend/` contains the page and styles;
+`backend/` contains the API, scraper, catalog, and SQL. Root npm commands run
+the two folders together for local development.
+
 ## Why these parts exist
 
 - **Catalog snapshot:** The store shuffles its catalog pages, so a saved list

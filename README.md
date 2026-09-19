@@ -17,6 +17,15 @@ shows saved readings and a log of every scrape attempt.
 The saved catalog makes search fast; live prices always come from the product
 page. Only the assignment mock store is scraped.
 
+## Folder structure
+
+```text
+backend/   Express API, Playwright scraper, catalog, SQL, private .env
+frontend/  React page, styles, Vite config
+```
+
+The root `package.json` only provides commands to run both folders together.
+
 ## Run locally
 
 You need Node.js 22.12 or newer.
@@ -24,10 +33,10 @@ You need Node.js 22.12 or newer.
 ```powershell
 npm ci
 npx playwright install chromium
-if (!(Test-Path .env)) { Copy-Item .env.example .env }
+if (!(Test-Path backend/.env)) { Copy-Item backend/.env.example backend/.env }
 ```
 
-In `.env`, replace `DATABASE_URL` with the Supabase connection string from the
+In `backend/.env`, replace `DATABASE_URL` with the Supabase connection string from the
 Supabase **Connect** dialog. Replace the password placeholder, including its
 square brackets. URL-encode reserved password characters. A Supabase session
 pooler string can be used if your network cannot reach the direct IPv6 address.
@@ -52,12 +61,12 @@ npm run build
 ```
 
 The headed command opens the browser so you can show how the price is revealed.
-Catalog sync refreshes `data/catalog.json` from the mock store and only replaces
+Catalog sync refreshes `backend/data/catalog.json` from the mock store and only replaces
 the file when all products were found.
 
 ## Deploy
 
-Publish this folder as a GitHub repository. `.env` is ignored by Git and must
+Publish this folder as a GitHub repository. `backend/.env` is ignored by Git and must
 stay private.
 
 ### 1. Backend on Render
@@ -110,7 +119,7 @@ have scheduled runs disabled. Check the Actions tab if no new scrape appears.
 | `price_history` | Valid price and stock readings with timestamps |
 | `scrape_log` | Every success, retry, or failure with its error |
 
-The schema is in `sql/schema.sql`. The secret database URL is used only by the
+The schema is in `backend/sql/schema.sql`. The secret database URL is used only by the
 backend; it is never sent to the browser or stored in a `VITE_` variable.
 
 ## Design choices and limits

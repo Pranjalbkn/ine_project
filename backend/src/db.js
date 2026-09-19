@@ -1,5 +1,9 @@
-import 'dotenv/config';
+import { config } from 'dotenv';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import pg from 'pg';
+
+config({ path: resolve(dirname(fileURLToPath(import.meta.url)), '../.env'), quiet: true });
 
 const { Pool } = pg;
 export const databaseConfigured = Boolean(process.env.DATABASE_URL);

@@ -238,7 +238,7 @@ export default function App() {
                 {selectedTracked ? <span className="tracking-badge">● Tracking</span> :
                   <button className="secondary-button" type="button" onClick={trackProduct} disabled={tracking || trackingAvailable !== true}>{tracking ? 'Adding…' : 'Track product'}</button>}
               </div>
-              {trackingAvailable === false && <p className="helper-text">Set DATABASE_URL in .env and run the database migration to enable tracking.</p>}
+              {trackingAvailable === false && <p className="helper-text">Set DATABASE_URL in backend/.env and run the database migration to enable tracking.</p>}
               {trackingError && trackingAvailable === true && <p className="error-message">{trackingError}</p>}
 
               {selectedTracked && <>
