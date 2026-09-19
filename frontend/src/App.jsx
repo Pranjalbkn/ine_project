@@ -211,15 +211,6 @@ export default function App() {
 
   return (
     <div className="app-shell">
-      <header className="site-header">
-        <div className="brand-mark" aria-hidden="true">◫</div>
-        <div className="brand-copy">
-          <strong>INE Price Tracker</strong>
-          <span>Explore the mock store</span>
-        </div>
-        <span className="header-tag">1,000 products</span>
-      </header>
-
       <main className="main-content">
         <SearchPanel
           query={searchText}
