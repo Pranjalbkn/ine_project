@@ -63,29 +63,30 @@ export async function getScrapeLog(productId) {
   return result.rows;
 }
 
-async function scrapeAndPersist(productId) {
+async function scrapeAndSave(productId) {
   if (!await isTracked(productId)) throw new Error('Product is not tracked');
   const runId = randomUUID();
   const startedAt = new Date().toISOString();
   let reading;
-  let attempts;
+  let attemptLog;
   let scrapeError;
   try {
     reading = await scrapeProduct(productId);
-    attempts = reading.attempts;
+    attemptLog = reading.attempts;
   } catch (error) {
     scrapeError = error;
-    attempts = error.attempts?.length ? error.attempts : [{
+    attemptLog = error.attempts?.length ? error.attempts : [{
       attempt: 1, startedAt, finishedAt: new Date().toISOString(),
       outcome: 'failed', error: error.message,
     }];
   }
 
-  const client = await pool.connect();
+  // Save every attempt and the successful reading together.
+  const databaseClient = await pool.connect();
   try {
-    await client.query('begin');
-    for (const attempt of attempts) {
-      await client.query(`
+    await databaseClient.query('begin');
+    for (const attempt of attemptLog) {
+      await databaseClient.query(`
         insert into scrape_log
           (product_id, run_id, attempt, started_at, finished_at, outcome, error)
         values ($1, $2, $3, $4, $5, $6, $7)
@@ -93,32 +94,34 @@ async function scrapeAndPersist(productId) {
         attempt.finishedAt, attempt.outcome, attempt.error ?? null]);
     }
     if (reading) {
-      await client.query(`
+      await databaseClient.query(`
         insert into price_history
           (product_id, price, currency, stock, scraped_at)
         values ($1, $2, $3, $4, $5)
         on conflict (product_id, scraped_at) do nothing
       `, [productId, reading.price, reading.currency, reading.stock, reading.scrapedAt]);
     }
-    await client.query('commit');
+    await databaseClient.query('commit');
   } catch (error) {
-    await client.query('rollback');
+    await databaseClient.query('rollback');
     throw error;
   } finally {
-    client.release();
+    databaseClient.release();
   }
   if (scrapeError) {
-    scrapeError.attempts = attempts;
+    scrapeError.attempts = attemptLog;
     throw scrapeError;
   }
   return reading;
 }
 
-const activeRuns = new Map();
+const activeTrackedScrapes = new Map();
 export function runTrackedScrape(productId) {
-  if (!activeRuns.has(productId)) {
-    const task = scrapeAndPersist(productId).finally(() => activeRuns.delete(productId));
-    activeRuns.set(productId, task);
+  // Share one scrape when two requests ask for the same product at once.
+  if (!activeTrackedScrapes.has(productId)) {
+    const task = scrapeAndSave(productId)
+      .finally(() => activeTrackedScrapes.delete(productId));
+    activeTrackedScrapes.set(productId, task);
   }
-  return activeRuns.get(productId);
+  return activeTrackedScrapes.get(productId);
 }

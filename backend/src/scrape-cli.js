@@ -1,13 +1,13 @@
 import { scrapeProduct } from './scraper.js';
 
-const args = process.argv.slice(2);
-const headed = args.includes('--headed');
-const idArgument = args.find((arg) => /^\d+$/.test(arg));
-const productId = idArgument ? Number(idArgument) : 738;
+const commandLineArgs = process.argv.slice(2);
+const showBrowser = commandLineArgs.includes('--headed');
+const productIdText = commandLineArgs.find((argument) => /^\d+$/.test(argument));
+const productId = productIdText ? Number(productIdText) : 738;
 
 try {
   const reading = await scrapeProduct(productId, {
-    headed,
+    headed: showBrowser,
     onAttempt: (entry) => console.error(JSON.stringify(entry)),
   });
   console.log(JSON.stringify(reading, null, 2));

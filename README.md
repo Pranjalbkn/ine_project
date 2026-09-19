@@ -30,6 +30,22 @@ In `frontend/src`, `App.jsx` coordinates data and actions, `api.js` handles
 requests, `format.js` holds display helpers, and `components/` contains the
 search, product, chart, history, and scrape-log views.
 
+## Code walkthrough
+
+- `frontend/src/App.jsx` holds the page state. It searches the catalog,
+  loads the selected product, starts price checks, and passes the results to
+  the components.
+- `frontend/src/components/` only displays the search panel, results,
+  product details, graph, history, and log. `api.js` makes HTTP requests,
+  and `format.js` formats prices and specifications.
+- `backend/src/server.js` defines the API routes. Search reads the saved
+  catalog; product details come from the store's API.
+- `backend/src/scraper.js` opens a product page with Playwright, reveals
+  the price, checks the price and stock text, and retries failed attempts.
+- `backend/src/tracking.js` saves tracked products, valid readings, and
+  every scrape attempt in PostgreSQL. `backend/src/db.js` creates the
+  database connection.
+
 ## Run locally
 
 You need Node.js 22.12 or newer.

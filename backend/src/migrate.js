@@ -8,8 +8,8 @@ if (!pool) {
   process.exitCode = 1;
 } else {
   try {
-    const file = resolve(dirname(fileURLToPath(import.meta.url)), '../sql/schema.sql');
-    await pool.query(await readFile(file, 'utf8'));
+    const schemaFile = resolve(dirname(fileURLToPath(import.meta.url)), '../sql/schema.sql');
+    await pool.query(await readFile(schemaFile, 'utf8'));
     console.log('Supabase tables and indexes are ready.');
   } catch (error) {
     console.error(`Database migration failed: ${error.message}`);

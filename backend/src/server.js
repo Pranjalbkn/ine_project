@@ -9,8 +9,10 @@ import { scrapeProduct } from './scraper.js';
 import { pool, requireDatabase } from './db.js';
 import { addTracked, getHistory, getScrapeLog, getStats, isTracked, listTracked, runTrackedScrape } from './tracking.js';
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const { products } = JSON.parse(await readFile(resolve(root, 'data/catalog.json'), 'utf8'));
+const backendFolder = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const { products } = JSON.parse(
+  await readFile(resolve(backendFolder, 'data/catalog.json'), 'utf8'),
+);
 if (!Array.isArray(products) || !products.length) throw new Error('Catalog cache is missing or invalid');
 const productIds = new Set(products.map((product) => product.id));
 const productById = new Map(products.map((product) => [product.id, product]));
@@ -19,25 +21,27 @@ const allowedOrigins = ['http://127.0.0.1:5173', 'http://localhost:5173', proces
 app.use(cors({ origin: allowedOrigins }));
 app.use(express.json());
 
-function validId(req, res) {
-  const id = Number(req.params.id);
-  if (!Number.isSafeInteger(id) || !productIds.has(id)) {
+function getProductId(req, res) {
+  const productId = Number(req.params.id);
+  if (!Number.isSafeInteger(productId) || !productIds.has(productId)) {
     res.status(404).json({ error: 'Product not found in the INE catalog' });
     return null;
   }
-  return id;
+  return productId;
 }
 
-async function storeProduct(id) {
+async function fetchStoreProduct(productId) {
   let lastError;
   for (let attempt = 1; attempt <= 3; attempt += 1) {
     try {
-      const response = await fetch(`https://demo.inelabteamdev.com/api/product/${id}`, {
+      const response = await fetch(`https://demo.inelabteamdev.com/api/product/${productId}`, {
         signal: AbortSignal.timeout(15_000),
       });
       if (!response.ok) throw new Error(`INE store returned HTTP ${response.status}`);
       const product = await response.json();
-      if (product.id !== id || !product.name) throw new Error('INE store returned an invalid product');
+      if (product.id !== productId || !product.name) {
+        throw new Error('INE store returned an invalid product');
+      }
       delete product.reviews;
       return product;
     } catch (error) {
@@ -48,7 +52,9 @@ async function storeProduct(id) {
   throw lastError;
 }
 
-app.get('/api/health', (_req, res) => res.json({ status: 'ok', catalogCount: products.length }));
+app.get('/api/health', (_req, res) => {
+  res.json({ status: 'ok', catalogCount: products.length });
+});
 
 app.get('/api/products', (req, res) => {
   const query = String(req.query.search ?? '').trim();
@@ -58,11 +64,11 @@ app.get('/api/products', (req, res) => {
 });
 
 app.get('/api/products/:id', async (req, res) => {
-  const id = validId(req, res);
-  if (id === null) return;
+  const productId = getProductId(req, res);
+  if (productId === null) return;
   try {
-    const product = await storeProduct(id);
-    res.json({ product, storeUrl: `https://demo.inelabteamdev.com/product/${id}` });
+    const product = await fetchStoreProduct(productId);
+    res.json({ product, storeUrl: `https://demo.inelabteamdev.com/product/${productId}` });
   } catch (error) {
     res.status(502).json({ error: `Could not load details: ${error.message}` });
   }
@@ -90,11 +96,11 @@ app.get('/api/stats', requireDatabase, async (_req, res) => {
 });
 
 app.post('/api/tracked/:id', requireDatabase, async (req, res) => {
-  const id = validId(req, res);
-  if (id === null) return;
+  const productId = getProductId(req, res);
+  if (productId === null) return;
   try {
-    const product = await addTracked(productById.get(id));
-    recentReadings.delete(id);
+    const product = await addTracked(productById.get(productId));
+    recentReadings.delete(productId);
     res.status(201).json({ product });
   } catch (error) {
     databaseError(res, error);
@@ -102,55 +108,55 @@ app.post('/api/tracked/:id', requireDatabase, async (req, res) => {
 });
 
 app.get('/api/tracked/:id/history', requireDatabase, async (req, res) => {
-  const id = validId(req, res);
-  if (id === null) return;
+  const productId = getProductId(req, res);
+  if (productId === null) return;
   try {
-    res.json({ history: await getHistory(id) });
+    res.json({ history: await getHistory(productId) });
   } catch (error) {
     databaseError(res, error);
   }
 });
 
 app.get('/api/tracked/:id/log', requireDatabase, async (req, res) => {
-  const id = validId(req, res);
-  if (id === null) return;
+  const productId = getProductId(req, res);
+  if (productId === null) return;
   try {
-    res.json({ log: await getScrapeLog(id) });
+    res.json({ log: await getScrapeLog(productId) });
   } catch (error) {
     databaseError(res, error);
   }
 });
 
 const recentReadings = new Map();
-const inProgress = new Map();
+const activePriceChecks = new Map();
 app.post('/api/products/:id/price-check', async (req, res) => {
-  const id = validId(req, res);
-  if (id === null) return;
-  let tracked = false;
+  const productId = getProductId(req, res);
+  if (productId === null) return;
+  let isProductTracked = false;
   if (pool) {
     try {
-      tracked = await isTracked(id);
+      isProductTracked = await isTracked(productId);
     } catch (error) {
       return databaseError(res, error);
     }
   }
-  const recent = recentReadings.get(id);
-  if (recent && Date.now() - recent.time < 120_000) {
-    return res.json({ reading: recent.reading, cached: true });
+  const cachedReading = recentReadings.get(productId);
+  if (cachedReading && Date.now() - cachedReading.time < 120_000) {
+    return res.json({ reading: cachedReading.reading, cached: true });
   }
   try {
     let reading;
-    if (tracked) {
-      reading = await runTrackedScrape(id);
+    if (isProductTracked) {
+      reading = await runTrackedScrape(productId);
     } else {
-      if (!inProgress.has(id)) {
-        const task = scrapeProduct(id).finally(() => inProgress.delete(id));
-        inProgress.set(id, task);
+      if (!activePriceChecks.has(productId)) {
+        const task = scrapeProduct(productId).finally(() => activePriceChecks.delete(productId));
+        activePriceChecks.set(productId, task);
       }
-      reading = await inProgress.get(id);
+      reading = await activePriceChecks.get(productId);
     }
-    recentReadings.set(id, { reading, time: Date.now() });
-    res.json({ reading, cached: false, saved: tracked });
+    recentReadings.set(productId, { reading, time: Date.now() });
+    res.json({ reading, cached: false, saved: isProductTracked });
   } catch (error) {
     res.status(502).json({ error: error.message, attempts: error.attempts ?? [] });
   }
@@ -160,20 +166,21 @@ function validCronSecret(value) {
   const expected = process.env.CRON_SECRET;
   if (!expected || expected === 'replace-with-a-long-random-secret') return false;
   const supplied = value?.startsWith('Bearer ') ? value.slice(7) : '';
-  const a = Buffer.from(supplied);
-  const b = Buffer.from(expected);
-  return a.length === b.length && timingSafeEqual(a, b);
+  const suppliedBuffer = Buffer.from(supplied);
+  const expectedBuffer = Buffer.from(expected);
+  return suppliedBuffer.length === expectedBuffer.length
+    && timingSafeEqual(suppliedBuffer, expectedBuffer);
 }
 
-let cronRunning = false;
+let scheduledScrapeRunning = false;
 app.post('/api/jobs/scrape', requireDatabase, async (req, res) => {
   if (!validCronSecret(req.get('authorization'))) return res.status(401).json({ error: 'Unauthorized' });
-  if (cronRunning) return res.status(409).json({ error: 'A scrape run is already in progress' });
-  cronRunning = true;
+  if (scheduledScrapeRunning) return res.status(409).json({ error: 'A scrape run is already in progress' });
+  scheduledScrapeRunning = true;
   try {
-    const tracked = await listTracked();
+    const trackedProducts = await listTracked();
     const results = [];
-    for (const product of tracked) {
+    for (const product of trackedProducts) {
       try {
         const reading = await runTrackedScrape(product.productId);
         recentReadings.set(product.productId, { reading, time: Date.now() });
@@ -182,11 +189,11 @@ app.post('/api/jobs/scrape', requireDatabase, async (req, res) => {
         results.push({ productId: product.productId, outcome: 'failed', error: error.message });
       }
     }
-    res.json({ started: tracked.length, results });
+    res.json({ started: trackedProducts.length, results });
   } catch (error) {
     databaseError(res, error);
   } finally {
-    cronRunning = false;
+    scheduledScrapeRunning = false;
   }
 });
 

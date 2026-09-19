@@ -5,26 +5,30 @@ import SearchResults from './components/SearchResults.jsx';
 import ProductDetails from './components/ProductDetails.jsx';
 
 export default function App() {
-  const priceRequest = useRef(0);
-  const selectedIdRef = useRef(null);
-  const [query, setQuery] = useState('');
-  const [matches, setMatches] = useState([]);
-  const [searching, setSearching] = useState(false);
+  const latestPriceCheck = useRef(0);
+  const selectedProductRef = useRef(null);
+
+  const [searchText, setSearchText] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+  const [isSearching, setIsSearching] = useState(false);
   const [searchError, setSearchError] = useState('');
-  const [selectedId, setSelectedId] = useState(null);
-  const [detail, setDetail] = useState(null);
-  const [detailsLoading, setDetailsLoading] = useState(false);
-  const [detailError, setDetailError] = useState('');
-  const [reading, setReading] = useState(null);
-  const [checking, setChecking] = useState(false);
-  const [checkError, setCheckError] = useState('');
+
+  const [selectedProductId, setSelectedProductId] = useState(null);
+  const [productDetails, setProductDetails] = useState(null);
+  const [isLoadingDetails, setIsLoadingDetails] = useState(false);
+  const [detailsError, setDetailsError] = useState('');
+
+  const [currentReading, setCurrentReading] = useState(null);
+  const [isCheckingPrice, setIsCheckingPrice] = useState(false);
+  const [priceCheckError, setPriceCheckError] = useState('');
+
   const [trackedProducts, setTrackedProducts] = useState([]);
   const [trackingAvailable, setTrackingAvailable] = useState(null);
   const [trackingError, setTrackingError] = useState('');
-  const [tracking, setTracking] = useState(false);
-  const [history, setHistory] = useState([]);
+  const [isAddingToTracking, setIsAddingToTracking] = useState(false);
+  const [priceHistory, setPriceHistory] = useState([]);
   const [scrapeLog, setScrapeLog] = useState([]);
-  const [historyError, setHistoryError] = useState('');
+  const [savedDataError, setSavedDataError] = useState('');
   const [stats, setStats] = useState(null);
 
   async function refreshStats() {
@@ -37,138 +41,227 @@ export default function App() {
 
   useEffect(() => {
     api('/api/tracked')
-      .then(({ products }) => { setTrackedProducts(products); setTrackingAvailable(true); })
-      .catch((error) => { setTrackingAvailable(false); setTrackingError(error.message); });
+      .then(({ products }) => {
+        setTrackedProducts(products);
+        setTrackingAvailable(true);
+      })
+      .catch((error) => {
+        setTrackingAvailable(false);
+        setTrackingError(error.message);
+      });
+
     refreshStats();
   }, []);
 
-  async function loadSavedData(id) {
+  async function loadSavedData(productId) {
     try {
-      const [past, attempts] = await Promise.all([
-        api(`/api/tracked/${id}/history`), api(`/api/tracked/${id}/log`),
+      const [historyResponse, logResponse] = await Promise.all([
+        api(`/api/tracked/${productId}/history`),
+        api(`/api/tracked/${productId}/log`),
       ]);
-      if (selectedIdRef.current !== id) return;
-      setHistory(past.history);
-      setScrapeLog(attempts.log);
-      setHistoryError('');
+
+      // Ignore a response if the user selected another product while it loaded.
+      if (selectedProductRef.current !== productId) return;
+      setPriceHistory(historyResponse.history);
+      setScrapeLog(logResponse.log);
+      setSavedDataError('');
     } catch (error) {
-      if (selectedIdRef.current === id) setHistoryError(error.message);
+      if (selectedProductRef.current === productId) {
+        setSavedDataError(error.message);
+      }
     }
   }
 
   useEffect(() => {
-    setHistory([]);
+    setPriceHistory([]);
     setScrapeLog([]);
-    setHistoryError('');
-    if (selectedId !== null && trackingAvailable === true) loadSavedData(selectedId);
-  }, [selectedId, trackingAvailable]);
+    setSavedDataError('');
+
+    if (selectedProductId !== null && trackingAvailable === true) {
+      loadSavedData(selectedProductId);
+    }
+  }, [selectedProductId, trackingAvailable]);
 
   useEffect(() => {
-    if (!query.trim()) {
-      setMatches([]);
+    if (!searchText.trim()) {
+      setSearchResults([]);
       setSearchError('');
-      setSearching(false);
+      setIsSearching(false);
       return;
     }
+
     const controller = new AbortController();
-    setSearching(true);
+    setIsSearching(true);
+
+    // Wait until typing pauses so one search does not start for every keypress.
     const timer = setTimeout(() => {
-      api(`/api/products?search=${encodeURIComponent(query)}`, { signal: controller.signal })
-        .then(({ products }) => { setMatches(products); setSearchError(''); })
-        .catch((error) => { if (error.name !== 'AbortError') setSearchError(error.message); })
-        .finally(() => { if (!controller.signal.aborted) setSearching(false); });
+      api(`/api/products?search=${encodeURIComponent(searchText)}`, {
+        signal: controller.signal,
+      })
+        .then(({ products }) => {
+          setSearchResults(products);
+          setSearchError('');
+        })
+        .catch((error) => {
+          if (error.name !== 'AbortError') setSearchError(error.message);
+        })
+        .finally(() => {
+          if (!controller.signal.aborted) setIsSearching(false);
+        });
     }, 220);
-    return () => { clearTimeout(timer); controller.abort(); };
-  }, [query]);
+
+    return () => {
+      clearTimeout(timer);
+      controller.abort();
+    };
+  }, [searchText]);
 
   useEffect(() => {
-    if (selectedId === null) return;
-    const controller = new AbortController();
-    setDetailsLoading(true);
-    setDetail(null);
-    setReading(null);
-    setDetailError('');
-    setCheckError('');
-    api(`/api/products/${selectedId}`, { signal: controller.signal })
-      .then(setDetail)
-      .catch((error) => { if (error.name !== 'AbortError') setDetailError(error.message); })
-      .finally(() => { if (!controller.signal.aborted) setDetailsLoading(false); });
-    return () => controller.abort();
-  }, [selectedId]);
+    if (selectedProductId === null) return;
 
-  function changeQuery(value) {
-    priceRequest.current += 1;
-    selectedIdRef.current = null;
-    setQuery(value);
-    setSelectedId(null);
-    setDetail(null);
-    setReading(null);
-    setChecking(false);
+    const controller = new AbortController();
+    setIsLoadingDetails(true);
+    setProductDetails(null);
+    setCurrentReading(null);
+    setDetailsError('');
+    setPriceCheckError('');
+
+    api(`/api/products/${selectedProductId}`, { signal: controller.signal })
+      .then(setProductDetails)
+      .catch((error) => {
+        if (error.name !== 'AbortError') setDetailsError(error.message);
+      })
+      .finally(() => {
+        if (!controller.signal.aborted) setIsLoadingDetails(false);
+      });
+
+    return () => controller.abort();
+  }, [selectedProductId]);
+
+  function changeSearchText(value) {
+    latestPriceCheck.current += 1;
+    selectedProductRef.current = null;
+    setSearchText(value);
+    setSelectedProductId(null);
+    setProductDetails(null);
+    setCurrentReading(null);
+    setIsCheckingPrice(false);
   }
 
-  function selectProduct(id) {
-    priceRequest.current += 1;
-    selectedIdRef.current = id;
-    setSelectedId(id);
-    setReading(null);
-    setChecking(false);
+  function selectProduct(productId) {
+    latestPriceCheck.current += 1;
+    selectedProductRef.current = productId;
+    setSelectedProductId(productId);
+    setCurrentReading(null);
+    setIsCheckingPrice(false);
   }
 
   async function checkPrice() {
-    const request = ++priceRequest.current;
-    const id = selectedId;
-    setChecking(true);
-    setCheckError('');
+    const requestNumber = ++latestPriceCheck.current;
+    const productId = selectedProductId;
+    setIsCheckingPrice(true);
+    setPriceCheckError('');
+
     try {
-      const data = await api(`/api/products/${id}/price-check`, { method: 'POST' });
-      if (priceRequest.current === request) {
-        setReading(data.reading);
-        if (data.saved) {
-          await loadSavedData(id);
-          refreshStats();
-        }
+      const result = await api(`/api/products/${productId}/price-check`, {
+        method: 'POST',
+      });
+
+      if (latestPriceCheck.current !== requestNumber) return;
+      setCurrentReading(result.reading);
+
+      if (result.saved) {
+        await loadSavedData(productId);
+        refreshStats();
       }
     } catch (error) {
-      if (priceRequest.current === request) setCheckError(error.message);
+      if (latestPriceCheck.current === requestNumber) {
+        setPriceCheckError(error.message);
+      }
     } finally {
-      if (priceRequest.current === request) setChecking(false);
+      if (latestPriceCheck.current === requestNumber) {
+        setIsCheckingPrice(false);
+      }
     }
   }
 
   async function trackProduct() {
-    setTracking(true);
+    setIsAddingToTracking(true);
     setTrackingError('');
+
     try {
-      const { product } = await api(`/api/tracked/${selectedId}`, { method: 'POST' });
-      setTrackedProducts((items) => [product, ...items.filter((item) => item.productId !== product.productId)]);
+      const { product } = await api(`/api/tracked/${selectedProductId}`, {
+        method: 'POST',
+      });
+      setTrackedProducts((currentProducts) => [
+        product,
+        ...currentProducts.filter((item) => item.productId !== product.productId),
+      ]);
       refreshStats();
     } catch (error) {
       setTrackingError(error.message);
     } finally {
-      setTracking(false);
+      setIsAddingToTracking(false);
     }
   }
 
-  return <div className="app-shell">
-    <header className="site-header">
-      <div className="brand-mark" aria-hidden="true">◫</div>
-      <div className="brand-copy"><strong>INE Price Tracker</strong><span>Explore the mock store</span></div>
-      <span className="header-tag">1,000 products</span>
-    </header>
+  const selectedIsTracked = trackedProducts.some(
+    (product) => product.productId === selectedProductId,
+  );
 
-    <main className="main-content">
-      <SearchPanel query={query} onQueryChange={changeQuery} stats={stats}
-        trackedProducts={trackedProducts} onSelectProduct={selectProduct} />
-      <div className="content-grid">
-        <SearchResults query={query} matches={matches} searching={searching}
-          error={searchError} selectedId={selectedId} onSelectProduct={selectProduct} />
-        <ProductDetails selectedId={selectedId} detail={detail} loading={detailsLoading}
-          error={detailError} reading={reading} checking={checking} checkError={checkError}
-          onCheckPrice={checkPrice} selectedTracked={trackedProducts.some((item) => item.productId === selectedId)}
-          trackingAvailable={trackingAvailable} tracking={tracking} trackingError={trackingError}
-          onTrack={trackProduct} history={history} historyError={historyError} scrapeLog={scrapeLog} />
-      </div>
-    </main>
-    <footer>Data comes only from INE’s assignment mock storefront. Prices and availability can change.</footer>
-  </div>;
+  return (
+    <div className="app-shell">
+      <header className="site-header">
+        <div className="brand-mark" aria-hidden="true">◫</div>
+        <div className="brand-copy">
+          <strong>INE Price Tracker</strong>
+          <span>Explore the mock store</span>
+        </div>
+        <span className="header-tag">1,000 products</span>
+      </header>
+
+      <main className="main-content">
+        <SearchPanel
+          query={searchText}
+          onQueryChange={changeSearchText}
+          stats={stats}
+          trackedProducts={trackedProducts}
+          onSelectProduct={selectProduct}
+        />
+
+        <div className="content-grid">
+          <SearchResults
+            query={searchText}
+            matches={searchResults}
+            searching={isSearching}
+            error={searchError}
+            selectedId={selectedProductId}
+            onSelectProduct={selectProduct}
+          />
+          <ProductDetails
+            selectedId={selectedProductId}
+            detail={productDetails}
+            loading={isLoadingDetails}
+            error={detailsError}
+            reading={currentReading}
+            checking={isCheckingPrice}
+            checkError={priceCheckError}
+            onCheckPrice={checkPrice}
+            selectedTracked={selectedIsTracked}
+            trackingAvailable={trackingAvailable}
+            tracking={isAddingToTracking}
+            trackingError={trackingError}
+            onTrack={trackProduct}
+            history={priceHistory}
+            historyError={savedDataError}
+            scrapeLog={scrapeLog}
+          />
+        </div>
+      </main>
+
+      <footer>
+        Data comes only from INE’s assignment mock storefront. Prices and availability can change.
+      </footer>
+    </div>
+  );
 }
