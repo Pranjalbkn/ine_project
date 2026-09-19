@@ -4,7 +4,7 @@ export default function ScrapeLog({ entries }) {
       <h3>Scrape log <span>({entries.length})</span></h3>
 
       {entries.length === 0 ? (
-        <p className="helper-text">No scrape attempts have been recorded yet.</p>
+        <p className="helper-text">No scrape attempts yet.</p>
       ) : (
         <div className="table-wrap">
           <table>

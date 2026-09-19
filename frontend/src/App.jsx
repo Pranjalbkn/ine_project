@@ -4,6 +4,21 @@ import SearchPanel from './components/SearchPanel.jsx';
 import SearchResults from './components/SearchResults.jsx';
 import ProductDetails from './components/ProductDetails.jsx';
 
+const RECENT_PRODUCTS_KEY = 'ine-recent-products';
+const RECENT_PRODUCTS_LIMIT = 5;
+
+function readRecentProducts() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(RECENT_PRODUCTS_KEY) || '[]');
+    if (!Array.isArray(saved)) return [];
+    return saved
+      .filter((product) => Number.isSafeInteger(product.id) && typeof product.name === 'string')
+      .slice(0, RECENT_PRODUCTS_LIMIT);
+  } catch {
+    return [];
+  }
+}
+
 export default function App() {
   const latestPriceCheck = useRef(0);
   const selectedProductRef = useRef(null);
@@ -12,6 +27,7 @@ export default function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
   const [searchError, setSearchError] = useState('');
+  const [recentProducts, setRecentProducts] = useState(readRecentProducts);
 
   const [selectedProductId, setSelectedProductId] = useState(null);
   const [productDetails, setProductDetails] = useState(null);
@@ -30,6 +46,14 @@ export default function App() {
   const [scrapeLog, setScrapeLog] = useState([]);
   const [savedDataError, setSavedDataError] = useState('');
   const [stats, setStats] = useState(null);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(RECENT_PRODUCTS_KEY, JSON.stringify(recentProducts));
+    } catch {
+      // The list still works for this visit if browser storage is unavailable.
+    }
+  }, [recentProducts]);
 
   async function refreshStats() {
     try {
@@ -148,12 +172,19 @@ export default function App() {
     setIsCheckingPrice(false);
   }
 
-  function selectProduct(productId) {
+  function selectProduct(productId, productName) {
     latestPriceCheck.current += 1;
     selectedProductRef.current = productId;
     setSelectedProductId(productId);
     setCurrentReading(null);
     setIsCheckingPrice(false);
+
+    if (productName) {
+      setRecentProducts((currentProducts) => [
+        { id: productId, name: productName },
+        ...currentProducts.filter((product) => product.id !== productId),
+      ].slice(0, RECENT_PRODUCTS_LIMIT));
+    }
   }
 
   async function checkPrice() {
@@ -217,6 +248,7 @@ export default function App() {
           onQueryChange={changeSearchText}
           stats={stats}
           trackedProducts={trackedProducts}
+          recentProducts={recentProducts}
           onSelectProduct={selectProduct}
         />
 
@@ -250,9 +282,6 @@ export default function App() {
         </div>
       </main>
 
-      <footer>
-        Data comes only from INE’s assignment mock storefront. Prices and availability can change.
-      </footer>
     </div>
   );
 }

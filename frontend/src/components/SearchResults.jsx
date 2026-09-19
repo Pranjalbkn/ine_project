@@ -5,8 +5,7 @@ export default function SearchResults({ query, matches, searching, error, select
     <section className="results-panel" aria-label="Search results">
       <div className="panel-heading">
         <div>
-          <p className="eyebrow">CATALOG</p>
-          <h2>Matching products</h2>
+          <h2>Results</h2>
         </div>
         <span className="count-badge">{hasSearchText ? matches.length : '—'}</span>
       </div>
@@ -14,18 +13,14 @@ export default function SearchResults({ query, matches, searching, error, select
       <div className="results-list" aria-live="polite">
         {!hasSearchText && (
           <div className="panel-empty">
-            <span>⌕</span>
-            <h3>Start with a product name</h3>
-            <p>Every matching product will appear here.</p>
+            <h3>Search for a product</h3>
           </div>
         )}
         {hasSearchText && searching && <div className="panel-message">Searching the catalog…</div>}
         {error && <div className="error-message">{error}</div>}
         {hasSearchText && !searching && !error && matches.length === 0 && (
           <div className="panel-empty">
-            <span>∅</span>
-            <h3>No matches found</h3>
-            <p>Try a shorter part of the name.</p>
+            <h3>No products found</h3>
           </div>
         )}
         {!searching && !error && matches.map((product) => (
@@ -33,7 +28,7 @@ export default function SearchResults({ query, matches, searching, error, select
             type="button"
             key={product.id}
             className={`result-item ${selectedId === product.id ? 'selected' : ''}`}
-            onClick={() => onSelectProduct(product.id)}
+            onClick={() => onSelectProduct(product.id, product.name)}
             aria-pressed={selectedId === product.id}
           >
             <span className="item-icon" aria-hidden="true">

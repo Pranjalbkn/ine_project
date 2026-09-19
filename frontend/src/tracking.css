@@ -1,18 +1,21 @@
-.tracked-strip {
+.tracked-strip,
+.recent-strip {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 18px;
 }
-.tracked-strip > span {
+.tracked-strip > span,
+.recent-strip > span {
   margin-right: 3px;
   color: var(--slate-dark);
   font-size: 10px;
   font-weight: 800;
   letter-spacing: .12em;
 }
-.tracked-strip button {
+.tracked-strip button,
+.recent-strip button {
   max-width: 210px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -26,6 +29,12 @@
   font-weight: 700;
 }
 .tracked-strip button:hover { background: var(--tomato-soft); }
+.recent-strip button {
+  background: var(--tomato-soft);
+  color: var(--tomato-dark);
+}
+.recent-strip button:hover { border-color: var(--tomato); }
+.recent-strip + .tracked-strip { margin-top: 10px; }
 .tracking-card {
   display: flex;
   align-items: center;
@@ -38,7 +47,6 @@
   background: var(--slate-soft);
 }
 .tracking-card strong { font-size: 13px; color: var(--ink); }
-.tracking-card p { margin: 5px 0 0; color: var(--muted); font-size: 11px; line-height: 1.4; }
 .tracking-badge { color: var(--tomato-dark); font-size: 11px; font-weight: 800; white-space: nowrap; }
 .secondary-button {
   flex: none;

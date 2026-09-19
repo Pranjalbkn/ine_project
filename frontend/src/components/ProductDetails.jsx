@@ -27,10 +27,7 @@ export default function ProductDetails({
     <section className="detail-panel" aria-label="Product details" aria-live="polite">
       {!selectedId && (
         <div className="detail-placeholder">
-          <div className="placeholder-art" aria-hidden="true">◎</div>
-          <p className="eyebrow">PRODUCT DETAILS</p>
-          <h2>Pick a product</h2>
-          <p>Its basic information, scrape count, price graph, and stock will appear here.</p>
+          <h2>Select a product</h2>
         </div>
       )}
 
@@ -53,7 +50,6 @@ export default function ProductDetails({
               <div><dt>SKU</dt><dd>{product.sku}</dd></div>
               <div><dt>Product ID</dt><dd>{product.id}</dd></div>
             </dl>
-            <p>{product.description}</p>
           </div>
 
           <div className="product-stats">
@@ -70,7 +66,7 @@ export default function ProductDetails({
           <div className="price-card">
             <div>
               <p className="eyebrow">CURRENT STORE READING</p>
-              {reading ? (
+              {reading && (
                 <>
                   <strong className="price-text">
                     {formatPrice(reading.price, reading.currency)}
@@ -80,8 +76,6 @@ export default function ProductDetails({
                   </p>
                   <small>Checked {new Date(reading.scrapedAt).toLocaleString()}</small>
                 </>
-              ) : (
-                <p className="price-prompt">Check the latest price and availability.</p>
               )}
             </div>
             <button
@@ -94,22 +88,12 @@ export default function ProductDetails({
             </button>
           </div>
 
-          {checking && (
-            <p className="helper-text">The store may load slowly; retries can take over a minute.</p>
-          )}
           {checkError && <p className="error-message">{checkError}</p>}
 
           <div className="tracking-card">
-            <div>
-              <strong>{selectedTracked ? 'Tracking this product' : 'Track this product'}</strong>
-              <p>
-                {selectedTracked
-                  ? 'New readings and scrape attempts are saved in Supabase.'
-                  : 'Save its future price, stock, and scrape log.'}
-              </p>
-            </div>
+            <strong>Price tracking</strong>
             {selectedTracked ? (
-              <span className="tracking-badge">● Tracking</span>
+              <span className="tracking-badge">● Active</span>
             ) : (
               <button
                 className="secondary-button"
@@ -124,7 +108,7 @@ export default function ProductDetails({
 
           {trackingAvailable === false && (
             <p className="helper-text">
-              Set DATABASE_URL in backend/.env and run the database migration to enable tracking.
+              Tracking is unavailable. Check the backend setup.
             </p>
           )}
           {trackingError && trackingAvailable === true && (
@@ -133,7 +117,6 @@ export default function ProductDetails({
 
           <div className="detail-section">
             <h3>Price over scrape time</h3>
-            <p className="chart-description">Each point is a saved price from a completed scrape.</p>
             {historyError && <p className="error-message">{historyError}</p>}
             <PriceChart history={history} />
           </div>

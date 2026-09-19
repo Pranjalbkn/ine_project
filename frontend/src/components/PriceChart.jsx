@@ -27,7 +27,7 @@ export default function PriceChart({ history }) {
   if (readings.length === 0) {
     return (
       <div className="chart-empty">
-        No saved prices yet. Track this product and check its live price to start the graph.
+        No price history yet.
       </div>
     );
   }
@@ -136,9 +136,6 @@ export default function PriceChart({ history }) {
         )}
       </svg>
 
-      {readings.length === 1 && (
-        <p className="helper-text">One reading so far. The line appears after the next saved scrape.</p>
-      )}
     </div>
   );
 }

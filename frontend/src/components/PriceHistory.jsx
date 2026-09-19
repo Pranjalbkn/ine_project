@@ -6,7 +6,7 @@ export default function PriceHistory({ history }) {
       <h3>Price and stock history <span>({history.length})</span></h3>
 
       {history.length === 0 ? (
-        <p className="helper-text">No saved readings yet. Track this product and check its live price.</p>
+        <p className="helper-text">No readings yet.</p>
       ) : (
         <div className="table-wrap">
           <table>

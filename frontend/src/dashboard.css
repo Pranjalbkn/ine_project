@@ -28,7 +28,6 @@
   font-weight: 500;
   line-height: 1;
 }
-.overview-stats small { color: var(--muted); font-size: 10px; }
 .basic-info {
   margin: 16px 0 20px;
   padding: 17px 19px;
@@ -51,10 +50,8 @@
   text-transform: uppercase;
 }
 .basic-grid dd { margin: 4px 0 0; color: var(--ink); font-size: 13px; }
-.basic-info > p:last-child { margin: 16px 0 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
 .product-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
 .product-stats > div { background: var(--slate-soft); }
-.chart-description { margin: -6px 0 12px; color: var(--muted); font-size: 12px; }
 .chart-wrap { width: 100%; overflow-x: auto; }
 .price-chart { display: block; width: 100%; min-width: 330px; height: auto; }
 .chart-grid-line { stroke: var(--border); stroke-width: 1; }

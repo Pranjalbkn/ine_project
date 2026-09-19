@@ -1,16 +1,16 @@
-export default function SearchPanel({ query, onQueryChange, stats, trackedProducts, onSelectProduct }) {
+export default function SearchPanel({
+  query, onQueryChange, stats, trackedProducts, recentProducts, onSelectProduct,
+}) {
   return (
     <section className="intro">
-      <p className="eyebrow">PRODUCT SEARCH</p>
-      <h1>Find the product you want to track.</h1>
-      <p>Search by any part of its name. Select a result to see its details, scrape count, and price history.</p>
+      <h1>Search products</h1>
 
       <label className="search-box">
         <span className="search-icon" aria-hidden="true">⌕</span>
         <span className="sr-only">Search product names</span>
         <input
           type="search"
-          placeholder="Try fitness band, doorbell, or monitor"
+          placeholder="Search by product name"
           value={query}
           onChange={(event) => onQueryChange(event.target.value)}
           autoComplete="off"
@@ -26,28 +26,40 @@ export default function SearchPanel({ query, onQueryChange, stats, trackedProduc
         <div>
           <span>Total scrape attempts</span>
           <strong>{stats?.totalScrapes ?? '—'}</strong>
-          <small>Includes retries</small>
         </div>
         <div>
           <span>Tracked products</span>
           <strong>{stats?.trackedProducts ?? '—'}</strong>
-          <small>Selected for regular checks</small>
         </div>
         <div>
           <span>Saved prices</span>
           <strong>{stats?.savedPrices ?? '—'}</strong>
-          <small>Valid readings</small>
         </div>
       </div>
 
+      {recentProducts.length > 0 && (
+        <div className="recent-strip" aria-label="Recent products">
+          <span>RECENT</span>
+          {recentProducts.map((product) => (
+            <button
+              type="button"
+              key={product.id}
+              onClick={() => onSelectProduct(product.id, product.name)}
+            >
+              {product.name}
+            </button>
+          ))}
+        </div>
+      )}
+
       {trackedProducts.length > 0 && (
-        <div className="tracked-strip">
-          <span>TRACKING</span>
+        <div className="tracked-strip" aria-label="Tracked products">
+          <span>TRACKED</span>
           {trackedProducts.map((product) => (
             <button
               type="button"
               key={product.productId}
-              onClick={() => onSelectProduct(product.productId)}
+              onClick={() => onSelectProduct(product.productId, product.name)}
             >
               {product.name}
             </button>
