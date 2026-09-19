@@ -24,7 +24,6 @@
 .overview-stats strong,
 .product-stats strong {
   color: #1d5144;
-  font-family: Georgia, serif;
   font-size: 29px;
   font-weight: 500;
   line-height: 1;
@@ -59,7 +58,7 @@
 .chart-wrap { width: 100%; overflow-x: auto; }
 .price-chart { display: block; width: 100%; min-width: 330px; height: auto; }
 .chart-grid-line { stroke: #e8eee7; stroke-width: 1; }
-.chart-axis-label { fill: #829287; font: 11px Inter, system-ui, sans-serif; }
+.chart-axis-label { fill: #829287; font: 11px 'Poppins', sans-serif; }
 .chart-line { fill: none; stroke: #297b62; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
 .chart-point { fill: #fff; stroke: #297b62; stroke-width: 3; }
 .chart-empty { padding: 32px 18px; border: 1px dashed #cddbd0; border-radius: 10px; background: #f8faf7; color: #7b8982; text-align: center; font-size: 12px; line-height: 1.5; }
