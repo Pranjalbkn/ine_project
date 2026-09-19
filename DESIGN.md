@@ -9,8 +9,8 @@ log of scrape attempts. GitHub Actions calls the API's protected job every two
 hours.
 
 The source folders are separate: `frontend/` contains the page and styles;
-`backend/` contains the API, scraper, catalog, and SQL. Root npm commands run
-the two folders together for local development.
+`backend/` contains the API, scraper, catalog, and SQL. Each folder has its
+own package and runs from its own terminal.
 
 The page shows total and per-product scrape attempts, basic product details,
 and a simple SVG price graph using saved timestamps and prices. Reviews are

@@ -1,0 +1,23 @@
+{
+  "name": "ine-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test",
+    "db:migrate": "node src/migrate.js",
+    "scrape": "node src/scrape-cli.js",
+    "scrape:headed": "node src/scrape-cli.js --headed",
+    "catalog:sync": "node src/catalog-cli.js --sync",
+    "catalog:search": "node src/catalog-cli.js --search"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.1",
+    "express": "^5.2.1",
+    "pg": "^8.23.0",
+    "playwright": "^1.55.0"
+  }
+}

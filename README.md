@@ -21,11 +21,11 @@ page. Only the assignment mock store is scraped.
 ## Folder structure
 
 ```text
-backend/   Express API, Playwright scraper, catalog, SQL, private .env
-frontend/  React page, styles, Vite config
+backend/   Express API, Playwright scraper, database, its own package.json
+frontend/  React page, styles, Vite config, its own package.json
 ```
 
-The root `package.json` only provides commands to run both folders together.
+Each folder installs and runs independently.
 In `frontend/src`, `App.jsx` coordinates data and actions, `api.js` handles
 requests, `format.js` holds display helpers, and `components/` contains the
 search, product, chart, history, and scrape-log views.
@@ -48,12 +48,21 @@ search, product, chart, history, and scrape-log views.
 
 ## Run locally
 
-You need Node.js 22.12 or newer.
+You need Node.js 22.12 or newer. Open the **INE project** folder in VS Code,
+then open two terminals. Install dependencies once in each folder:
 
 ```powershell
+# Terminal 1, from the project root
+cd backend
 npm ci
 npx playwright install chromium
-if (!(Test-Path backend/.env)) { Copy-Item backend/.env.example backend/.env }
+if (!(Test-Path .env)) { Copy-Item .env.example .env }
+```
+
+```powershell
+# Terminal 2, from the project root
+cd frontend
+npm ci
 ```
 
 In `backend/.env`, replace `DATABASE_URL` with the Supabase connection string from the
@@ -61,25 +70,44 @@ Supabase **Connect** dialog. Replace the password placeholder, including its
 square brackets. URL-encode reserved password characters. A Supabase session
 pooler string can be used if your network cannot reach the direct IPv6 address.
 
+Run the migration once from the **backend** terminal:
+
 ```powershell
 npm run db:migrate
+```
+
+For normal development, start each side in its own terminal:
+
+```powershell
+# Terminal 1: INE project/backend
 npm run dev
 ```
 
-Open `http://127.0.0.1:5173`. The API runs on port 3001. Search for a name,
+```powershell
+# Terminal 2: INE project/frontend
+npm run dev
+```
+
+Open `http://127.0.0.1:5173`. The frontend sends API requests to the backend
+on port 3001. Search for a name,
 select a product, click **Track product**, then click **Check live price**.
 The first check can take a minute if the store is slow or the scraper retries.
 The graph appears after a saved reading; two readings show a price trend.
 "Scrape attempts" includes retries, while "saved prices" counts validated
 readings only.
 
-Useful commands:
+Useful backend commands (run inside `backend/`):
 
 ```powershell
 npm run scrape -- 738
 npm run scrape:headed -- 738
 npm run catalog:sync
 npm test
+```
+
+Frontend build (run inside `frontend/`):
+
+```powershell
 npm run build
 ```
 
@@ -94,7 +122,8 @@ stay private.
 
 ### 1. Backend on Render
 
-Create a **Web Service** from the repository, using the Node runtime.
+Create a **Web Service** from the repository, using the Node runtime. Set its
+**Root Directory** to `backend`.
 
 | Setting | Value |
 | --- | --- |
@@ -105,14 +134,15 @@ Create a **Web Service** from the repository, using the Node runtime.
 | `CRON_SECRET` | A long random secret that you choose |
 | `FRONTEND_ORIGIN` | Exact Vercel site origin, such as `https://your-site.vercel.app` |
 
-The database tables were created locally with `npm run db:migrate`. To create
+The database tables were created locally from `backend/` with
+`npm run db:migrate`. To create
 them for a different Supabase database, run the same command with that
 database's `DATABASE_URL`. Confirm the Render URL responds at `/api/health`.
 
 ### 2. Frontend on Vercel
 
-Import the same GitHub repository as a Vercel project. Keep the project root
-at the repository root. `vercel.json` sets the build and output directory.
+Import the same GitHub repository as a Vercel project. Set its **Root Directory**
+to `frontend`. `frontend/vercel.json` builds the frontend and publishes `dist`.
 Set `VITE_API_BASE_URL` to the Render URL, without a trailing slash. Deploy,
 then set Render's `FRONTEND_ORIGIN` to the exact Vercel URL and redeploy Render.
 
@@ -158,6 +188,6 @@ backend; it is never sent to the browser or stored in a `VITE_` variable.
 - A free Render service may sleep when idle, so the first request can be slow.
 
 For a demo: search for a product, track it, check its live price, show the
-history and log, then run `npm run scrape:headed -- 738` to show the browser
+history and log, then run `npm run scrape:headed -- 738` from `backend/` to show the browser
 interaction. After deployment, run the GitHub workflow manually to demonstrate
 the two-hour job.
