@@ -1,3 +1,5 @@
+import { formatPrice } from '../format.js';
+
 const WIDTH = 640;
 const HEIGHT = 240;
 const LEFT = 72;
@@ -11,7 +13,7 @@ function timeLabel(value) {
   }).format(new Date(value));
 }
 
-export default function PriceChart({ history, formatPrice }) {
+export default function PriceChart({ history }) {
   const readings = [...history]
     .filter((item) => Number.isFinite(Number(item.price)) && Number.isFinite(Date.parse(item.scrapedAt)))
     .sort((a, b) => Date.parse(a.scrapedAt) - Date.parse(b.scrapedAt));

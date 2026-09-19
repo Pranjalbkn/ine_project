@@ -1,30 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-import PriceChart from './PriceChart.jsx';
-
-const API = import.meta.env.VITE_API_BASE_URL?.replace(/\/$/, '') || '';
-
-async function api(path, options) {
-  const response = await fetch(`${API}${path}`, options);
-  const data = await response.json();
-  if (!response.ok) throw new Error(data.error || `Request failed (${response.status})`);
-  return data;
-}
-
-function label(key) {
-  if (key === 'weightGrams') return 'Weight';
-  return key.replace(/([A-Z])/g, ' $1').replace(/^./, (letter) => letter.toUpperCase());
-}
-
-function specValue(key, value) {
-  if (key === 'weightGrams') return value >= 1000 ? `${(value / 1000).toFixed(2)} kg` : `${value} g`;
-  return String(value);
-}
-
-function formatPrice(amount, currency) {
-  return new Intl.NumberFormat('en-IN', {
-    style: 'currency', currency, maximumFractionDigits: 0,
-  }).format(amount);
-}
+import { api } from './api.js';
+import SearchPanel from './components/SearchPanel.jsx';
+import SearchResults from './components/SearchResults.jsx';
+import ProductDetails from './components/ProductDetails.jsx';
 
 export default function App() {
   const priceRequest = useRef(0);
@@ -82,9 +60,7 @@ export default function App() {
     setHistory([]);
     setScrapeLog([]);
     setHistoryError('');
-    if (selectedId !== null && trackingAvailable === true) {
-      loadSavedData(selectedId);
-    }
+    if (selectedId !== null && trackingAvailable === true) loadSavedData(selectedId);
   }, [selectedId, trackingAvailable]);
 
   useEffect(() => {
@@ -120,6 +96,24 @@ export default function App() {
     return () => controller.abort();
   }, [selectedId]);
 
+  function changeQuery(value) {
+    priceRequest.current += 1;
+    selectedIdRef.current = null;
+    setQuery(value);
+    setSelectedId(null);
+    setDetail(null);
+    setReading(null);
+    setChecking(false);
+  }
+
+  function selectProduct(id) {
+    priceRequest.current += 1;
+    selectedIdRef.current = id;
+    setSelectedId(id);
+    setReading(null);
+    setChecking(false);
+  }
+
   async function checkPrice() {
     const request = ++priceRequest.current;
     const id = selectedId;
@@ -141,24 +135,6 @@ export default function App() {
     }
   }
 
-  function changeQuery(value) {
-    priceRequest.current += 1;
-    selectedIdRef.current = null;
-    setQuery(value);
-    setSelectedId(null);
-    setDetail(null);
-    setReading(null);
-    setChecking(false);
-  }
-
-  function selectProduct(id) {
-    priceRequest.current += 1;
-    selectedIdRef.current = id;
-    setSelectedId(id);
-    setReading(null);
-    setChecking(false);
-  }
-
   async function trackProduct() {
     setTracking(true);
     setTrackingError('');
@@ -173,129 +149,26 @@ export default function App() {
     }
   }
 
-  const product = detail?.product;
-  const selectedTracked = trackedProducts.some((item) => item.productId === selectedId);
-  return (
-    <div className="app-shell">
-      <header className="site-header">
-        <div className="brand-mark" aria-hidden="true">◫</div>
-        <div className="brand-copy"><strong>INE Price Tracker</strong><span>Explore the mock store</span></div>
-        <span className="header-tag">1,000 products</span>
-      </header>
+  return <div className="app-shell">
+    <header className="site-header">
+      <div className="brand-mark" aria-hidden="true">◫</div>
+      <div className="brand-copy"><strong>INE Price Tracker</strong><span>Explore the mock store</span></div>
+      <span className="header-tag">1,000 products</span>
+    </header>
 
-      <main className="main-content">
-        <section className="intro">
-          <p className="eyebrow">PRODUCT SEARCH</p>
-          <h1>Find the product you want to track.</h1>
-          <p>Search by any part of its name. Select a result to see its details, scrape count, and price history.</p>
-          <label className="search-box">
-            <span className="search-icon" aria-hidden="true">⌕</span>
-            <span className="sr-only">Search product names</span>
-            <input
-              type="search" placeholder="Try fitness band, doorbell, or monitor"
-              value={query} onChange={(event) => changeQuery(event.target.value)}
-              autoComplete="off"
-            />
-            {query && <button type="button" onClick={() => changeQuery('')} aria-label="Clear search">×</button>}
-          </label>
-          <div className="overview-stats" aria-label="Tracking summary">
-            <div><span>Total scrape attempts</span><strong>{stats?.totalScrapes ?? '—'}</strong><small>Includes retries</small></div>
-            <div><span>Tracked products</span><strong>{stats?.trackedProducts ?? '—'}</strong><small>Selected for regular checks</small></div>
-            <div><span>Saved prices</span><strong>{stats?.savedPrices ?? '—'}</strong><small>Valid readings</small></div>
-          </div>
-          {trackedProducts.length > 0 && <div className="tracked-strip"><span>TRACKING</span>{trackedProducts.map((item) => <button type="button" key={item.productId} onClick={() => selectProduct(item.productId)}>{item.name}</button>)}</div>}
-        </section>
-
-        <div className="content-grid">
-          <section className="results-panel" aria-label="Search results">
-            <div className="panel-heading">
-              <div><p className="eyebrow">CATALOG</p><h2>Matching products</h2></div>
-              <span className="count-badge">{query.trim() ? matches.length : '—'}</span>
-            </div>
-            <div className="results-list" aria-live="polite">
-              {!query.trim() && <div className="panel-empty"><span>⌕</span><h3>Start with a product name</h3><p>Every matching product will appear here.</p></div>}
-              {query.trim() && searching && <div className="panel-message">Searching the catalog…</div>}
-              {searchError && <div className="error-message">{searchError}</div>}
-              {query.trim() && !searching && !searchError && matches.length === 0 &&
-                <div className="panel-empty"><span>∅</span><h3>No matches found</h3><p>Try a shorter part of the name.</p></div>}
-              {!searching && !searchError && matches.map((item) => (
-                <button
-                  type="button" key={item.id}
-                  className={`result-item ${selectedId === item.id ? 'selected' : ''}`}
-                  onClick={() => selectProduct(item.id)}
-                  aria-pressed={selectedId === item.id}
-                >
-                  <span className="item-icon" aria-hidden="true">{item.category?.slice(0, 1) || 'P'}</span>
-                  <span className="item-text"><strong>{item.name}</strong><small>{item.brand} · {item.category} · {item.sku}</small></span>
-                  <span className="item-arrow" aria-hidden="true">→</span>
-                </button>
-              ))}
-            </div>
-          </section>
-
-          <section className="detail-panel" aria-label="Product details" aria-live="polite">
-            {!selectedId && <div className="detail-placeholder"><div className="placeholder-art" aria-hidden="true">◎</div><p className="eyebrow">PRODUCT DETAILS</p><h2>Pick a product</h2><p>Its basic information, scrape count, price graph, and stock will appear here.</p></div>}
-            {selectedId && detailsLoading && <div className="panel-message">Loading product details…</div>}
-            {detailError && <div className="error-message">{detailError}</div>}
-            {product && <>
-              <div className="detail-top"><span className="category-pill">{product.category}</span><span className="sku">{product.sku}</span></div>
-              <h2 className="product-title">{product.name}</h2>
-              <div className="basic-info">
-                <p className="eyebrow">BASIC INFORMATION</p>
-                <dl className="basic-grid">
-                  <div><dt>Brand</dt><dd>{product.brand}</dd></div>
-                  <div><dt>Category</dt><dd>{product.category}</dd></div>
-                  <div><dt>SKU</dt><dd>{product.sku}</dd></div>
-                  <div><dt>Product ID</dt><dd>{product.id}</dd></div>
-                </dl>
-                <p>{product.description}</p>
-              </div>
-
-              <div className="product-stats">
-                <div><span>Product scrape attempts</span><strong>{scrapeLog.length}</strong></div>
-                <div><span>Saved price readings</span><strong>{history.length}</strong></div>
-              </div>
-
-              <div className="price-card">
-                <div><p className="eyebrow">CURRENT STORE READING</p>
-                  {reading ? <><strong className="price-text">{formatPrice(reading.price, reading.currency)}</strong><p className={reading.stock === 0 ? 'stock-out' : 'stock-in'}>{reading.stock === 0 ? 'Out of stock' : `${reading.stock} in stock`}</p><small>Checked {new Date(reading.scrapedAt).toLocaleString()}</small></>
-                    : <p className="price-prompt">Check the latest price and availability.</p>}
-                </div>
-                <button className="primary-button" type="button" onClick={checkPrice} disabled={checking}>{checking ? 'Checking…' : reading ? 'Check again' : 'Check live price'}</button>
-              </div>
-              {checking && <p className="helper-text">The store may load slowly; retries can take over a minute.</p>}
-              {checkError && <p className="error-message">{checkError}</p>}
-
-              <div className="tracking-card">
-                <div><strong>{selectedTracked ? 'Tracking this product' : 'Track this product'}</strong><p>{selectedTracked ? 'New readings and scrape attempts are saved in Supabase.' : 'Save its future price, stock, and scrape log.'}</p></div>
-                {selectedTracked ? <span className="tracking-badge">● Tracking</span> :
-                  <button className="secondary-button" type="button" onClick={trackProduct} disabled={tracking || trackingAvailable !== true}>{tracking ? 'Adding…' : 'Track product'}</button>}
-              </div>
-              {trackingAvailable === false && <p className="helper-text">Set DATABASE_URL in backend/.env and run the database migration to enable tracking.</p>}
-              {trackingError && trackingAvailable === true && <p className="error-message">{trackingError}</p>}
-
-              <div className="detail-section"><h3>Price over scrape time</h3>
-                <p className="chart-description">Each point is a saved price from a completed scrape.</p>
-                {historyError && <p className="error-message">{historyError}</p>}
-                <PriceChart history={history} formatPrice={formatPrice} />
-              </div>
-
-              <div className="detail-section"><h3>Price and stock history <span>({history.length})</span></h3>
-                {history.length === 0 ? <p className="helper-text">No saved readings yet. Track this product and check its live price.</p> :
-                  <div className="table-wrap"><table><thead><tr><th>Checked</th><th>Price</th><th>Stock</th></tr></thead><tbody>{history.map((item) => <tr key={item.id}><td>{new Date(item.scrapedAt).toLocaleString()}</td><td>{formatPrice(item.price, item.currency)}</td><td>{item.stock === 0 ? 'Out' : item.stock}</td></tr>)}</tbody></table></div>}
-              </div>
-              <div className="detail-section"><h3>Scrape log <span>({scrapeLog.length})</span></h3>
-                {scrapeLog.length === 0 ? <p className="helper-text">No scrape attempts have been recorded yet.</p> :
-                  <div className="table-wrap"><table><thead><tr><th>Time</th><th>Attempt</th><th>Outcome</th></tr></thead><tbody>{scrapeLog.map((entry) => <tr key={entry.id}><td>{new Date(entry.startedAt).toLocaleString()}</td><td>{entry.attempt}</td><td><span className={`log-status ${entry.outcome}`}>{entry.outcome}</span>{entry.error && <small className="log-error">{entry.error}</small>}</td></tr>)}</tbody></table></div>}
-              </div>
-
-              <div className="detail-section"><h3>Specifications</h3><dl className="spec-grid">{Object.entries(product.specs || {}).map(([key, value]) => <div key={key}><dt>{label(key)}</dt><dd>{specValue(key, value)}</dd></div>)}</dl></div>
-              <a className="store-link" href={detail.storeUrl} target="_blank" rel="noreferrer">View on INE mock store ↗</a>
-            </>}
-          </section>
-        </div>
-      </main>
-      <footer>Data comes only from INE’s assignment mock storefront. Prices and availability can change.</footer>
-    </div>
-  );
+    <main className="main-content">
+      <SearchPanel query={query} onQueryChange={changeQuery} stats={stats}
+        trackedProducts={trackedProducts} onSelectProduct={selectProduct} />
+      <div className="content-grid">
+        <SearchResults query={query} matches={matches} searching={searching}
+          error={searchError} selectedId={selectedId} onSelectProduct={selectProduct} />
+        <ProductDetails selectedId={selectedId} detail={detail} loading={detailsLoading}
+          error={detailError} reading={reading} checking={checking} checkError={checkError}
+          onCheckPrice={checkPrice} selectedTracked={trackedProducts.some((item) => item.productId === selectedId)}
+          trackingAvailable={trackingAvailable} tracking={tracking} trackingError={trackingError}
+          onTrack={trackProduct} history={history} historyError={historyError} scrapeLog={scrapeLog} />
+      </div>
+    </main>
+    <footer>Data comes only from INE’s assignment mock storefront. Prices and availability can change.</footer>
+  </div>;
 }

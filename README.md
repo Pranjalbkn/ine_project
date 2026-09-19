@@ -26,6 +26,9 @@ frontend/  React page, styles, Vite config
 ```
 
 The root `package.json` only provides commands to run both folders together.
+In `frontend/src`, `App.jsx` coordinates data and actions, `api.js` handles
+requests, `format.js` holds display helpers, and `components/` contains the
+search, product, chart, history, and scrape-log views.
 
 ## Run locally
 
