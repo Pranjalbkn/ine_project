@@ -1,4 +1,4 @@
-import { formatPrice } from '../format.js';
+import { formatIndiaDateTime, formatPrice } from '../format.js';
 
 export default function PriceHistory({ history }) {
   return (
@@ -11,12 +11,12 @@ export default function PriceHistory({ history }) {
         <div className="table-wrap">
           <table>
             <thead>
-              <tr><th>Checked</th><th>Price</th><th>Stock</th></tr>
+              <tr><th>Checked (IST)</th><th>Price</th><th>Stock</th></tr>
             </thead>
             <tbody>
               {history.map((reading) => (
                 <tr key={reading.id}>
-                  <td>{new Date(reading.scrapedAt).toLocaleString()}</td>
+                  <td>{formatIndiaDateTime(reading.scrapedAt)}</td>
                   <td>{formatPrice(reading.price, reading.currency)}</td>
                   <td>{reading.stock === 0 ? 'Out' : reading.stock}</td>
                 </tr>

@@ -1,3 +1,5 @@
+import { formatIndiaDateTime } from '../format.js';
+
 export default function ScrapeLog({ entries }) {
   return (
     <div className="detail-section">
@@ -9,12 +11,12 @@ export default function ScrapeLog({ entries }) {
         <div className="table-wrap">
           <table>
             <thead>
-              <tr><th>Time</th><th>Attempt</th><th>Outcome</th></tr>
+              <tr><th>Time (IST)</th><th>Attempt</th><th>Outcome</th></tr>
             </thead>
             <tbody>
               {entries.map((entry) => (
                 <tr key={entry.id}>
-                  <td>{new Date(entry.startedAt).toLocaleString()}</td>
+                  <td>{formatIndiaDateTime(entry.startedAt)}</td>
                   <td>{entry.attempt}</td>
                   <td>
                     <span className={`log-status ${entry.outcome}`}>{entry.outcome}</span>

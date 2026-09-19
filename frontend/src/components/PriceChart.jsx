@@ -1,4 +1,4 @@
-import { formatPrice } from '../format.js';
+import { formatIndiaChartDate, formatIndiaDateTime, formatPrice } from '../format.js';
 
 const CHART_WIDTH = 640;
 const CHART_HEIGHT = 240;
@@ -6,15 +6,6 @@ const LEFT_MARGIN = 72;
 const RIGHT_MARGIN = 20;
 const TOP_MARGIN = 18;
 const BOTTOM_MARGIN = 42;
-
-function formatChartDate(date) {
-  return new Intl.DateTimeFormat('en-IN', {
-    day: 'numeric',
-    month: 'short',
-    hour: 'numeric',
-    minute: '2-digit',
-  }).format(new Date(date));
-}
 
 export default function PriceChart({ history }) {
   const readings = [...history]
@@ -111,7 +102,7 @@ export default function PriceChart({ history }) {
             r="5"
           >
             <title>
-              {`${formatPrice(point.reading.price, point.reading.currency)} on ${new Date(point.reading.scrapedAt).toLocaleString()}`}
+              {`${formatPrice(point.reading.price, point.reading.currency)} on ${formatIndiaDateTime(point.reading.scrapedAt)}`}
             </title>
           </circle>
         ))}
@@ -122,7 +113,7 @@ export default function PriceChart({ history }) {
           y={CHART_HEIGHT - 13}
           textAnchor={points.length === 1 ? 'middle' : 'start'}
         >
-          {formatChartDate(readings[0].scrapedAt)}
+          {formatIndiaChartDate(readings[0].scrapedAt)}
         </text>
         {points.length > 1 && (
           <text
@@ -131,7 +122,7 @@ export default function PriceChart({ history }) {
             y={CHART_HEIGHT - 13}
             textAnchor="end"
           >
-            {formatChartDate(readings[readings.length - 1].scrapedAt)}
+            {formatIndiaChartDate(readings[readings.length - 1].scrapedAt)}
           </text>
         )}
       </svg>

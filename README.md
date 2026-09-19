@@ -35,8 +35,8 @@ search, product, chart, history, and scrape-log views.
 - `frontend/src/App.jsx` holds the page state. It searches the catalog,
   loads the selected product, starts price checks, and passes the results to
   the components.
-- `frontend/src/components/` only displays the search panel, results,
-  product details, graph, history, and log. `api.js` makes HTTP requests,
+- `frontend/src/components/` displays matching products in the search dropdown,
+  then shows product details, graph, history, and log below it. `api.js` makes HTTP requests,
   and `format.js` formats prices and specifications.
 - `backend/src/server.js` defines the API routes. Search reads the saved
   catalog; product details come from the store's API.
@@ -55,6 +55,7 @@ then open two terminals. Install dependencies once in each folder:
 # Terminal 1, from the project root
 cd backend
 npm ci
+$env:PLAYWRIGHT_BROWSERS_PATH = (Join-Path (Get-Location) '.playwright-browsers')
 npx playwright install chromium
 if (!(Test-Path .env)) { Copy-Item .env.example .env }
 ```
@@ -69,6 +70,7 @@ In `backend/.env`, replace `DATABASE_URL` with the Supabase connection string fr
 Supabase **Connect** dialog. Replace the password placeholder, including its
 square brackets. URL-encode reserved password characters. A Supabase session
 pooler string can be used if your network cannot reach the direct IPv6 address.
+The browser is installed inside `backend/.playwright-browsers` and is ignored by Git.
 
 Run the migration once from the **backend** terminal:
 
@@ -171,6 +173,9 @@ have scheduled runs disabled. Check the Actions tab if no new scrape appears.
 | `tracked_products` | Products selected by the user |
 | `price_history` | Valid price and stock readings with timestamps |
 | `scrape_log` | Every success, retry, or failure with its error |
+
+The app displays dates and times in Indian Standard Time (IST). Supabase may
+display the original `timestamptz` values as UTC (`+00`).
 
 The schema is in `backend/sql/schema.sql`. The secret database URL is used only by the
 backend; it is never sent to the browser or stored in a `VITE_` variable.

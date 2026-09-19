@@ -1,33 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
 import { api } from './api.js';
 import SearchPanel from './components/SearchPanel.jsx';
-import SearchResults from './components/SearchResults.jsx';
 import ProductDetails from './components/ProductDetails.jsx';
-
-const RECENT_PRODUCTS_KEY = 'ine-recent-products';
-const RECENT_PRODUCTS_LIMIT = 5;
-
-function readRecentProducts() {
-  try {
-    const saved = JSON.parse(localStorage.getItem(RECENT_PRODUCTS_KEY) || '[]');
-    if (!Array.isArray(saved)) return [];
-    return saved
-      .filter((product) => Number.isSafeInteger(product.id) && typeof product.name === 'string')
-      .slice(0, RECENT_PRODUCTS_LIMIT);
-  } catch {
-    return [];
-  }
-}
 
 export default function App() {
   const latestPriceCheck = useRef(0);
   const selectedProductRef = useRef(null);
 
+  const [browserMode, setBrowserMode] = useState('headless');
+
   const [searchText, setSearchText] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
   const [searchError, setSearchError] = useState('');
-  const [recentProducts, setRecentProducts] = useState(readRecentProducts);
 
   const [selectedProductId, setSelectedProductId] = useState(null);
   const [productDetails, setProductDetails] = useState(null);
@@ -42,18 +27,11 @@ export default function App() {
   const [trackingAvailable, setTrackingAvailable] = useState(null);
   const [trackingError, setTrackingError] = useState('');
   const [isAddingToTracking, setIsAddingToTracking] = useState(false);
+
   const [priceHistory, setPriceHistory] = useState([]);
   const [scrapeLog, setScrapeLog] = useState([]);
   const [savedDataError, setSavedDataError] = useState('');
   const [stats, setStats] = useState(null);
-
-  useEffect(() => {
-    try {
-      localStorage.setItem(RECENT_PRODUCTS_KEY, JSON.stringify(recentProducts));
-    } catch {
-      // The list still works for this visit if browser storage is unavailable.
-    }
-  }, [recentProducts]);
 
   async function refreshStats() {
     try {
@@ -84,8 +62,8 @@ export default function App() {
         api(`/api/tracked/${productId}/log`),
       ]);
 
-      // Ignore a response if the user selected another product while it loaded.
       if (selectedProductRef.current !== productId) return;
+
       setPriceHistory(historyResponse.history);
       setScrapeLog(logResponse.log);
       setSavedDataError('');
@@ -101,7 +79,10 @@ export default function App() {
     setScrapeLog([]);
     setSavedDataError('');
 
-    if (selectedProductId !== null && trackingAvailable === true) {
+    if (
+      selectedProductId !== null &&
+      trackingAvailable === true
+    ) {
       loadSavedData(selectedProductId);
     }
   }, [selectedProductId, trackingAvailable]);
@@ -115,22 +96,29 @@ export default function App() {
     }
 
     const controller = new AbortController();
+
     setIsSearching(true);
 
-    // Wait until typing pauses so one search does not start for every keypress.
     const timer = setTimeout(() => {
-      api(`/api/products?search=${encodeURIComponent(searchText)}`, {
-        signal: controller.signal,
-      })
+      api(
+        `/api/products?search=${encodeURIComponent(searchText)}`,
+        {
+          signal: controller.signal,
+        },
+      )
         .then(({ products }) => {
           setSearchResults(products);
           setSearchError('');
         })
         .catch((error) => {
-          if (error.name !== 'AbortError') setSearchError(error.message);
+          if (error.name !== 'AbortError') {
+            setSearchError(error.message);
+          }
         })
         .finally(() => {
-          if (!controller.signal.aborted) setIsSearching(false);
+          if (!controller.signal.aborted) {
+            setIsSearching(false);
+          }
         });
     }, 220);
 
@@ -144,19 +132,26 @@ export default function App() {
     if (selectedProductId === null) return;
 
     const controller = new AbortController();
+
     setIsLoadingDetails(true);
     setProductDetails(null);
     setCurrentReading(null);
     setDetailsError('');
     setPriceCheckError('');
 
-    api(`/api/products/${selectedProductId}`, { signal: controller.signal })
+    api(`/api/products/${selectedProductId}`, {
+      signal: controller.signal,
+    })
       .then(setProductDetails)
       .catch((error) => {
-        if (error.name !== 'AbortError') setDetailsError(error.message);
+        if (error.name !== 'AbortError') {
+          setDetailsError(error.message);
+        }
       })
       .finally(() => {
-        if (!controller.signal.aborted) setIsLoadingDetails(false);
+        if (!controller.signal.aborted) {
+          setIsLoadingDetails(false);
+        }
       });
 
     return () => controller.abort();
@@ -165,40 +160,55 @@ export default function App() {
   function changeSearchText(value) {
     latestPriceCheck.current += 1;
     selectedProductRef.current = null;
+
     setSearchText(value);
+    setSearchResults([]);
+    setIsSearching(Boolean(value.trim()));
+    setSearchError('');
+
     setSelectedProductId(null);
     setProductDetails(null);
     setCurrentReading(null);
     setIsCheckingPrice(false);
   }
 
-  function selectProduct(productId, productName) {
+  function selectProduct(productId) {
     latestPriceCheck.current += 1;
     selectedProductRef.current = productId;
+
     setSelectedProductId(productId);
     setCurrentReading(null);
     setIsCheckingPrice(false);
-
-    if (productName) {
-      setRecentProducts((currentProducts) => [
-        { id: productId, name: productName },
-        ...currentProducts.filter((product) => product.id !== productId),
-      ].slice(0, RECENT_PRODUCTS_LIMIT));
-    }
+    setPriceCheckError('');
   }
 
   async function checkPrice() {
+    if (selectedProductId === null) return;
+
     const requestNumber = ++latestPriceCheck.current;
     const productId = selectedProductId;
+
     setIsCheckingPrice(true);
     setPriceCheckError('');
 
     try {
-      const result = await api(`/api/products/${productId}/price-check`, {
-        method: 'POST',
-      });
+      const result = await api(
+        `/api/products/${productId}/price-check`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            headless: browserMode === 'headless',
+          }),
+        },
+      );
 
-      if (latestPriceCheck.current !== requestNumber) return;
+      if (latestPriceCheck.current !== requestNumber) {
+        return;
+      }
+
       setCurrentReading(result.reading);
 
       if (result.saved) {
@@ -208,6 +218,10 @@ export default function App() {
     } catch (error) {
       if (latestPriceCheck.current === requestNumber) {
         setPriceCheckError(error.message);
+        if (selectedIsTracked) {
+          await loadSavedData(productId);
+          refreshStats();
+        }
       }
     } finally {
       if (latestPriceCheck.current === requestNumber) {
@@ -217,17 +231,26 @@ export default function App() {
   }
 
   async function trackProduct() {
+    if (selectedProductId === null) return;
+
     setIsAddingToTracking(true);
     setTrackingError('');
 
     try {
-      const { product } = await api(`/api/tracked/${selectedProductId}`, {
-        method: 'POST',
-      });
+      const { product } = await api(
+        `/api/tracked/${selectedProductId}`,
+        {
+          method: 'POST',
+        },
+      );
+
       setTrackedProducts((currentProducts) => [
         product,
-        ...currentProducts.filter((item) => item.productId !== product.productId),
+        ...currentProducts.filter(
+          (item) => item.productId !== product.productId,
+        ),
       ]);
+
       refreshStats();
     } catch (error) {
       setTrackingError(error.message);
@@ -246,42 +269,38 @@ export default function App() {
         <SearchPanel
           query={searchText}
           onQueryChange={changeSearchText}
+          matches={searchResults}
+          searching={isSearching}
+          error={searchError}
           stats={stats}
-          trackedProducts={trackedProducts}
-          recentProducts={recentProducts}
           onSelectProduct={selectProduct}
         />
 
-        <div className="content-grid">
-          <SearchResults
-            query={searchText}
-            matches={searchResults}
-            searching={isSearching}
-            error={searchError}
-            selectedId={selectedProductId}
-            onSelectProduct={selectProduct}
-          />
-          <ProductDetails
-            selectedId={selectedProductId}
-            detail={productDetails}
-            loading={isLoadingDetails}
-            error={detailsError}
-            reading={currentReading}
-            checking={isCheckingPrice}
-            checkError={priceCheckError}
-            onCheckPrice={checkPrice}
-            selectedTracked={selectedIsTracked}
-            trackingAvailable={trackingAvailable}
-            tracking={isAddingToTracking}
-            trackingError={trackingError}
-            onTrack={trackProduct}
-            history={priceHistory}
-            historyError={savedDataError}
-            scrapeLog={scrapeLog}
-          />
-        </div>
+        {selectedProductId !== null && (
+          <div className="product-content">
+            <ProductDetails
+              selectedId={selectedProductId}
+              detail={productDetails}
+              loading={isLoadingDetails}
+              error={detailsError}
+              reading={currentReading}
+              checking={isCheckingPrice}
+              checkError={priceCheckError}
+              onCheckPrice={checkPrice}
+              browserMode={browserMode}
+              onBrowserModeChange={setBrowserMode}
+              selectedTracked={selectedIsTracked}
+              trackingAvailable={trackingAvailable}
+              tracking={isAddingToTracking}
+              trackingError={trackingError}
+              onTrack={trackProduct}
+              history={priceHistory}
+              historyError={savedDataError}
+              scrapeLog={scrapeLog}
+            />
+          </div>
+        )}
       </main>
-
     </div>
   );
 }
