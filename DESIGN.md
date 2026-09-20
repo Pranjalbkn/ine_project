@@ -1,48 +1,37 @@
-# Design note
+# Design note: reliable price scraping
 
-## The simple explanation
+## Approach
 
-The React page lets a user search and choose a product. The Express API runs a
-Playwright browser to reveal that product's selling price and stock on INE's
-mock store. Supabase stores the products being tracked, valid readings, and a
-log of scrape attempts. GitHub Actions calls the API's protected job every two
-hours.
+The store hides its live price until a visitor interacts with the product page,
+so I use Playwright to read the rendered page. The scraper dismisses the cookie
+overlay, moves the pointer across the price card, clicks **Reveal price**, and
+waits for either a success or an error. It then reads the visible selling price
+and stock. Validation rejects hidden decoy prices, crossed-out prices, the
+wrong product, and invalid stock text before anything is saved.
 
-The source folders are separate: `frontend/` contains the page and styles;
-`backend/` contains the API, scraper, catalog, and SQL. Each folder has its
-own package and runs from its own terminal.
+Each product gets up to five attempts because the store's reveal step sometimes
+fails even when the page loads. Every attempt is recorded in `scrape_log`, with
+the stage and error on failures; only a validated reading goes into
+`price_history`. The scheduled job checks tracked products sequentially every
+two hours. GitHub Actions calls the protected backend endpoint and marks the run
+failed if any product ultimately fails.
 
-The page shows total and per-product scrape attempts, basic product details,
-and a simple SVG price graph using saved timestamps and prices. Reviews are
-omitted to keep the tracker focused on the assignment's price history.
+## Trade-offs
 
-## Why these parts exist
+A real browser is slower and uses more memory than a simple HTTP request, but
+the price depends on browser interaction. Five retries improve the chance of a
+reading while making a difficult product take longer. Sequential checks reduce
+load on the mock store but make total run time grow with the number of tracked
+products. GitHub's schedule can be delayed, so the scrape log and Actions run
+history show what actually ran.
 
-- **Catalog snapshot:** The store shuffles its catalog pages, so a saved list
-  of product names makes partial-name search fast and predictable. A separate
-  command refreshes the snapshot.
-- **Browser scraper:** The current price is hidden until pointer interaction.
-  Reading the rendered page is more dependable than guessing from an API
-  response or parsing its HTML without the interaction.
-- **Three database tables:** `tracked_products` answers what to check;
-  `price_history` contains valid readings; `scrape_log` records every success,
-  retry, or failure. A failed scrape cannot create a misleading price row.
-- **One scheduled endpoint:** The same scraper handles manual checks and
-  scheduled checks. A secret protects the job from arbitrary callers, and
-  GitHub Actions provides the two-hour trigger and a visible run result.
+## What the AI-assisted first attempt got wrong
 
-## Failure handling
-
-The scraper retries each product up to three times. It checks the product page,
-visible selling price, currency, and stock before saving a reading. Each
-attempt is logged, including error text on failures. The scheduled job checks
-products one at a time and continues to the next product if one fails. The
-GitHub workflow fails when any product fails, making the problem visible.
-
-## Tradeoffs
-
-The local catalog must be refreshed if the store adds or removes products.
-Sequential scraping is easy to understand and avoids hitting the mock store
-too hard, but it takes longer as more products are tracked. GitHub's schedule
-can be delayed, so the Actions run history and Supabase log are the source of
-truth for whether each check actually happened.
+The first scraper used Playwright's default headless shell, made one pointer
+pass, and waited only for a success state. In testing, the store could leave
+the reveal button disabled or return a challenge error; the scraper then timed
+out without explaining why. I reproduced the failure in the browser, compared
+headed and headless runs, and changed the scraper to use full Chromium in
+headless mode, retry the pointer interaction, and detect the store's error
+state. I also tested the complete API path to confirm that a successful scrape
+creates a saved price and a failed attempt creates only a log entry.
