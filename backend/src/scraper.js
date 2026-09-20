@@ -17,7 +17,7 @@ if (
 const { chromium } = await import('playwright');
 
 const STORE_ORIGIN = 'https://demo.inelabteamdev.com';
-const DEFAULT_ATTEMPTS = 3;
+const DEFAULT_ATTEMPTS = 5;
 
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -112,41 +112,6 @@ async function revealPrice(page) {
 
   await dismissCookies(page);
 
-  const bounds = await priceCard.boundingBox();
-
-  if (!bounds) {
-    throw new Error(
-      'Price area has no visible bounding box',
-    );
-  }
-
-  await page.mouse.move(
-    bounds.x + 15,
-    bounds.y + bounds.height / 2,
-  );
-
-  for (let step = 1; step <= 12; step += 1) {
-    const xPosition =
-      bounds.x +
-      15 +
-      ((bounds.width - 30) * step) / 13;
-
-    const yPosition =
-      bounds.y +
-      bounds.height *
-        (0.35 + (step % 3) * 0.12);
-
-    await page.mouse.move(
-      xPosition,
-      yPosition,
-      { steps: 2 },
-    );
-
-    await delay(85);
-  }
-
-  await delay(750);
-
   const revealButton = page.getByRole(
     'button',
     { name: 'Reveal price' },
@@ -156,6 +121,41 @@ async function revealPrice(page) {
     state: 'visible',
     timeout: 5000,
   });
+
+  // The cookie overlay can arrive while the pointer is moving. Leave and
+  // re-enter the card until the store enables its reveal button.
+  for (let pass = 0; pass < 3; pass += 1) {
+    await dismissCookies(page);
+
+    const bounds = await priceCard.boundingBox();
+    if (!bounds) {
+      throw new Error('Price area has no visible bounding box');
+    }
+
+    await page.mouse.move(bounds.x - 20, bounds.y - 20);
+    await page.mouse.move(
+      bounds.x + 15,
+      bounds.y + bounds.height / 2,
+    );
+
+    for (let step = 1; step <= 12; step += 1) {
+      const xPosition =
+        bounds.x + 15 + ((bounds.width - 30) * step) / 13;
+      const yPosition =
+        bounds.y + bounds.height * (0.35 + (step % 3) * 0.12);
+
+      await page.mouse.move(xPosition, yPosition, { steps: 2 });
+      await delay(85);
+    }
+
+    await delay(750);
+    await dismissCookies(page);
+    if (await revealButton.isEnabled()) break;
+  }
+
+  if (!await revealButton.isEnabled()) {
+    throw new Error('Price reveal button did not become ready');
+  }
 
   await dismissCookies(page);
 
@@ -180,19 +180,27 @@ async function revealPrice(page) {
     });
   }
 
-  await page
-    .locator('.price-block.price-success')
-    .waitFor({
-      state: 'visible',
-      timeout: 25_000,
-    });
+  const completedPriceCard = page.locator(
+    '.price-block.price-success, .price-block.price-error',
+  );
+  await completedPriceCard.waitFor({
+    state: 'visible',
+    timeout: 25_000,
+  });
+
+  if (await page.locator('.price-block.price-error').isVisible()) {
+    const reason = await page
+      .locator('.price-block.price-error .price-substatus')
+      .innerText();
+    throw new Error(`Store price reveal failed: ${reason}`);
+  }
 
   await page
     .locator('.price-block.price-success')
     .getByText('Updating…')
     .waitFor({
       state: 'hidden',
-      timeout: 12_000,
+      timeout: 20_000,
     });
 }
 
@@ -367,6 +375,7 @@ export async function scrapeProduct(
   try {
     browser = await chromium.launch({
       headless,
+      ...(headless ? { channel: 'chromium' } : {}),
       slowMo: headless ? 0 : 70,
     });
   } catch (error) {
@@ -394,6 +403,7 @@ export async function scrapeProduct(
       const startedAt = new Date().toISOString();
 
       const page = await context.newPage();
+      let stage = 'opening the product page';
 
       try {
         page.setDefaultTimeout(15_000);
@@ -406,6 +416,7 @@ export async function scrapeProduct(
           },
         );
 
+        stage = 'loading product details';
         const heading = page.locator('h1');
 
         await heading.waitFor({
@@ -417,8 +428,10 @@ export async function scrapeProduct(
           await heading.textContent()
         )?.trim();
 
+        stage = 'revealing the live price';
         await revealPrice(page);
 
+        stage = 'reading the price and stock';
         const reading = validateReading(
           await extractReading(
             page,
@@ -456,7 +469,7 @@ export async function scrapeProduct(
               : 'failed',
           error:
             error instanceof Error
-              ? error.message.split('\n')[0]
+              ? `${stage}: ${error.message.split('\n')[0]}`
               : String(error),
         };
 

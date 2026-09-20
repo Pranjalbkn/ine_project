@@ -95,7 +95,10 @@ npm run dev
 Open `http://127.0.0.1:5173`. The frontend sends API requests to the backend
 on port 3001. Search for a name,
 select a product, click **Track product**, then click **Check live price**.
-The first check can take a minute if the store is slow or the scraper retries.
+The first check can take several minutes if the store is slow or the scraper
+needs to retry its price reveal. If Vite reports `ECONNREFUSED 127.0.0.1:3001`,
+start the backend in its own terminal with `npm run dev` and confirm
+`http://127.0.0.1:3001/api/health` responds.
 The graph appears after a saved reading; two readings show a price trend.
 "Scrape attempts" includes retries, while "saved prices" counts validated
 readings only.
@@ -190,7 +193,7 @@ backend; it is never sent to the browser or stored in a `VITE_` variable.
   interaction. The scraper ignores the hidden decoy price and crossed-out MRP.
 - Each product is scraped sequentially in the scheduled job. This is simple
   and gentle on the mock store, but a large tracking list takes longer.
-- The API retries a failed product up to three times and records each attempt.
+- The API retries a failed product up to five times and records each attempt.
   Only a validated selling price and stock count enter `price_history`.
 - A free Render service may sleep when idle, so the first request can be slow.
 
