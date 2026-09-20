@@ -4,6 +4,8 @@ A small price tracker for the [INE assignment mock store](https://demo.inelabtea
 Search a product name, choose a result, and track its price and stock. The app
 shows overall scrape counts, basic product information, a price-over-time graph,
 saved readings, and a log of every scrape attempt.
+The main dashboard also shows the eight most recent scrape attempts across all
+tracked products, with a button to refresh the list.
 
 ## How it works
 

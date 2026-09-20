@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { api } from './api.js';
 import SearchPanel from './components/SearchPanel.jsx';
 import ProductDetails from './components/ProductDetails.jsx';
+import RecentScrapes from './components/RecentScrapes.jsx';
 
 export default function App() {
   const latestPriceCheck = useRef(0);
@@ -32,6 +33,9 @@ export default function App() {
   const [scrapeLog, setScrapeLog] = useState([]);
   const [savedDataError, setSavedDataError] = useState('');
   const [stats, setStats] = useState(null);
+  const [recentScrapes, setRecentScrapes] = useState([]);
+  const [recentScrapesLoading, setRecentScrapesLoading] = useState(true);
+  const [recentScrapesError, setRecentScrapesError] = useState('');
 
   async function refreshStats() {
     try {
@@ -39,6 +43,24 @@ export default function App() {
     } catch {
       setStats(null);
     }
+  }
+
+  async function refreshRecentScrapes() {
+    setRecentScrapesLoading(true);
+    try {
+      const { log } = await api('/api/scrape-log');
+      setRecentScrapes(log);
+      setRecentScrapesError('');
+    } catch (error) {
+      setRecentScrapesError(error.message);
+    } finally {
+      setRecentScrapesLoading(false);
+    }
+  }
+
+  function refreshDashboard() {
+    refreshRecentScrapes();
+    refreshStats();
   }
 
   useEffect(() => {
@@ -52,7 +74,7 @@ export default function App() {
         setTrackingError(error.message);
       });
 
-    refreshStats();
+    refreshDashboard();
   }, []);
 
   async function loadSavedData(productId) {
@@ -224,6 +246,9 @@ export default function App() {
         }
       }
     } finally {
+      if (selectedIsTracked) {
+        refreshRecentScrapes();
+      }
       if (latestPriceCheck.current === requestNumber) {
         setIsCheckingPrice(false);
       }
@@ -274,6 +299,13 @@ export default function App() {
           error={searchError}
           stats={stats}
           onSelectProduct={selectProduct}
+        />
+
+        <RecentScrapes
+          entries={recentScrapes}
+          loading={recentScrapesLoading}
+          error={recentScrapesError}
+          onRefresh={refreshDashboard}
         />
 
         {selectedProductId !== null && (

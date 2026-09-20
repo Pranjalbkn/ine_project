@@ -103,6 +103,25 @@ export async function getScrapeLog(productId) {
   return result.rows;
 }
 
+export async function getRecentScrapeLog() {
+  const result = await pool.query(`
+    select
+      l.id,
+      l.product_id as "productId",
+      t.name as "productName",
+      l.attempt,
+      l.started_at as "startedAt",
+      l.outcome,
+      l.error
+    from scrape_log l
+    join tracked_products t on t.product_id = l.product_id
+    order by l.started_at desc, l.id desc
+    limit 8
+  `);
+
+  return result.rows;
+}
+
 async function scrapeAndSave(productId, options = {}) {
   if (!await isTracked(productId)) {
     throw new Error('Product is not tracked');

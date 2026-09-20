@@ -11,6 +11,7 @@ import { pool, requireDatabase } from './db.js';
 import {
   addTracked,
   getHistory,
+  getRecentScrapeLog,
   getScrapeLog,
   getStats,
   isTracked,
@@ -192,6 +193,18 @@ app.get(
   async (_req, res) => {
     try {
       res.json(await getStats());
+    } catch (error) {
+      databaseError(res, error);
+    }
+  },
+);
+
+app.get(
+  '/api/scrape-log',
+  requireDatabase,
+  async (_req, res) => {
+    try {
+      res.json({ log: await getRecentScrapeLog() });
     } catch (error) {
       databaseError(res, error);
     }
